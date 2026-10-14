@@ -617,17 +617,7 @@ dialog { border-top: 4px solid var(--gold); }
 @media (prefers-reduced-motion: no-preference) {
   .podium.anim .pod, .rk-list.anim .rk-row { animation: rise .5s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 60ms); }
 }
-#data { width: min(560px, calc(100% - 32px)); }
-.import-box { border: 1px solid var(--line-strong); border-radius: 10px; padding: 12px 14px; background: var(--sunken); font-size: 14px; }
-.import-box h3 { margin: 0 0 6px; font-size: 15px; overflow-wrap: anywhere; }
-.import-box .imp-sheets { margin: 0 0 10px; padding-left: 18px; color: var(--muted); }
-.import-box .imp-sum { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; margin: 0 0 10px; }
-.import-box .imp-sum dt { color: var(--muted); }
-.import-box .imp-sum dd { margin: 0; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
-.import-box .imp-skip { margin: 6px 0 10px; }
-.import-box .imp-skip ul { max-height: 180px; overflow: auto; margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
-.import-box .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
-.import-box .hint { margin: 4px 0; }
+#data { width: min(440px, calc(100% - 32px)); }
 #data .btn { justify-content: center; height: 42px; }
 
 /* ============================ front page, covers and motion ============================
@@ -905,13 +895,6 @@ body, .panel, .book-card, .cat-row, .kc, .stt, .li, .appbar, .ctl, .search, .sca
 .title-tools .tools-gap { flex: 1 1 12px; }
 .title-tools label.btn { cursor: pointer; }
 .title-edit { margin-bottom: 12px; }
-.want-book strong { display: block; color: var(--fg); }
-.want-book .sub { display: block; margin-top: 2px; }
-.title-edit .te-h { margin: 0 0 10px; font-size: 15px; }
-.copy-edit { display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-end; gap: 10px; padding: 4px 0; text-align: left; }
-.copy-edit > div:not(.actions) { flex: 1 1 160px; }
-.copy-edit .actions { display: flex; gap: 8px; }
-.copy-edit .field-msg { flex-basis: 100%; margin: 0; }
 #view-log td { vertical-align: top; }
 #view-log .sub { display: block; font-size: 12.5px; color: var(--muted); }
 #view-classread { display: block; }
@@ -1040,44 +1023,6 @@ body, .panel, .book-card, .cat-row, .kc, .stt, .li, .appbar, .ctl, .search, .sca
 .story.mine span:last-child { color: var(--fg); font-weight: 600; }
 .story .plus { position: absolute; left: 42px; top: 40px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--surface); background: var(--accent); color: var(--accent-fg); font: 700 14px/1 var(--font-ui); font-style: normal; }
 .appbar .me-btn .avatar.pic { background: none; }
-
-/* categories */
-.ci { width: 16px; height: 16px; flex: none; }
-.ctag { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 9px 0 7px; border-radius: 99px; font-size: 12px; font-weight: 600; line-height: 1; color: var(--cc); background: color-mix(in srgb, var(--cc) 12%, transparent); border: 1px solid color-mix(in srgb, var(--cc) 35%, transparent); white-space: nowrap; vertical-align: middle; }
-:root[data-theme="dark"] .ctag { color: color-mix(in srgb, var(--cc) 55%, #fff); }
-.ctag .ci { width: 13px; height: 13px; }
-.ctag-btn { display: inline-flex; margin-top: 6px; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 99px; }
-.ctag-btn:hover .ctag { background: color-mix(in srgb, var(--cc) 22%, transparent); }
-#tt-body .ctag { margin-left: 4px; }
-.catbar { display: flex; gap: 6px; flex-wrap: wrap; }
-@media (max-width: 760px) { .catbar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; } .catbar .chip { flex: none; } }
-.chip.cchip { display: inline-flex; align-items: center; gap: 6px; }
-.chip.cchip .ci { width: 15px; height: 15px; color: var(--cc); }
-.chip.solid.cchip[aria-pressed="true"] { background: var(--cc); border-color: var(--cc); color: #fff; }
-.chip.solid.cchip[aria-pressed="true"] .ci, .chip.solid.cchip[aria-pressed="true"] .num { color: #fff; opacity: 1; }
-.sortby { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
-.sortby select.ctl { height: 36px; width: auto; min-width: 0; padding-right: 32px; font-size: 14px; }
-#view-catalog > #cat-count { margin: -4px 0 0; }
-.kc-cat { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--cc); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-:root[data-theme="dark"] .kc-cat { color: color-mix(in srgb, var(--cc) 55%, #fff); }
-.kc-cat .ci { width: 13px; height: 13px; }
-.bd-cats { display: flex; flex-direction: column; gap: 16px; }
-.bd-cats:empty { display: none; }
-.ctiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(178px, 1fr)); gap: 12px; }
-.ctile { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-height: 118px; padding: 14px 16px; overflow: hidden; text-align: left; font: inherit; color: var(--fg); cursor: pointer; border: 1px solid color-mix(in srgb, var(--cc) 30%, var(--line)); border-radius: 16px; background: linear-gradient(150deg, color-mix(in srgb, var(--cc) 13%, var(--surface)), color-mix(in srgb, var(--surface) var(--veil), transparent) 70%); box-shadow: var(--shadow); transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s, border-color .3s; }
-.ctile::after { content: ""; position: absolute; right: -26px; bottom: -26px; width: 90px; height: 90px; border-radius: 50%; background: color-mix(in srgb, var(--cc) 10%, transparent); transition: transform .4s cubic-bezier(.2, .8, .2, 1); }
-.ctile:hover, .ctile:focus-visible { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--cc); }
-.ctile:hover::after { transform: scale(1.35); }
-.ctile-i { display: grid; place-items: center; width: 38px; height: 38px; margin-bottom: 4px; border-radius: 12px; background: var(--cc); color: #fff; box-shadow: 0 6px 14px color-mix(in srgb, var(--cc) 35%, transparent); }
-.ctile-i .ci { width: 21px; height: 21px; }
-.ctile b { font: 700 15px/1.25 var(--font-display); }
-.ctile small { font-size: 12.5px; color: var(--muted); }
-@media (prefers-reduced-motion: no-preference) { .bd-cats.anim .ctile { animation: rise .45s both; animation-delay: calc(var(--i, 0) * 40ms); } }
-@media (max-width: 520px) { .ctiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ctile { min-height: 108px; padding: 12px; } }
-select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: var(--font-ui); }
-.cat-pick select.ctl, .sortby select.ctl, #ab-cat { font-family: var(--font-ui); }
-.cat-pick { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
-.cat-pick select.ctl { height: 32px; width: auto; font-size: 13.5px; }
 </style>
 </head>
 <body>
@@ -1152,7 +1097,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
     <button class="tab" role="tab" id="tab-log" data-view="log" aria-controls="view-log">Activity <kbd data-alt="G"></kbd></button>
   </nav>
 
-  <p class="notice bad" id="server-notice" hidden>The server part of the site on Netlify is older than this page, so newer things (categories, houses, pictures, likes…) may not work or save. Upload the whole site folder again, including the netlify folder.</p>
   <p class="notice warn" id="desk-notice" hidden>The shared library is still empty. Open Data and load your list file, then add the books.</p>
   <p class="notice bad" id="net-notice" role="status" hidden>Could not load the library. Check the internet connection. Trying again…</p>
 
@@ -1162,7 +1106,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
     <div class="home-cols" id="home-cols">
       <div class="home-main">
         <div id="home-shelves"></div>
-        <div id="bd-cats" class="bd-cats"></div>
         <div class="sec-head">
           <div><h2>Trending now</h2><p>The books being borrowed the most right now.</p></div>
           <button type="button" class="btn" data-go="catalog">See all books</button>
@@ -1182,12 +1125,8 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
   <section id="view-catalog" aria-label="All books" hidden>
     <div class="board-bar">
       <div class="filters" id="bd-filters" role="group" aria-label="Filter books"></div>
-      <label class="sortby"><span>Sort</span><select id="bd-sort" class="ctl">
-        <option value="az">A–Z</option><option value="pop">Most read</option><option value="shelf">Most on the shelf</option><option value="new">Newest first</option>
-      </select></label>
+      <p class="hint" id="cat-count"></p>
     </div>
-    <div class="catbar" id="bd-catbar" role="group" aria-label="Category"></div>
-    <p class="hint" id="cat-count"></p>
     <div class="cat-list" id="cat-body"></div>
     <div class="more" id="cat-more"></div>
     <p class="empty" id="bd-empty" hidden></p>
@@ -1244,7 +1183,7 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
           <div>
             <label class="field-label" for="co-copy">Book</label>
             <div class="combo" id="co-copy-combo">
-              <input class="scan" id="co-copy" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="co-copy-list" aria-describedby="co-copy-msg" placeholder="Type the number on the book, its title or ISBN">
+              <input class="scan" id="co-copy" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="co-copy-list" aria-describedby="co-copy-msg" placeholder="Type the number on the book, or its title">
               <ul class="options" id="co-copy-list" role="listbox" hidden></ul>
             </div>
             <div id="co-copy-picked" hidden></div>
@@ -1256,7 +1195,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
                   <div><label class="field-label" for="nb-title">Title</label><input class="ctl" id="nb-title" autocomplete="off" maxlength="120"></div>
                   <div><label class="field-label" for="nb-number">Number on the book</label><input class="ctl" id="nb-number" autocomplete="off" spellcheck="false" maxlength="40"></div>
                   <div><label class="field-label" for="nb-author">Author (optional)</label><input class="ctl" id="nb-author" autocomplete="off" maxlength="80"></div>
-                  <div><label class="field-label" for="nb-isbn">ISBN (optional)</label><input class="ctl" id="nb-isbn" autocomplete="off" spellcheck="false" inputmode="numeric" maxlength="20" placeholder="978…"></div>
                 </div>
                 <p class="field-msg" id="nb-msg" role="alert"></p>
                 <div class="actions" style="margin-top:12px"><button type="button" class="btn" id="nb-add">Use this book <kbd>Enter</kbd></button><button type="button" class="btn" id="nb-cancel">Cancel <kbd>Esc</kbd></button></div>
@@ -1375,7 +1313,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
     <div class="panel">
       <div class="toolbar">
         <input class="search" id="tt-search" type="search" autocomplete="off" placeholder="Search title, author or ISBN" aria-label="Search titles">
-        <select class="ctl tt-cat" id="tt-cat" aria-label="Category"></select>
         <div class="filters" id="tt-filters" role="group" aria-label="Filter titles"></div>
         <button class="btn" type="button" id="ab-open" aria-expanded="false" aria-controls="ab-form" style="background:var(--accent);color:var(--accent-fg);border-color:var(--accent)">Add a book</button>
       </div>
@@ -1383,10 +1320,9 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
         <h3>Add a book</h3>
         <div class="nb-grid">
           <div class="wide"><label class="field-label" for="ab-title">Title</label><input class="ctl" id="ab-title" autocomplete="off" maxlength="120"></div>
-          <div><label class="field-label" for="ab-isbn">ISBN (optional)</label><input class="ctl" id="ab-isbn" autocomplete="off" spellcheck="false" inputmode="numeric" maxlength="20" placeholder="978…"></div>
           <div><label class="field-label" for="ab-author">Author (optional)</label><input class="ctl" id="ab-author" autocomplete="off" maxlength="80"></div>
-          <div><label class="field-label" for="ab-cat">Category</label><select class="ctl" id="ab-cat"></select></div>
           <div><label class="field-label" for="ab-shelf">Shelf (optional)</label><input class="ctl" id="ab-shelf" autocomplete="off" maxlength="20"></div>
+          <div><label class="field-label" for="ab-isbn">ISBN (optional)</label><input class="ctl" id="ab-isbn" autocomplete="off" spellcheck="false" inputmode="text" maxlength="20" placeholder="9781108744539" style="font-family:var(--font-mono)"></div>
           <div><label class="field-label" for="ab-copies">How many copies</label><input class="ctl" id="ab-copies" type="number" min="1" max="50" step="1" value="1" inputmode="numeric"></div>
           <div class="wide"><label class="field-label" for="ab-numbers">Numbers on the copies (separate with commas)</label><input class="ctl" id="ab-numbers" autocomplete="off" spellcheck="false" maxlength="400" style="font-family:var(--font-mono)"></div>
         </div>
@@ -1556,7 +1492,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
       <button class="btn" type="button" id="signin-cancel">Cancel</button>
     </div>
     <p class="hint">No code yet, or forgot it? Ask at the library desk.</p>
-    <p class="notice warn" id="signin-preview" hidden>This is a preview copy: the codes on the paper slips work only on the real site. For a code that works here, open the librarian desk and look the reader up under People.</p>
   </form>
 </dialog>
 
@@ -1571,7 +1506,7 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
   <form id="want-form" novalidate>
     <div>
       <h2 id="want-h">Reserve this book</h2>
-      <p class="hint want-book" id="want-book"></p>
+      <p class="hint" id="want-book"></p>
     </div>
     <div>
       <span class="field-label" id="want-l">How long do you need it?</span>
@@ -1616,10 +1551,6 @@ select.ctl.tt-cat { width: auto; max-width: 300px; height: 40px; font-family: va
     <input type="file" id="data-file" accept="application/json,.json" hidden>
     <button class="btn" type="button" data-excel="readers">Excel: readers, codes and reading history</button>
     <button class="btn" type="button" data-excel="books">Excel: books and copies</button>
-    <button class="btn" type="button" id="import-open">Import from Excel or CSV: people, books, who has which book</button>
-    <input type="file" id="import-file" accept=".xlsx,.csv,.txt,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" hidden>
-    <div class="import-box" id="import-box" hidden></div>
-    <button class="btn" type="button" data-excel="template">Excel: an empty form to fill in and import</button>
     <button class="btn" type="button" id="year-up">New school year: move every class up</button>
     <button class="btn" type="button" id="reset-data">Reset to the starting list</button>
   </div>
@@ -1655,105 +1586,6 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&
 // English strings are the keys. t() returns the Uzbek text when Uzbek is selected and falls back to English.
 // Switching language saves the choice and reloads, so every label, message and date is built in one language.
 const UZ = {
-  "row": "qator",
-  "Books already returned: {rows}. Only books still out are imported.": "Allaqachon qaytarilgan kitoblar: {rows}. Faqat hozir berilgan kitoblar yuklanadi.",
-  "Skipped: {rows}": "O‘tkazib yuborildi: {rows}",
-  "Import from Excel or CSV: people, books, who has which book": "Excel yoki CSV dan yuklash: odamlar, kitoblar, kimda qaysi kitob",
-  "Excel: an empty form to fill in and import": "Excel: to‘ldirib yuklash uchun bo‘sh shakl",
-  "Imported from Excel": "Excel dan yuklandi",
-  "people": "odamlar",
-  "books and copies": "kitoblar va nusxalar",
-  "who has which book": "kimda qaysi kitob",
-  "not recognised: skipped": "tanilmadi: o‘tkazib yuborildi",
-  "Already in the list": "Ro‘yxatda bor",
-  "Books given out": "Berilgan kitoblar",
-  "Copy {n} is already with someone else.": "{n}-nusxa allaqachon boshqa odamda.",
-  "Copy {n} is not on the shelf.": "{n}-nusxa javonda emas.",
-  "Dates: 01.09.2026 or an Excel date. Without a due date the book is due in {n} days.": "Sanalar: 01.09.2026 yoki Excel sanasi. Qaytarish sanasi bo‘lmasa, kitob {n} kunda qaytariladi.",
-  "Filled in (class, house, ISBN, author, category)": "To‘ldirildi (sinf, house, ISBN, muallif, toifa)",
-  "From “{name}”": "“{name}” faylidan",
-  "How to fill in this file": "Bu faylni qanday to‘ldirish kerak",
-  "ISBN {isbn} is not in the list, and the row has no title.": "ISBN {isbn} ro‘yxatda yo‘q va qatorda kitob nomi yo‘q.",
-  "ISBN {isbn} is not right. Check the digits.": "ISBN {isbn} noto‘g‘ri. Raqamlarni tekshiring.",
-  "Import": "Yuklash",
-  "Imported. New people: {a} · new books: {b} · new copies: {c} · books given out: {d}.": "Yuklandi. Yangi odamlar: {a} · yangi kitoblar: {b} · yangi nusxalar: {c} · berilgan kitoblar: {d}.",
-  "New books": "Yangi kitoblar",
-  "New copies": "Yangi nusxalar",
-  "New people": "Yangi odamlar",
-  "New people get a reader number and a code of their own. Print their slips on the Students tab.": "Yangi odamlarga kitobxon raqami va shaxsiy kod beriladi. Ularning varaqchalarini O‘quvchilar bo‘limida chop eting.",
-  "No copy of “{title}” is on the shelf.": "“{title}” kitobining javonda nusxasi yo‘q.",
-  "No headings this page knows were found. Use headings such as Name, Class, Title, ISBN, Number on the book, or download the empty form.": "Tanish sarlavhalar topilmadi. Ism, Sinf, Kitob nomi, ISBN, Kitob raqami kabi sarlavhalardan foydalaning yoki bo‘sh shaklni yuklab oling.",
-  "Nothing new to add from this file.": "Bu fayldan qo‘shiladigan yangi narsa yo‘q.",
-  "Number {n} is not in the list, and the row has no title.": "{n} raqami ro‘yxatda yo‘q va qatorda kitob nomi yo‘q.",
-  "People: one row per student or teacher. Class is the grade (5 to 11). Leave Reader number empty for new people: the library gives one.": "Odamlar: har bir o‘quvchi yoki o‘qituvchi uchun bitta qator. Sinf — bu sinf raqami (5 dan 11 gacha). Yangi odamlar uchun kitobxon raqamini bo‘sh qoldiring: kutubxona o‘zi beradi.",
-  "Books: one row per title. Write the numbers of its copies separated with commas, or only how many copies there are.": "Kitoblar: har bir nom uchun bitta qator. Nusxalar raqamlarini vergul bilan yozing yoki faqat nechta nusxa borligini yozing.",
-  "Who has which book: one row per book that is out now. The reader number or the name, and the number on the book or its title.": "Kimda qaysi kitob: hozir berilgan har bir kitob uchun bitta qator. Kitobxon raqami yoki ismi, va kitobdagi raqam yoki kitob nomi.",
-  "Then open Library data, press Import from Excel, choose this file, check the summary and press Import.": "So‘ng Kutubxona ma’lumotlarini oching, Excel dan yuklashni bosing, shu faylni tanlang, xulosani tekshirib, Yuklashni bosing.",
-  "Read me": "O‘qing",
-  "Reader number {n} is not in the list, and the row has no name.": "{n} kitobxon raqami ro‘yxatda yo‘q va qatorda ism yo‘q.",
-  "Reading the file…": "Fayl o‘qilmoqda…",
-  "The codes in the file are not used.": "Fayldagi kodlar ishlatilmaydi.",
-  "The row has no book.": "Qatorda kitob yo‘q.",
-  "The row has no name.": "Qatorda ism yo‘q.",
-  "The row has no title.": "Qatorda kitob nomi yo‘q.",
-  "This file could not be read. Save it from Excel as .xlsx or .csv and try again.": "Bu faylni o‘qib bo‘lmadi. Excel da .xlsx yoki .csv qilib saqlang va qayta urinib ko‘ring.",
-  "This is a backup file. Use “Load a backup file” for it.": "Bu zaxira fayli. Uning uchun “Zaxira faylini yuklash” tugmasidan foydalaning.",
-  "This is an old Excel file (.xls). Open it in Excel, choose Save As, pick “Excel Workbook (.xlsx)”, and import that file.": "Bu eski Excel fayli (.xls). Uni Excel da oching, “Save As” ni tanlang, “Excel Workbook (.xlsx)” turini belgilang va o‘sha faylni yuklang.",
-  "Who has which book": "Kimda qaysi kitob",
-  "row {n}": "{n}-qator",
-  "{name}: more than one person has this name. Add the reader number or the class.": "{name}: bu ismda bir nechta odam bor. Kitobxon raqami yoki sinfni qo‘shing.",
-  "{n} rows are books already returned. Only books still out are imported.": "{n} qatordagi kitoblar allaqachon qaytarilgan. Faqat hozir berilgan kitoblar yuklanadi.",
-  "{n} rows skipped": "{n} qator o‘tkazib yuborildi",
-  "{n} rows": "{n} qator",
-  "Type the number on the book, its title or ISBN": "Kitobdagi raqamni, nomini yoki ISBN raqamini yozing",
-  "Number, title or ISBN of the book for {name}": "{name} uchun kitob raqami, nomi yoki ISBN",
-  "copy {n}": "nusxa {n}",
-  "“{title}” ({details}) is set aside for you. Collect it at the library by {date}.": "“{title}” ({details}) siz uchun olib qo‘yildi. {date} gacha kutubxonadan olib keting.",
-  "None on the shelf now. You join the queue.": "Hozir javonda yo‘q. Siz navbatga yozilasiz.",
-  "{a} of {b} reading": "{b} dan {a} nafari o‘qiyapti",
-  "Book details": "Kitob ma’lumotlari",
-  "Save changes": "O‘zgarishlarni saqlash",
-  "Undo changes": "O‘zgarishlarni bekor qilish",
-  "Copy number or shelf changed": "Nusxa raqami yoki javoni o‘zgartirildi",
-  "ISBN (optional)": "ISBN (ixtiyoriy)",
-  "This ISBN is not right. Check the digits.": "Bu ISBN noto‘g‘ri. Raqamlarni tekshiring.",
-  "This ISBN is already in the list: “{title}”.": "Bu ISBN ro‘yxatda bor: “{title}”.",
-  "Looking the ISBN up…": "ISBN qidirilmoqda…",
-  "Not found online. Type the title yourself.": "Internetda topilmadi. Nomini o‘zingiz yozing.",
-  "Found online: “{title}”. Check it before saving.": "Internetda topildi: “{title}”. Saqlashdan oldin tekshiring.",
-  "Add a new book with ISBN {isbn}": "ISBN {isbn} bilan yangi kitob qo‘shish",
-  "ISBN {isbn} already belongs to “{title}”.": "ISBN {isbn} allaqachon “{title}” kitobiga tegishli.",
-  "Another book already has this title. If it is a different edition, give each its ISBN.": "Bu nomdagi kitob allaqachon bor. Boshqa nashr bo‘lsa, har biriga o‘z ISBN raqamini yozing.",
-  "The server part of the site on Netlify is older than this page, so newer things (categories, houses, pictures, likes…) may not work or save. Upload the whole site folder again, including the netlify folder.": "Netlify’dagi saytning server qismi bu sahifadan eskiroq, shuning uchun yangi imkoniyatlar (bo‘limlar, houselar, rasmlar, yoqtirishlar…) ishlamasligi yoki saqlanmasligi mumkin. Sayt papkasini netlify papkasi bilan birga qaytadan joylang.",
-  "Uzbek literature": "O‘zbek adabiyoti",
-  "World literature": "Jahon adabiyoti",
-  "Reading in English": "Ingliz tilida o‘qish",
-  "Children’s books": "Bolalar kitoblari",
-  "Cambridge & exam prep": "Cambridge va imtihonga tayyorgarlik",
-  "School textbooks": "Maktab darsliklari",
-  "Languages & dictionaries": "Tillar va lug‘atlar",
-  "History & biography": "Tarix va tarjimai hol",
-  "Religion & spirituality": "Din va ma’naviyat",
-  "State, law & society": "Davlat, huquq va jamiyat",
-  "Science & self-development": "Fan va shaxsiy rivojlanish",
-  "Sport, arts & music": "Sport, san’at va musiqa",
-  "Other": "Boshqa",
-  "Browse by category": "Bo‘limlar bo‘yicha",
-  "Pick a kind of book and see everything the library has of it.": "Kitob turini tanlang va kutubxonada bor hammasini ko‘ring.",
-  "{books} · {n} on the shelf": "{books} · {n} tasi javonda",
-  "All categories": "Barcha bo‘limlar",
-  "Show this category": "Shu bo‘limni ko‘rsatish",
-  "Sort": "Tartib",
-  "A–Z": "A–Z",
-  "Most read": "Ko‘p o‘qilgan",
-  "Most on the shelf": "Javonda ko‘p",
-  "Newest first": "Avval yangilari",
-  "Category": "Bo‘lim",
-  "Choose a category": "Bo‘limni tanlang",
-  "Choose the category of the book.": "Kitob bo‘limini tanlang.",
-  "“{title}” is now in {cat}.": "“{title}” endi “{cat}” bo‘limida.",
-  "Category changed": "Bo‘lim o‘zgartirildi",
-  "This is a preview copy: the codes on the paper slips work only on the real site. For a code that works here, open the librarian desk and look the reader up under People.": "Bu sinov nusxasi: qog‘ozdagi kodlar faqat haqiqiy saytda ishlaydi. Bu yerda ishlaydigan kodni ko‘rish uchun kutubxonachi panelini oching va Kitobxonlar bo‘limidan kitobxonni toping.",
   "−{n} points for {name} ({total} in all).": "{name}dan −{n} ball (jami {total}).",
   "Returned damaged: {n} points are taken off.": "Shikastlangan holda qaytarildi: {n} ball olib tashlanadi.",
   "Borrow a book in this period and you are on the board.": "Shu davrda kitob oling va reytingga kirasiz.",
@@ -2246,6 +2078,19 @@ const UZ = {
   "Book and number": "Kitob va raqami",
   "Add “{q}” as a new book": "“{q}”ni yangi kitob sifatida qo‘shish",
   "Enter the title of the book.": "Kitob nomini kiriting.",
+  "ISBN (optional)": "ISBN (ixtiyoriy)",
+  "Code written in the book": "Kitobdagi kod (varaqdagi raqam)",
+  "Apply": "Qo‘llash",
+  "This copy will be numbered “{code}” when the book is issued.": "Kitob berilganda bu nusxaga “{code}” raqami yoziladi.",
+  "Type the code written in the book to pick exactly that copy.": "Kitobning varag‘idagi kodni yozing: aynan shu nusxa tanlanadi.",
+  "Every copy of this book already has its own code, and none of them is “{code}”.": "Bu kitobning hamma nusxasiga kod yozilgan va ularning orasida “{code}” yo‘q.",
+  "Numbers on the copies": "Nusxalardagi raqamlar",
+  "Copy {n}": "{n}-nusxa",
+  "Add more copies (separate the numbers with commas)": "Yangi nusxalar qo‘shish (raqamlarni vergul bilan ajrating)",
+  "Every copy needs a number.": "Har bir nusxaning raqami bo‘lishi kerak.",
+  "ISBN must have 10 or 13 digits.": "ISBN 10 yoki 13 ta raqamdan iborat bo‘lishi kerak.",
+  "ISBN {n} already belongs to “{title}”.": "{n} ISBN raqami “{title}” kitobida bor.",
+  "“{title}” already has another ISBN ({n}).": "“{title}” kitobida boshqa ISBN bor ({n}).",
   "Number {n} is already used by “{title}”.": "{n} raqami “{title}” kitobida allaqachon ishlatilgan.",
   "Number given automatically": "Raqam avtomatik beriladi",
   "New book, added when issued": "Yangi kitob, berilganda ro‘yxatga qo‘shiladi",
@@ -2622,105 +2467,6 @@ const UZ = {
 };
 // Russian: counted nouns are short forms (дн., кн., экз.), because the page cannot change a word's ending after a number.
 const RU = {
-  "row": "стр.",
-  "Books already returned: {rows}. Only books still out are imported.": "Уже возвращённые книги: {rows}. Импортируются только книги, которые сейчас на руках.",
-  "Skipped: {rows}": "Пропущено: {rows}",
-  "Import from Excel or CSV: people, books, who has which book": "Импорт из Excel или CSV: люди, книги, у кого какая книга",
-  "Excel: an empty form to fill in and import": "Excel: пустая форма для заполнения и импорта",
-  "Imported from Excel": "Импорт из Excel",
-  "people": "люди",
-  "books and copies": "книги и экземпляры",
-  "who has which book": "у кого какая книга",
-  "not recognised: skipped": "не распознан: пропущен",
-  "Already in the list": "Уже в списке",
-  "Books given out": "Выданные книги",
-  "Copy {n} is already with someone else.": "Экземпляр {n} уже у другого читателя.",
-  "Copy {n} is not on the shelf.": "Экземпляра {n} нет на полке.",
-  "Dates: 01.09.2026 or an Excel date. Without a due date the book is due in {n} days.": "Даты: 01.09.2026 или дата Excel. Без срока книгу нужно вернуть через {n} дней.",
-  "Filled in (class, house, ISBN, author, category)": "Дополнено (класс, house, ISBN, автор, категория)",
-  "From “{name}”": "Из файла «{name}»",
-  "How to fill in this file": "Как заполнить этот файл",
-  "ISBN {isbn} is not in the list, and the row has no title.": "ISBN {isbn} нет в списке, а в строке нет названия.",
-  "ISBN {isbn} is not right. Check the digits.": "ISBN {isbn} неверен. Проверьте цифры.",
-  "Import": "Импортировать",
-  "Imported. New people: {a} · new books: {b} · new copies: {c} · books given out: {d}.": "Импортировано. Новых людей: {a} · новых книг: {b} · новых экземпляров: {c} · выданных книг: {d}.",
-  "New books": "Новые книги",
-  "New copies": "Новые экземпляры",
-  "New people": "Новые люди",
-  "New people get a reader number and a code of their own. Print their slips on the Students tab.": "Новые люди получат номер читателя и свой код. Напечатайте их карточки на вкладке «Ученики».",
-  "No copy of “{title}” is on the shelf.": "Ни одного экземпляра «{title}» нет на полке.",
-  "No headings this page knows were found. Use headings such as Name, Class, Title, ISBN, Number on the book, or download the empty form.": "Знакомые заголовки не найдены. Используйте заголовки вроде ФИО, Класс, Название, ISBN, Инвентарный номер или скачайте пустую форму.",
-  "Nothing new to add from this file.": "В этом файле нет ничего нового.",
-  "Number {n} is not in the list, and the row has no title.": "Номера {n} нет в списке, а в строке нет названия.",
-  "People: one row per student or teacher. Class is the grade (5 to 11). Leave Reader number empty for new people: the library gives one.": "Люди: одна строка на ученика или учителя. Класс — номер класса (с 5 по 11). Для новых людей номер читателя оставьте пустым: библиотека выдаст его сама.",
-  "Books: one row per title. Write the numbers of its copies separated with commas, or only how many copies there are.": "Книги: одна строка на название. Впишите номера экземпляров через запятую или только количество экземпляров.",
-  "Who has which book: one row per book that is out now. The reader number or the name, and the number on the book or its title.": "У кого какая книга: одна строка на каждую выданную сейчас книгу. Номер читателя или имя, и номер на книге или её название.",
-  "Then open Library data, press Import from Excel, choose this file, check the summary and press Import.": "Затем откройте «Данные библиотеки», нажмите «Импорт из Excel», выберите этот файл, проверьте сводку и нажмите «Импортировать».",
-  "Read me": "Прочтите",
-  "Reader number {n} is not in the list, and the row has no name.": "Номера читателя {n} нет в списке, а в строке нет имени.",
-  "Reading the file…": "Читаем файл…",
-  "The codes in the file are not used.": "Коды из файла не используются.",
-  "The row has no book.": "В строке нет книги.",
-  "The row has no name.": "В строке нет имени.",
-  "The row has no title.": "В строке нет названия.",
-  "This file could not be read. Save it from Excel as .xlsx or .csv and try again.": "Не удалось прочитать файл. Сохраните его в Excel как .xlsx или .csv и попробуйте снова.",
-  "This is a backup file. Use “Load a backup file” for it.": "Это файл резервной копии. Для него используйте «Загрузить резервную копию».",
-  "This is an old Excel file (.xls). Open it in Excel, choose Save As, pick “Excel Workbook (.xlsx)”, and import that file.": "Это старый файл Excel (.xls). Откройте его в Excel, выберите «Сохранить как», тип «Книга Excel (.xlsx)» и импортируйте этот файл.",
-  "Who has which book": "У кого какая книга",
-  "row {n}": "строка {n}",
-  "{name}: more than one person has this name. Add the reader number or the class.": "{name}: с таким именем несколько человек. Добавьте номер читателя или класс.",
-  "{n} rows are books already returned. Only books still out are imported.": "В {n} строках книги уже возвращены. Импортируются только книги, которые сейчас на руках.",
-  "{n} rows skipped": "Пропущено строк: {n}",
-  "{n} rows": "строк: {n}",
-  "Type the number on the book, its title or ISBN": "Введите номер на книге, её название или ISBN",
-  "Number, title or ISBN of the book for {name}": "Номер, название или ISBN книги для читателя {name}",
-  "copy {n}": "экземпляр {n}",
-  "“{title}” ({details}) is set aside for you. Collect it at the library by {date}.": "«{title}» ({details}) отложена для вас. Заберите её в библиотеке до {date}.",
-  "None on the shelf now. You join the queue.": "Сейчас на полке нет. Вы встанете в очередь.",
-  "{a} of {b} reading": "Читают {a} из {b}",
-  "Book details": "Данные книги",
-  "Save changes": "Сохранить изменения",
-  "Undo changes": "Отменить изменения",
-  "Copy number or shelf changed": "Изменён номер или полка экземпляра",
-  "ISBN (optional)": "ISBN (необязательно)",
-  "This ISBN is not right. Check the digits.": "Этот ISBN неверен. Проверьте цифры.",
-  "This ISBN is already in the list: “{title}”.": "Этот ISBN уже есть в списке: «{title}».",
-  "Looking the ISBN up…": "Ищем ISBN…",
-  "Not found online. Type the title yourself.": "В интернете не найдено. Введите название сами.",
-  "Found online: “{title}”. Check it before saving.": "Найдено в интернете: «{title}». Проверьте перед сохранением.",
-  "Add a new book with ISBN {isbn}": "Добавить новую книгу с ISBN {isbn}",
-  "ISBN {isbn} already belongs to “{title}”.": "ISBN {isbn} уже принадлежит книге «{title}».",
-  "Another book already has this title. If it is a different edition, give each its ISBN.": "Книга с таким названием уже есть. Если это другое издание, укажите у каждого свой ISBN.",
-  "The server part of the site on Netlify is older than this page, so newer things (categories, houses, pictures, likes…) may not work or save. Upload the whole site folder again, including the netlify folder.": "Серверная часть сайта на Netlify старее этой страницы, поэтому новые возможности (разделы, хаусы, фото, лайки…) могут не работать или не сохраняться. Загрузите всю папку сайта заново, вместе с папкой netlify.",
-  "Uzbek literature": "Узбекская литература",
-  "World literature": "Мировая литература",
-  "Reading in English": "Чтение на английском",
-  "Children’s books": "Детские книги",
-  "Cambridge & exam prep": "Cambridge и подготовка к экзаменам",
-  "School textbooks": "Школьные учебники",
-  "Languages & dictionaries": "Языки и словари",
-  "History & biography": "История и биографии",
-  "Religion & spirituality": "Религия и духовность",
-  "State, law & society": "Государство, право и общество",
-  "Science & self-development": "Наука и саморазвитие",
-  "Sport, arts & music": "Спорт, искусство и музыка",
-  "Other": "Другое",
-  "Browse by category": "По разделам",
-  "Pick a kind of book and see everything the library has of it.": "Выберите раздел и посмотрите все книги библиотеки в нём.",
-  "{books} · {n} on the shelf": "{books} · на полке: {n}",
-  "All categories": "Все разделы",
-  "Show this category": "Показать этот раздел",
-  "Sort": "Сортировка",
-  "A–Z": "А–Я",
-  "Most read": "Самые читаемые",
-  "Most on the shelf": "Больше всего на полке",
-  "Newest first": "Сначала новые",
-  "Category": "Раздел",
-  "Choose a category": "Выберите раздел",
-  "Choose the category of the book.": "Выберите раздел книги.",
-  "“{title}” is now in {cat}.": "«{title}» теперь в разделе «{cat}».",
-  "Category changed": "Раздел изменён",
-  "This is a preview copy: the codes on the paper slips work only on the real site. For a code that works here, open the librarian desk and look the reader up under People.": "Это пробная копия: коды с бумажных листков работают только на настоящем сайте. Чтобы узнать код, который работает здесь, откройте панель библиотекаря и найдите читателя в разделе «Читатели».",
   "−{n} points for {name} ({total} in all).": "−{n} баллов — {name} (всего {total}).",
   "Returned damaged: {n} points are taken off.": "Возвращена повреждённой: снимается баллов — {n}.",
   "Borrow a book in this period and you are on the board.": "Возьмите книгу за этот период — и вы в рейтинге.",
@@ -3212,6 +2958,19 @@ const RU = {
   "Book and number": "Книга и номер",
   "Add “{q}” as a new book": "Добавить «{q}» как новую книгу",
   "Enter the title of the book.": "Введите название книги.",
+  "ISBN (optional)": "ISBN (необязательно)",
+  "Code written in the book": "Код в книге (номер на странице)",
+  "Apply": "Применить",
+  "This copy will be numbered “{code}” when the book is issued.": "При выдаче этому экземпляру будет присвоен номер «{code}».",
+  "Type the code written in the book to pick exactly that copy.": "Введите код из книги, чтобы выбрать именно этот экземпляр.",
+  "Every copy of this book already has its own code, and none of them is “{code}”.": "У всех экземпляров этой книги уже есть свои коды, и «{code}» среди них нет.",
+  "Numbers on the copies": "Номера на экземплярах",
+  "Copy {n}": "Экземпляр {n}",
+  "Add more copies (separate the numbers with commas)": "Добавить экземпляры (номера через запятую)",
+  "Every copy needs a number.": "У каждого экземпляра должен быть номер.",
+  "ISBN must have 10 or 13 digits.": "ISBN должен содержать 10 или 13 цифр.",
+  "ISBN {n} already belongs to “{title}”.": "ISBN {n} уже есть у книги «{title}».",
+  "“{title}” already has another ISBN ({n}).": "У книги «{title}» уже другой ISBN ({n}).",
   "Number {n} is already used by “{title}”.": "Номер {n} уже занят книгой «{title}».",
   "Number given automatically": "Номер присваивается автоматически",
   "New book, added when issued": "Новая книга, добавится при выдаче",
@@ -3661,59 +3420,11 @@ const librarians = [
 // The school's readers: students by grade (5 to 11) and teachers. Only people in this list can borrow.
 // The hosted build leaves this list out of the page; there it comes from the shared library on the server.
 const ROSTER = { classes: [], teachers: [] };
-// The school's books, taken from the library's own list (Umumiy kitoblar): [title, [[row in that list, copies], …], category].
+// The school's books, taken from the library's own list (Umumiy kitoblar): [title, [[row in that list, copies], …]].
 // Every copy gets the number "K row-copy": K489-03 is the third copy of row 489. The K keeps these apart from plain numbers such as
 // 4893, which the librarian is free to write on books added later. Titles written twice in the list are one book here.
 // The hosted build keeps this list on the server, next to the people, and the page receives the books from there.
 const CATALOG = [];   // the books come from the server
-/*<catmap>*/
-// Every title of the school's list with its category, as a short fingerprint of the title and one letter for the category
-// (built from CATALOG by scratchpad/merge/catmap.mjs). The hosted page carries no book list, but with this it can still show a
-// category for a book that arrives without one, whatever server part or saved library it is talking to.
-const CAT_KEYS = ["uzlit","world","english","kids","cambridge","school","lang","history","religion","society","science","arts","other"];
-const CAT_MAP = new Map('16435291 1tsbdku1 1a7s0xa6 elfeh56 1kvblo91 fi0pf83 1voy5bv1 i116wqa k9cf6v1 4eo2nra 1m2hjn00 6iir7e4 18nsfzo0 10jd1oja 5uf0bg4 1vhjz6h3 14c290c5 wr2ouj1 dt1gt90 3feybn0 1iwql3t2 jgou0m1 1r9xzhj4 3u6k9v9 10d27jo0 uswd2ea 1v75wcl1 xyqxl01 pfxe9c0 b13vfi1 5bbcq60 s0xluf3 13b2hax9 13rl9l19 1btoh2p4 19m3xer0 7ki8m70 3z38jia 17kfkyya 1cf705c0 tlzxm93 1y5hcua3 181b2ue3 1p0e0f91 ta7m2m0 17iw5lka 1elekvwa 17b7ohya 1bvi4ye0 19fsw4o3 1btfth53 r8tcky3 1kztp1f0 10usq5d3 17v9oyl0 gk9izu0 1rsjwq20 1jkl3729 10iqsgw3 swjg6t6 120vl6m1 jmiyh83 vq1yf33 nsr6ot1 1wqz7d21 1k8l5jv3 1yfmdz93 3fn5uk5 1efiw734 1cot848b kg2gp21 1vo5gmb0 131ky703 vstml60 1td0q3p7 lqlrtr0 1hch7d1 19yv8a34 r5h2y34 1ki31ws6 5pe9ln7 1t250oz0 1p9hjs1a 1gn0c5a1 eb5h231 t38byq1 1hm49rg7 9s38da5 1ohg08z0 18451gj3 1sun97w3 1e45cfg0 91cms10 vyb7g99 13a1zr07 cc3wwy6 1ma13em3 15e77cp5 1jnfwac4 1ebkqnp4 19pqtaq4 f3ak8fb mamv1s1 3qiai91 5784a23 1iykbn1 i1ed443 1o23nb90 aeqx929 1m112294 19ovml44 1rjldbt0 qsnowj6 1kdy8ns0 193pvdz3 14j90eu1 1bnxket4 10h10z70 1yzixj51 ucy0e37 lv5hyh0 1t2j5g43 8aks101 axdkde0 bq78914 87965r5 rsn0lw5 1vn6cjs1 1r6c0mi0 6pne1t4 si9bb21 1lert1y6 14u6spo1 kgfkrx5 4yna1pa libdam9 1ba5q1e0 1v24c8q4 1jqqwxu3 pwn7wi3 122027e0 15kadcf0 17odldo0 1u2gs9v0 1vgesqq0 16um94k4 miggmu0 1deyt443 oahnqw3 1qzf4hp3 3w9gf1a k08gjr5 1swg3m4 i6x4t24 silssc1 1hr8yny1 cbp2rm0 h8dd51 1mcd3o80 vj8ujh1 emtbf31 pxmaf11 1covh9ta s1mj5a3 1ce8eq00 13onotb8 sfszmy1 1wdsy0l0 5gz7r30 kn6zgd3 v5p06q7 rdyjc11 1uhav67 yc1d9u0 1a9fmzr3 1wzwk3v0 tjvxuua ybornk1 1h6wkzta 4fph057 tdr1to3 3ndrj73 vf4kmw4 orcnwf1 1cqv36n1 65pklr0 qsgfv30 94y5a10 11thx8l3 1dvnx6k6 93ck7j0 15nt5l21 1rpw8kp3 vi26g03 hpbuej3 2fmwjpa 1l0c8hc1 1wwa6mf1 1md6iyy1 2sh8qg1 1firpjk0 1iitq0c3 8tdcrh3 ivp6fb3 zej2w84 11lyuez4 1wrt1hw0 1dx33hw6 h0a9ey0 1jzqtc9a 1t2f6kw3 m2xv1u5 1ifqc49a 60joxw1 gpgpun0 tweabd0 r7oade3 1crdnbw7 spefy31 ymv35u9 3lrr9f0 14v6bwm9 s9km2l1 srgiey4 12co1u6 1c91nb21 raujuw0 d2usdl6 jjcwr0 teznta3 san36g4 wnpn0v4 16eoa4l9 zdqky71 lzu2l70 zqeo970 1jgrb8v3 1lq3tmma 1m1qssj0 17zpsqg4 qjmu3h1 c2jmaj1 14qtp24a 50u8wb0 9p38p45 11qklbh5 1kq9upx4 1ucsvr25 1hgce720 1yon9q57 16vte7k5 159e5gd4 1nexhbq4 vjozqu6 1arjera1 1xk6cbu0 1onaore1 17hh69e6 1qpae2d6 xh92d00 ermvyi3 1p3ryuu0 3vkp9r3 16bo1031 phexo21 5v4tiw0 7slyyd6 lcu1xw1 1qcuvlg0 hv93wd9 1xb9dw13 1nqlspz1 16eusqp4 1vh0hyd4 1y2y7jk1 1dwrcsr1 hm1m0h0 177mrvs5 126v1rz1 a49ojt1 1gm6x0l3 cj200w3 1witn323 1a3rexg1 n1jlz54 15tqg87b 10fwney1 cd7f391 1saazoq0 1yj9wpv0 tsw2ml1 p3rzgt3 fpp0p31 17pdfv74 qc7efb9 10nt40m4 1iu62ze1 70k9f5 19ew0w54 1ta80nb0 d0eswg0 zoyaabb 1mo13th1 1oj5ihx6 1p3t10k3 1j10nsba e0hb2u1 5qi9fx0 ybahrl1 2e2owm8 1quc6qq0 1mdjvay1 1x80jmw0 ighchh0 hoe3ed1 1b344t70 6ud7gc4 2cvnhk4 ehotem1 bvsf9v1 15lriod0 jf9pd3 37i8ff0 1xtmey9 hthe0k4 94j2qu4 1a7rt9s7 vrrvdw0 1h4akm60 1k1zsb41 1n9jtoq1 9wrbal7 rusolr1 1joespr4 mo6glz4 vhau160 9kb91l0 7ivfph0 1iip9bf0 hdvq220 1cpfgbd1 nwv9yi7 qcun6e0 1bclg8f0 ugd46t3 98h52h5 1qyet2i3 1esrss3a g6r8e13 lfpoca0 1mop71l1 20gijxb 9lrxg31 1owf0am1 yzlznca 1ns0nkd0 1ux9k7k0 19amv1h3 1tsh6kw0 s9dc911 6p062ba c0posa3 u5lpgt1 1i88klc1 1qdf82w1 1h0lnxa3 18j6wnz3 krzfc13 4uf36g3 1vo465t0 1pte7lu1 mx32jf4 1xi2mq93 q2wox07 51aj2d9 5745bg0 368zvl2 1e5jai44 s9odf2b 52bhkq4 l4guph1 1d35mxo0 1u28evc0 1nmps590 whlbde0 1tmrynd0 vlkue00 ohbnhy0 spld860 13mfprka 1i814ki0 n70t546 1iev0tl0 vky9420 1f291is1 c1dy9d0 sz2ly03 140xypl0 avt5918 wefh5g3 hs7hll6 1p5gidn7 t8ghsp0 1sfd3740 1er81ak9 1riq5hk0 25g5uv3 ib82z60 1t3uunw4 1y662e54 u17goeb qj1b5i0 1pc3jsza dfrozq0 t2eb850 180yoyk0 1t2dbk63 1hd1lor0 us5o309 dral1y4 1twhyj13 w5p5z40 1pn6ff0 ll77297 1b9mi1j1 1wgrsnt7 173xk7j0 jvt60fa 8thvtca 1i67gx6a 1rassi70 19gim3a0 vj62xv1 86a6u50 d66uj23 qguoqta r3nd7x9 5j306za jvtzkh1 1ixgxgr3 1nkp6a01 1k47g140 50xuu1b 1krza931 1p5rgdf7 1uuvih60 1o138pm5 1esrwl90 1uwflcs0 lvloxb4 cjmssz0 3bqcvk3 1bzq5hm0 4mucg24 1vqdj9m4 8wksck1 waw7lt6 iz6vw21 1ru0gwh1 m83rnn1 1mlbdsg0 w054347 6nn22x3 1j698dy0 1nwx5935 yizv926 v8905s5 1dguyyj3 16xqrps1 1jvx6x1 12qlvffb 4l1z2h0 1gr1f3t3 n6kzgb3 1fo4g1gb 1l1oevj0 1cal0cc0 1hovvw91 1ipjgve1 fn9mmb0 41e2mt9 16trk84 135977p5 1l5sjrm0 ctteze1 wanu7g1 u7sz7m0 91n09y9 cdz0maa 44ogysa jkex2b5 19m5xar5 owqqb61 1k0ijvg3 x5xxla i8rhtn1 1feqlcq0 p51iap3 11sdb0l0 tysml1 actq9g0 16rijen4 1ewfz7a4 e2qoie5 1x2lppt0 1widudc6 1umfznt0 1t4qr0u1 dwdr9s0 17fqlci4 r8japd1 1gf5kew4 fss91s4 1f8ci7q4 13097gv4 p3hm3h3 ix3ihx0 6jk02f7 1lonbwo3 199b4e40 1dtuouq1 bj377j1 ztmrc23 hjdxtl6 6hz0pk0 1rb0wo80 2wpbay0 1ileq9a0 u22lfe3 knersvb 40leux7 1w1p6fp0 1khbs9i1 1xms9l36 17wuo401 12b811s7 8hmufx0 5ef7eq0 1qihgg10 ilxav50 1i5o8dn0 mzuxld0 1dmqnko4 mgfd823 jhqpby1 5pxq1o1 1w38g393 1baykxw3 focvjy3 7c2rzy1 1bg3oa06 unqbkt3 1fgkp1v0 1t793yp5 8ugsgr0 1uctyzr3 nhghbf9 opgclda 820ktg6 k0uytw6 1lvtb1n1 14sewga1 9v5ucg7 4b3twy1 16pnxlj0 1qagxne4 1mj6g3r1 1nk912ca 1usqpfp3 157wibd5 13j9bx40 1ixwh720 1fnszzg0 2d7ako1 epym4ea 18oo1gu0 18pa75h1 1k1fxmaa c4yek80 e8bvbl0 1iwyq91 110i3lt4 hv0z8k0 1j4va651 ap4pcz5 1ygmyx44 oesfcr2 1v70w9e4 165t6nm4 ecjdv41 1dzkm2n0 1lwiroq7 1v1nqr33 1l19dg03 j69ngu5 1w79egga jfadnf1 1vylvge4 1naedha4 1akyp931 1mjj09n0 heffke3 smvib40 48n3wq1 p1qx4r1 1fbmssy5 173j46b4 106n4x83 1bxla6v1 z0cdh43 qubliy3 p4sn1ua 1yblqmm3 1qgb70j1 a5e9q83 7j0sx6a 8cg1ai0 e8h9131 unv5aa3 12ldppda mc1mv11 m7l2w10 1pzih60 v3kwt61 1kb93boa 1gearao9 7qh1ql0 19n3zoe5 1erpj0k4 hlz93l2 40y2g84 bv3s799 1enoi5f0 1crbg7w1 cyt6rf6 1v1s2ip4 1sb9osw0 om9ydx0 2ixpl4a cprizh4 1fg6ccg1 1aemw209 ax8n1ea huosk20 1fjdlxt0 wzst5k0 1vxbjyt0 1x1i9tm9 wmpb1o5 qaowo70 1sr8hc80 k1u47b1 1v8fyux7 16m9k3h1 11u4asv1 19jhdb31 wkmude4 n3ehnt0 srtqqk3 1v9glgy0 ld6fus0 1dji71q7 1myw94o0 hqbsr75 tpb4wa1 aifrew8 15n4tv4a 12limmub om5qa88 2q1qe50 p2wo9ya ruv0cb4 lwg5u43 m6frj33 1jkua0h5 1px6t010 y5xyyp1 15dexx31 1ezecxg4 1oepjkja 8f7kmt1 is14vw0 6bwt40 1xmlfz70 1g45l2ca muqzz42 1g3gicx4 1t5womfa 167g61k0 k8e3b3a uj0hwf0 1vn33mv0 1vi7pfr0 14x4qfwa 1aus08o0 17likfc1 1tcir533 1e1c93h3 1y4mo3p3 5liwqf0 sy82s90 d76spm4 g096us9 delsjv0 ex9ibe4 1go0qly0 mv7b8g0 1gdsk790 1h7v4kp6 hrex8f9 os50t91 1bp6wpe0 sk6ceb7 17sitk74 1l6xp6c0 1lltvoo0 tssojp1 1jkufha6 np8kz53 166r0l93 6rzl2o3 1luwcdp5 1vqeefp0 1m70g509 9cww2y3 16sbph50 1toza650 112sqjq7 13z5huza ml6v2b0 aadz7v0 aaj72j0 14q14ev1 6focbr1 1a4l6f40 1ga9a908 1l0n2mga 1m6h6323 g10w8t0 1pp38kv7 ulvyco4 10uw11ma 12gicm90 1s0mh0z0 gmpqym1 13v3agpa 1xrromx0 a4esro0 1e4u5wq0 1x53e9h0 1rs3kil3 1dbezm21 i1uo8o0 hesc824 e10jz53 w6mdy90 hhg7c66 1qcchce0 1qifav60 wq5cnl4 1x4sav94 mi3knv0 1dfcno69 vv1m181 y2qhy4 4g9sd1 1b4byrf1 7yd4ex1 1xg7e2c0 1nycjpq0 atq7bha 1008fml8 tysh1g0 dvok3z3 1h5jh1l4 1gvjvcm4 9d63wz1 58atf41 13zzgyg1 27isp0 1iwt9456 15bud7m0 ij1in9a 1s4j1b41 e9gqm3a nwvtd83 1dr25ala 12r75q13 bmm5sq0 1au8nlx0 1klwo843 xypbdsb 1rf23l3a 1ixldd81 1s7dmu0a 1te09jy3 14p9mq60 17iae7h3 t6pvzv3 1ayph4a1 fwwfve7 p43nvn7 1bt6i029 173x5384 1krqhr30 13glqn20 185r7kt0 1k7bjnm7 41v69w7 dq68l82 1qlmn2d4 1yci57wa dcmvhz0 u3qrwga ewsuyg0 rjzqyj0 2b87xb0 1bdaeij4 1gx8ybxa 8mnbo20 1gkn5yw0 kaw1yo7 j66tvu1 bt79by6 1bzej681 1ow0zw53 jtsswu1 3zmd8i5 jfk9e40 6ed2ve0 1vr03nc4 nurh3ua t7b9as3 oowxo93 53r52y7 15fexrt4 vwo6bb4 22w1sl4 1bsc6n29 14gylac3 z1tjgs1 udvjlb3 j0cl0w0 s618z64 ypfqdh8 114jbu79 1dxe5l33 1832cpg9 qdsw7b4 1iws3ux3 agqba0 njjfuo7 6owrseb w7f0f71 1k7up9p1 13tzfcb1 1n3lfkb1 k24r0a1 1ilvzm81 1u2g3a43 19y5ka20 mdonzd0 3ujjm33 o3d2ge1 p9b7t31 15obwu3 ae2qvf3 z0o3kq4 1caoch2a 9ml8vs9 1te64xm8 14rmgh00 b495qc0 1bfaxv55 11fx95u3 k6mimj1 se231w9 1vohke45 1tdugcv4 10h2rx6a 1obq4jg1 1tpfzdua fs96uf0 ld5wov0 1tkh9oh3 v7b5il0 5xjxmx1 bbskln1 1watog1 10q91jx1 11o5ppm4 12hwcl73 vu28p77 1b8et3x8 1uyp8e03 vwgpxg0 jfs0e00 hvz74u7 vgkuqqa 1fbnpgo4 z7rf0ob 2uk3waa vn0puo1 1orqln50 ur3wko1 1ky1pxa0 14c9lxo0 k9gurca 1vv6nt80 1894hb61 kq1kpn3 pn4q30a 1ljdoh60 pp3ksm1 1oyn5zh4 bjuccs0 e0rcci0 1vq97yd4 1jxpge11 em8047a 7t0isp0 v6brf7a 1on3gh51 1tsd20b3 iiicx43 1on187i5 1vy68tq1 w0pp3sb 1rh0pwm1 nqmfeg9 vod3vpa v0vtzp0 1julcff0 hfd5v10 1iezsd50 144k71b0 18jdmvj9 1n2nuglb x4a8uw1 oqlfom3 1usv4g60 1kww6r20 rbvyh61 1bmgx569 1aagabd3 ny67qc1 2xb1rpb c0c6qt3 1og0zpx0 2iqw296 x2lqifa dqsjdi4 q7apw50 49lyxh5 8q1lot4 1rhq8ar0 h08d015 1j6rpjw3 eweo2n4 8d4ifv1 r3rxsg4 1cqnq291 cd56oh0 1am6wu95 1bdgrc83 1ec56mt0 1f57d631 1y6kq4e0 3033f30 1q1gb2ib ockbtz8 1l6cv2r6 1tp7g3q1 574tbw5 195oe4c7 zhja7y8 ff7eri7 hejy9f5 x6qrs10 1gtkq8l0 1hm09em5 1330uod0 zb3vvyb 3dy9yj0 13at5j91 1215jt81 qsjy0c6 73t8hb5 1briiu19 1j6hc2c0 yag0p47 9xuf0i0 1hw4bsq0 163792u6 1vm35vx0 1b9jobn1 1acduxu6 1aigfba0 p7c76a0 3dtgrq7 199m8n11 iel0z55 1bp7fho0 qwbg4h0 eklluw1 t5nq490 1k187jb1 14z6s2cc fla4yv0 dwnwyj1 v475yh1 crp5v46 1lhco0d5 aj1id77 k3w0430 e3lrnk0 ubc8rs1 1lasgcm1 17ib1ys5 q19j00 u292el1 1fr9n155 1elv19t0 17ej8fg0 12fpl7n1 1szis3zb 6nj99f0 1cez4xt1 1mzq6055 1bp68qe1 f32e4g5 h8kpnl1 11ketif1 lbnqvy1 sa6a2a1 rnqei61 1z111sr6 1s5rvl60 a6h9lg0 1qdcmcr1 i5py3h1 333zr91 1vpncrg8 3x7rrf5 1fhd0cc6 kgerv11 15sox4n1 1g5uy9e1 8c3skc0 ihgitc1 12p37tk1 fz1ddt5 mvpr4j5 1lfbxdg0 3a85jp6 qvfsai1 157b53v7 bdah730 8txi0a1 dlzy0j1 wsemawb ura6f65 axr6uu1 af2uer6 3l0ntg7 1umq435 ewh8lp0 1enzj3e6 9nmiik8 z5lo1g0 1tx1yve7 ifsrcd0 1r2c9js0 18io4xm7 zy2mhs0 1ysa8is0 1be077y0 iv5iig0 1i418z1 tf65jr1 ihaxjz7 1nqax005 1u1mrsj0 89br1r6 1j8f76o7 1ls1woa5 1s73sad0 19irb3w1 pf9hac8 1cldeft1 toje420 xnlhuk5 4ftd228 x0u5247 rnrufd1 ehr6gq0 1mlvyb31 10vlf0g9 1ylpnqu0 1lvh92l8 10ohljp5 19eub170 1fv77me7 od2vvx0 1kywtxu1 10npily5 1w7tab10 1gudeen1 1i5yz465 fxp5wm0 182v6ad1 2e5wmz0 1ky4m6y1 1cq6xc01 12f7tik1 1u1zn9w9 quf1eg0 1rt9wtg0 1ow7mym0 1mxb16z1 11teuof7 fm0kc09 1ecklzb0 90wvhm0 1ya5j9p0 65mptjb 14382w48 4spl3ob 1qztlu81 1w608y6 qitl957 1txgd6i9 12ibsu01 3w02pw1 vx2azd1 123p6qn1 1rzqj2k9 niqj0q0 vx0khi6 fhls889 15xp72g1 5zy7da1 9vhtvz7 1k37zqv1 1qkx53k0 10uj4z40 jv5hru0 bj2ti87 rhxh5s9 1z0tiwk1 bmw5vf0 12qlcdd0 6th3t90 btf4741 qjg9l50 tv9owi0 h4afsw0 17pl36w0 1sl7d5u1 16e15461 15phhpn1 3i3s4s0 bky7md0 1h3uhbt1 7oowwo0 txmx7o0 n64i90 192faoe1 15aegzh1 om5hj00 15uk4vw0 1e5vdg51 1broon71 14gxizk0 19f5zks0 1ccuqo61 k891jh0 dlm07s1 1sxh4v40 jn4t1 oyzr150 ao7dvn0 j1bdie1 mjr9w10 14hptas1 1y1tnb1 o3kt6i1 3x6njy1 ovoe911 j105jp1 qobjyn1 9xo6401 ubyiss0 1fqz0qd0 vmjl5q1 1bqln3a0 kk05c21 19cmxdl0 rwk0vn1 17uq3471 oy33fl1 z7zcn81 14cgbhf0 8vg9f90 12qjsi81 1qbwdqt1 1f394ch0 ol95rm1 fm2lz81 1q6giu10 j9v8s51 1hl778p0 129rgz90 1ldnke01 iz2gp30 dkuhjo0 p1w3300 1l0s54x0 1j09o3z1 17m66jp1 17bqwgq0 ep2t881 1dw3xh51 1et83m31 1828j8e1 1hkify41 7zn9f90 181bunw0 v68gaz0 g042qw0 zgps740 1eyz5wp1 1u10w181 1xcmh8x0 1apzxth0 d1jqb80 877xkv0 1qni3cj1 kie7eo0 9ymqhn1 7966io0 1ddd6at1 abxirj1 b9deh71 1dxk0an1 q56y371 1oj6b090 18pcz4z1 a39gpu0 ynf5vr0 bur22d1 fra8zv1 1xzm05j1 1qjbdlj1 z0y6gc0 ru05t39 1gsyuhs9 ntf3i80 6ffsac0 11dbnj70 hmc2v80 y2bju10 rfdeeg0 11ydzdn0 r07xkt0 1krpd1s0 1p5jyzi0 4riypw0 1u99d2p0 hjqyfr6 wlbvob6 1tlwplo6 1fvatwp6 11tdbim9 edqf552 v7qdb42 1ibdkt82 ieuwim2 3372mi2 1ufwp312 y4gmk32 jqstf02 1ie49um2 111sbe72 102a58j2 a97gnx2 1yk06pq2 5naahm2 w8b7c02 g9ifpp2 1ckewyw2 1t5f0dm2 5klphi2 1rexpie2 ekurbb2 1d6swor2 4rvxuv2 18xlf9h2 fe6cbn2 nm35eh2 rpepjx2 1ssdjqs2 v1nqke2 lvyboa2 1rycds52 e7vjkg2 1cdbx9c2 1e51obs2 3inti32 1211vgq2 nu2kmh2 1kzdgsc2 17zrll22 cnfiiv2 wu8jra2 1lafi4y2 13i18tl2 39kjq02 145m8i2 13a2wxp2 173j15k2 1cs3dw12 eek21k2 6zbsk42 1v8g32p2 1i5u7sj2 b2tcdu2 1klwvt92 1srx6m62 eqrrw22 19db56f2 1005a6s2 kln2rg2 twa5382 74rdk2 1jya0ut2 tcpmea2 1p6hglf2 tdxiwd2 130ckfn2 18ka34x2 1bmsf8a2 1xbx4lv2 18kq9gq2 w4iswm2 w0aoxi2 1o9sdpg2 1gx19432 1pfpnxo2 1wp7okr2 cboc012 11nz4q92 cctt712 164ztqa2 6uyt982 1oza1ol2 ui6sh62 1f1aowf2 ntnmgd2 61c3hu2 ed9mst2 14rgtls2 79aq0y2 kr9usb2 1o3ctyk2 1bc7xut2 1b0unsq2 1dt1rl82 1ng7qfg2 114lp2o2 1k50w1w2 7vp0r52 8zu6ry2 h4jlpd2 dz30qr2 1ejh75x2 1ptqv1k2 1b2epcx2 1278mic2 13d23rz2 1ms4w0g2 14a5eyt2 1gnt80q2 r56dhq2 16nog3r2 1oxssmt2 17orgyh2 8gg9br2 1ggnk2v2 13x9syy2 a2winn2 rsbrcw2 1qwpncx2 1mvqmul2 1o63cqm2 ztlnkc2 1cfei212 1ggneio2 q5oqw52 olsp802 1bi1go52 12keznm2 17rgh1n2 t1n0mm2 8n8avc2 1qox4qw2 15byxh32 1d6t8yn2 1n6khdc2 10dut642 18l52go2 1jp1o0m2 bznmpa2 hscvau2 4kook22 1ffk742 1lxxbb42 myajr32 10yonk52 1w8ebre2 1n5r4602 3y0yh02 1ru1zvu2 1rk2e6v2 10gdfe2 pv3ph72 ehve6q2 e6o7ml2 150lp8f2 1wvnzt2 psq6vu2 1vscox42 1rl0wuf2 1bnes9b2 1g394rn2 1bnu0kw2 1u8a5282 1wj4j422 11q3gj92 1lw6lhx2 17k89ez2 vgye192 1y8xdi12 49vuyd2 1d8eke72 10qstgz2 tq20jr2 18o5wwy2 16m1vb92 o8bet2 1r0yu682 17wa3iz2 f8io2g2 bcziqj2 b8vlbr2 fzbwc82 1608tmw2 10jkfqi2 15askuw2 175ftmd2 17f2tnk2 1wdx1ed2 lzlv402 5si15e2 1bel58j2 1ntmrkx2 1htio4x2 1uz61vg2 rkqrlb2 1wupzau2 nor6222 s7fbf42 19igk1m2 12xhhz62 1qn5fr72 1yewytu2 1nwf1kr2 13i9ms82 s8wz12 3t2q082 k04qlx2 11hi43o2 326wyy4 qbhlwa4 9jxph04 1575pmc4 1dyua624 1mlalp64 1o3eerp4 1uamxyf4 17xbv9t4 ord6o74 q2a8364 1oz738n4 yec3r4 1rklowh4 l9s9ag4 kjp2544 1v51hib4 bz4ypy4 11polaw4 1kwp2wa4 jk5rua4 1oxdkjd4 dgwmeg2 1mdwl592 1lm52257 1gc1my87 bjwlq07 1fkdgxz7 1r8ruby0 p771fe0 143k1et9 13ecp6m9 hsbizr9 1u89u164 pzyiaj4 kqce2j4'.split(' ').map((x) => [x.slice(0, -1), CAT_KEYS[parseInt(x.slice(-1), 36)]]));
-const catTitleKey = (t) => String(t || '').toLowerCase().replace(/[\s'’‘`ʻʼ]/g, '');
-const catHash = (t) => { let h = 0x811c9dc5; for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193); } return (h >>> 0).toString(36); };
-/** The category of a book of the school's list, from its title; '' when the title is not on the list. */
-const catGuess = (b) => (b ? CAT_MAP.get(catHash(catTitleKey(b.enTitle))) || CAT_MAP.get(catHash(catTitleKey(b.uzTitle))) || '' : '');
-/** A book that arrives without a category gets the one of the list (a category set at the desk is never changed). */
-function fillCat(b) { if (b && (typeof b.cat !== 'string' || !CAT_KEYS.includes(b.cat))) { const c = catGuess(b); if (c) b.cat = c; } return b; }
-// Each student of the school's house lists, as a fingerprint of the name and the number of the house. A server part made
-// before the houses (no houseSeed in the data) sends people without one; with this they are still put into their house.
-const HOUSE_KEYS = ["Abdurauf Fitrat","Abdulla Qodiriy","Mahmudxo‘ja Behbudiy","Cho‘lpon"];
-const HOUSE_MAP = new Map('1mxqkg70 5wv3o10 1o470rz0 fnbdbd0 19hllmr0 1wz2hg70 m1diel0 ehrrqe0 i8147b0 7v02mb0 1cnxi570 43vyhb0 105ehvd0 16bgx1q0 1pmcsji0 1yww9zd0 1naslvc0 1ohgke30 pq0owd0 cqybx20 iyxsqw0 1um7l40 1hsas180 1jr7w080 6ccj9z0 l65qre0 vopu5m0 1xk0hph0 1rlbtqu0 zgdbik0 17a14qn0 iib9u30 1wupqjf0 15evv690 1ttmmwq0 1cwnuad0 162e6tu0 18cx2l40 7jz5j0 x7erd00 1j4wlh10 j6tkz80 1d8d9s01 chuen01 1svarp21 1gpm8yj1 kaj95u1 1xksidz1 remwqg1 7l1id41 5bczdn1 165rwjc1 1qhbqut1 jcfey21 yj8ru1 ogn5x61 hc4dxy1 11xxq2n1 ne2j4p1 wdbfke1 15b0hvg1 4003hb1 12qxot01 1gj2vif1 hy8sct1 1jpn2gz1 6ixkvo1 x62lzw1 ytvj601 14w25wv1 1mp3rl1 2qfcr51 1ltfo811 bohvx41 1dlpbcx1 1lygiso1 1nyjmkf1 1ka36fj1 1y0xyt31 6b0g4t1 121mk211 1gjodir1 vxk9wv1 npkvdm1 wd89fe2 y9o5p52 13tzicq2 16dvx152 w3mo322 1wfvbmq2 1ttxyip2 1ckid982 wra3jn2 16nzqew2 1vhtncy2 1yh63za2 cx5ds82 189a8d02 19p0s1t2 xwhre92 1xs9ey12 3vx3o92 1lbbxng2 wce4vs2 1k8act32 1nwp1s42 1nu5o052 poit8y2 1pfj8ry2 1r2pz6c2 1blmck62 fjsjfs2 djuqqg2 16s903p2 1pxm6hb2 20ize42 14e8l8n2 14puxke2 lcucvx2 t784tt2 uo65kc2 1gdczew2 9qi62r2 1vdscae2 13tjl672 xjeaxs3 1rys7413 1npddd73 i70emt3 18n2g9g3 1sw0dby3 1hcvu6t3 aqw1y63 c2go3g3 1ygv2ga3 puy1va3 1wwauiu3 1m7ibi53 24vbt13 1gvtj8j3 5aujju3 10s1rzv3 1h72kmh3 lzpfrl3 jamlgi3 f8xl0j3 1g9o88q3 1tsvvum3 9lknfq3 1qay56d3 12qc1713 inhzqr3 1yo6mtq3 1jrhzx33 2qooik3 qsq5o63 1vfnaez3 1ul68zo3 19ib0p43 1ab7y103 tp088a3 a6ahuo3 1pvehmx3 1fptapg3 1pv96cv3 zwfrb63 1l8vmy53'.split(' ').filter(Boolean).map((x) => [x.slice(0, -1), HOUSE_KEYS[Number(x.slice(-1))]]));
-const houseGuess = (p) => (p && p.kind === 'student' ? HOUSE_MAP.get(catHash(catTitleKey(p.enName))) || HOUSE_MAP.get(catHash(catTitleKey(p.uzName))) || '' : '');
-/*</catmap>*/
-// ---- ISBN: the number of an edition, printed on the back of a book. Two books with the same title but a different ISBN are
-// different editions and are kept apart. The number written on each copy still tells the copies themselves apart.
-/** An ISBN as typed or scanned, as its 13 digits; '' when it is not a valid ISBN. Hyphens and spaces do not matter, and an
-    ISBN-10 is turned into the ISBN-13 of the same book. */
-function isbn13(s) {
-  const x = String(s || '').toUpperCase().replace(/[^0-9X]/g, '');
-  const check13 = (d12) => { let n = 0; for (let i = 0; i < 12; i++) n += Number(d12[i]) * (i % 2 ? 3 : 1); return String((10 - (n % 10)) % 10); };
-  if (/^97[89]\d{10}$/.test(x)) return check13(x) === x[12] ? x : '';
-  if (/^\d{9}[\dX]$/.test(x)) {
-    let n = 0; for (let i = 0; i < 10; i++) n += (x[i] === 'X' ? 10 : Number(x[i])) * (10 - i);
-    if (n % 11) return '';
-    const d12 = '978' + x.slice(0, 9); return d12 + check13(d12);
-  }
-  return '';
-}
-/** The first ISBN-13 written inside a text, such as a title that begins with its ISBN. */
-function isbnInText(s) {
-  for (const run of String(s || '').match(/97[89][\d\- ]{10,20}/g) || []) { const k = isbn13(run.replace(/\D/g, '').slice(0, 13)); if (k) return k; }
-  return '';
-}
-/** A book with no ISBN whose title carries one gets it. */
-function fillIsbn(b) { if (b && !b.isbn) { const k = isbnInText(b.enTitle); if (k) b.isbn = k; } return b; }
-const isbnOf = (b) => (b ? isbn13(b.isbn) : '');
-/** What was typed, as far as an ISBN goes: a whole valid ISBN, or at least 4 digits that are part of one. */
-function isbnHit(b, q) {
-  const k = isbnOf(b); if (!k) return false;
-  const whole = isbn13(q); if (whole) return whole === k;
-  const digits = String(q || '').replace(/[\s\-]/g, '');
-  return /^\d{4,}$/.test(digits) && k.includes(digits);
-}
 /*<seedcode>*/
 const SEED = 1;   // raise it when CATALOG grows: a library saved before that gets the new titles and copies added
 /** Adds every title and copy of CATALOG that the library does not have yet. Nothing is changed or taken away, so running it again is harmless. */
@@ -3724,9 +3435,9 @@ function mergeCatalog(d) {
   const books = d.books.slice(), copies = d.copies.slice(), byTitle = new Map(), taken = new Set(copies.map((c) => numberKey(c.barcode)));
   books.forEach((b) => [b.enTitle, b.uzTitle].forEach((x) => { const k = titleKey(x); if (k && !byTitle.has(k)) byTitle.set(k, b); }));
   let bookId = books.reduce((n, b) => Math.max(n, b.id), 0), copyId = copies.reduce((n, c) => Math.max(n, c.id), 0);
-  CATALOG.forEach(([title, rows, cat]) => {
+  CATALOG.forEach(([title, rows]) => {
     let b = byTitle.get(titleKey(title));
-    if (!b) { b = { id: ++bookId, isbn: null, enTitle: title, enAuthor: '', uzTitle: title, uzAuthor: '', ...(cat ? { cat } : {}) }; books.push(b); byTitle.set(titleKey(title), b); }
+    if (!b) { b = { id: ++bookId, isbn: null, enTitle: title, enAuthor: '', uzTitle: title, uzAuthor: '' }; books.push(b); byTitle.set(titleKey(title), b); }
     rows.forEach(([row, n]) => {
       for (let i = 1; i <= n; i++) {
         const barcode = `K${row}-${String(i).padStart(2, '0')}`, k = numberKey(barcode);
@@ -3735,15 +3446,6 @@ function mergeCatalog(d) {
     });
   });
   return { ...d, books, copies, seed: SEED };
-}
-const CAT_SEED = 1;   // raise it when the categories in CATALOG are revised: titles without a category then get theirs
-/** Gives every title of the school's list its category, once. A category the librarian set or changed stays. */
-function seedCats(d) {
-  if ((d.catSeed || 0) >= CAT_SEED || !CATALOG.length) return d;
-  const key = (s) => String(s || '').toLowerCase().replace(/[\s'’‘`ʻʼ]/g, ''), of = new Map();
-  CATALOG.forEach(([title, , cat]) => { if (cat && !of.has(key(title))) of.set(key(title), cat); });
-  const books = d.books.map((b) => (b.cat ? b : (() => { const c = of.get(key(b.enTitle)) || of.get(key(b.uzTitle)); return c ? { ...b, cat: c } : b; })()));
-  return { ...d, books, catSeed: CAT_SEED };
 }
 const HOUSE_SEED = 1;   // raise it when the school sends a new list of houses: every listed student is then put into their house again
 /** Puts the students on the school's house lists (ROSTER.houses) into their houses, once. What the librarian changes afterwards stays. */
@@ -4064,8 +3766,6 @@ let seenHolds = null;   // reservations the desk has already been told about (se
 let seed = 0;   // which CATALOG the library already contains (see mergeCatalog)
 let pinSeed = 0;   // set by the server once the codes from the paper slips are in the library; only carried along here
 let houseSeed = 0;   // which list of houses the people already carry (see seedHouses)
-let catSeed = 0;   // whether the books already carry the categories of the school's list (see seedCats)
-let classTotals = null;   // the same for the classes
 let houseTotals = null;   // readers' pages: how many students each house has, as told by the server (the page itself only knows the readers who borrowed)
 
 /** The number on a book, compared loosely: capitals, spaces, dashes, dots, slashes and № or # never matter,
@@ -4113,44 +3813,6 @@ document.addEventListener('error', (e) => {   // a picture that does not load gi
 }, true);
 const coverClass = (b) => `c${((b.id || 0) % 6) + 1}`;
 const miniCover = (b, big) => `<span class="mini-cover ${coverClass(b)}${big ? ' lg' : ''}" aria-hidden="true"></span>`;
-const bookByIsbn = (k) => (k ? books.find((b) => isbnOf(b) === k) || null : null);
-const isbnDot = (b) => (isbnOf(b) ? `<span class="mono">ISBN ${esc(isbnOf(b))}</span> · ` : '');
-/** Where a typed-in book belongs: the title with this ISBN; else a title of the same name that has no ISBN yet (it takes this
-    one); else nowhere: a new title, which with a different ISBN is a different edition of a book already in the list. */
-function bookHome(title, isbn) {
-  if (isbn) { const same = bookByIsbn(isbn); if (same) return same; }
-  const named = books.filter((b) => norm(b.enTitle) === norm(title) || norm(b.uzTitle) === norm(title));
-  return isbn ? named.find((b) => !isbnOf(b)) || null : named[0] || null;
-}
-/** The title and author of an ISBN from Open Library, then Google Books. Nothing is waited on for more than a few seconds,
-    and nothing breaks without the internet: the librarian simply types the title. */
-async function isbnLookup(k) {
-  const get = async (url) => {
-    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 6000);
-    try { const r = await fetch(url, { signal: ctl.signal }); return r.ok ? await r.json() : null; } catch (_) { return null; } finally { clearTimeout(timer); }
-  };
-  const ol = await get(`https://openlibrary.org/api/books?bibkeys=ISBN:${k}&format=json&jscmd=data`), o = ol && ol[`ISBN:${k}`];
-  if (o && o.title) return { title: [o.title, o.subtitle].filter(Boolean).join(': '), author: (o.authors || []).map((a) => a && a.name).filter(Boolean).slice(0, 3).join(', ') };
-  const gb = await get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${k}`), v = gb && gb.items && gb.items[0] && gb.items[0].volumeInfo;
-  if (v && v.title) return { title: [v.title, v.subtitle].filter(Boolean).join(': '), author: (v.authors || []).slice(0, 3).join(', ') };
-  return null;
-}
-/** Fill the title (and author) of a form from an ISBN: from the list when the ISBN is already there, else from the internet. */
-async function isbnFill(isbnEl, titleEl, authorEl, msgEl) {
-  const k = isbn13(isbnEl.value), say = (text, kind) => { msgEl.textContent = text; msgEl.dataset.kind = kind || 'info'; };
-  if (!isbnEl.value.trim()) return;
-  if (!k) return say(t('This ISBN is not right. Check the digits.'), 'error');
-  const known = bookByIsbn(k);
-  if (known) { if (!titleEl.value.trim()) titleEl.value = known.enTitle; if (authorEl && !authorEl.value.trim()) authorEl.value = known.enAuthor || ''; return say(t('This ISBN is already in the list: “{title}”.', { title: known.title })); }
-  if (titleEl.value.trim() && (!authorEl || authorEl.value.trim())) return say('');
-  say(t('Looking the ISBN up…'));
-  const hit = await isbnLookup(k);
-  if (isbn13(isbnEl.value) !== k) return;   // the ISBN was changed meanwhile
-  if (!hit) return say(t('Not found online. Type the title yourself.'));
-  if (!titleEl.value.trim()) titleEl.value = hit.title;
-  if (authorEl && !authorEl.value.trim() && hit.author) authorEl.value = hit.author;
-  say(t('Found online: “{title}”. Check it before saving.', { title: hit.title }));
-}
 const shelfDot = (c) => (c.shelf ? ` · ${t('Shelf {s}', { s: esc(c.shelf) })}` : '');
 const authorDot = (b) => (b.author ? `${esc(b.author)} · ` : '');
 const autoNumber = () => { let n = copies.length + 1; while (copyByBarcode(`N${n}`)) n++; return `N${n}`; };
@@ -4158,8 +3820,6 @@ const autoNumber = () => { let n = copies.length + 1; while (copyByBarcode(`N${n
 function registerCopy(c) {
   if (!c.isNew) return c;
   if (c.draftBook) { c.draftBook.id = books.reduce((n, b) => Math.max(n, b.id), 0) + 1; c.draftBook.addedOn = today(); books.push(c.draftBook); c.bookId = c.draftBook.id; }
-  if (c.setIsbn) { const b = bookById(c.bookId); if (b && !isbnOf(b)) b.isbn = c.setIsbn; }   // a title without an ISBN takes the one typed for its new copy
-  delete c.setIsbn;
   c.id = copies.reduce((n, x) => Math.max(n, x.id), 0) + 1;
   if (!c.barcode) c.barcode = autoNumber();   // no number given: the desk hands one out
   delete c.isNew; delete c.draftBook; copies.push(c);
@@ -4173,16 +3833,15 @@ const studentByNo = (no) => students.find((s) => s.no === no);
 // On its own, this page keeps the library in this browser. Deployed together with its server part (the site/ folder),
 // it keeps the library on the server instead, so every device sees the same books, people and loans.
 const STORE_KEY = 'circulation-desk-v5';
-const API = (document.querySelector('meta[name="library-api"]') || {}).content || '';
-const SERVER_WANTS = 10;   // the server part this page was made with (its SERVER_VER); an older one lacks parts of what the page shows   // set only in the hosted build
-const snapshot = () => ({ people: students, books, copies, loans, reservations, requests, assignments, likes, log: activity, nextLoanId, seed, pinSeed, houseSeed, catSeed, picRev });
+const API = (document.querySelector('meta[name="library-api"]') || {}).content || '';   // set only in the hosted build
+const snapshot = () => ({ people: students, books, copies, loans, reservations, requests, assignments, likes, log: activity, nextLoanId, seed, pinSeed, houseSeed, picRev });
 /** The lists a backup file or a saved copy may carry, old files included (they simply have fewer). */
-const pickData = (d) => ({ people: d.people, books: d.books, copies: d.copies, loans: d.loans, reservations: d.reservations, requests: d.requests, assignments: d.assignments, likes: d.likes, log: d.log, nextLoanId: d.nextLoanId, seed: d.seed, pinSeed: d.pinSeed, houseSeed: d.houseSeed, catSeed: d.catSeed, picRev: d.picRev });
+const pickData = (d) => ({ people: d.people, books: d.books, copies: d.copies, loans: d.loans, reservations: d.reservations, requests: d.requests, assignments: d.assignments, likes: d.likes, log: d.log, nextLoanId: d.nextLoanId, seed: d.seed, pinSeed: d.pinSeed, houseSeed: d.houseSeed, picRev: d.picRev });
 const refill = (list, items) => { const next = items.slice(); list.length = 0; for (let i = 0; i < next.length; i++) list.push(next[i]); };
 const validData = (d) => !!d && [d.people, d.books, d.copies, d.loans, d.reservations].every(Array.isArray);
 function applyData(d) {
   refill(students, d.people.map(makePerson));
-  refill(books, d.books.map((b) => makeBook(fillIsbn(fillCat(b)))));   // a book without a category gets the one of the school's list
+  refill(books, d.books.map(makeBook));
   d.loans.forEach((l) => { l.issuedAt = new Date(l.issuedAt); l.returnedAt = l.returnedAt ? new Date(l.returnedAt) : null; });
   refill(copies, d.copies);
   refill(loans, d.loans);
@@ -4193,11 +3852,9 @@ function applyData(d) {
   refill(activity, Array.isArray(d.log) ? d.log : []);
   reservations.forEach((r, i) => { if (r.id === undefined || r.id === null) r.id = `o${i + 1}`; });
   nextLoanId = d.nextLoanId || loans.reduce((n, l) => Math.max(n, l.id), 0) + 1;
-  seed = d.seed || 0; pinSeed = d.pinSeed || 0; houseSeed = d.houseSeed || 0; catSeed = d.catSeed || 0; picRev = Number(d.picRev) || 0;
+  seed = d.seed || 0; pinSeed = d.pinSeed || 0; houseSeed = d.houseSeed || 0; picRev = Number(d.picRev) || 0;
   if (API && me && me.token && picRev !== picsRev) setTimeout(pullPics, 0);   // someone changed a picture: ask which ones there are now
   if ('houses' in d) houseTotals = d.houses && typeof d.houses === 'object' && !Array.isArray(d.houses) ? d.houses : null;
-  if ('classes' in d) classTotals = d.classes && typeof d.classes === 'object' && !Array.isArray(d.classes) ? d.classes : null;
-  if (!d.houseSeed) students.forEach((p) => { if (p.kind === 'student' && !p.house) { const h = houseGuess(p); if (h) p.house = h; } });   // a server part made before the houses
   dataGen++; touch();
   holdSweep(snapshot(), today());   // reservations nobody collected in time have lapsed
   actSweep(snapshot(), today());
@@ -4223,7 +3880,6 @@ function load() {
 load();
 if (!API && seed < SEED) applyData(mergeCatalog(snapshot()));   // on its own, the page brings the school's books with it
 if (!API && houseSeed < HOUSE_SEED) applyData(seedHouses(snapshot()));   // and puts the students into their houses
-if (!API && catSeed < CAT_SEED) applyData(seedCats(snapshot()));   // and the books into their categories
 if (!API && ensurePins()) save();
 
 // ---------------------------------------------------------------- shared library (hosted build)
@@ -4287,7 +3943,7 @@ async function api(method, path, body, signed) {
 /** Show a copy of the library that came from the server. Full copies are for the desk; public ones leave private details out. */
 function takeLibrary(d, full) {
   remote.on = true; remote.missing = false; remote.failed = false; remote.seq++; remote.pulledAt = Date.now();
-  remote.rev = d.rev || 0; remote.empty = !d.data; remote.view = full ? 'full' : 'public'; remote.ver = Number(d.ver) || 0;
+  remote.rev = d.rev || 0; remote.empty = !d.data; remote.view = full ? 'full' : 'public';
   if (!full && d.data) { try { localStorage.setItem(CACHE_KEY, JSON.stringify({ rev: remote.rev, data: d.data })); } catch (_) { /* no copy kept */ } }
   applyData(validData(d.data) ? d.data : { people: [], books: [], copies: [], loans: [], reservations: [], nextLoanId: 1, seed: 0 });
 }
@@ -4307,7 +3963,7 @@ async function pullRemote(full, background) {
   return changed;
 }
 /** Nothing half-done at the desk: safe to swap in a newer copy of the library. */
-const deskIdle = () => !co.student && !co.copy && !co.adding && !rt.loan && !ln.open && ab.form.hidden && ap.form.hidden && !document.querySelector('dialog[open]') && !document.querySelector('.tick:checked') && !document.querySelector('[data-armed]') && pinEdit === null && personEdit === null && titleEdit === null && copyEdit === null
+const deskIdle = () => !co.student && !co.copy && !co.adding && !rt.loan && !ln.open && ab.form.hidden && ap.form.hidden && !document.querySelector('dialog[open]') && !document.querySelector('.tick:checked') && !document.querySelector('[data-armed]') && pinEdit === null && personEdit === null && titleEdit === null
   && !(document.activeElement && /^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) && !['radio', 'checkbox'].includes(document.activeElement.type) && document.activeElement.value);
 async function refreshRemote() {
   if (!API || remote.missing || remote.busy || remote.dirty || document.hidden) return;
@@ -4379,7 +4035,6 @@ function paintShared() {
     sync.textContent = state === 'bad' ? t('Not saved yet. Trying again…') : state === 'busy' ? t('Saving…') : t('Saved for everyone');
   }
   $('#desk-notice').hidden = !(API && desk && remote.on && remote.empty && remote.view === 'full');
-  $('#server-notice').hidden = !(API && desk && remote.on && (remote.ver || 0) < SERVER_WANTS);
   $('#net-notice').hidden = !(API && !desk && remote.failed && !remote.on && !remote.cached);
   $('#reset-data').hidden = !!API;
   $('#data-hint').textContent = API
@@ -4556,29 +4211,14 @@ function houseRanking(since) {
   rows.forEach((r, i) => { r.rank = i && rows[i - 1].points === r.points ? rows[i - 1].rank : i + 1; });
   return rows;
 }
-const SCHOOL_CLASSES = ['5', '6', '7', '8', '9', '10', '11'];
-/** The classes there are: 5 to 11 always, and any other the list has. */
-const rankClasses = () => [...new Set([...SCHOOL_CLASSES, ...students.filter((p) => p.kind === 'student' && p.cls).map((p) => p.cls), ...Object.keys(classTotals || {})])].sort(classSort);
-/** How many students each class has. The desk counts its own list; a reader's page is told by the server. */
-function classSizes() {
-  if (API && classTotals && remote.view !== 'full') return classTotals;
-  const sizes = {};
-  students.forEach((p) => { if (p.kind === 'student' && p.cls && p.active !== false) sizes[p.cls] = (sizes[p.cls] || 0) + 1; });
-  return sizes;
-}
 function classRanking(since) {
-  const by = new Map(), sizes = classSizes();
-  const blank = (cls) => ({ cls, name: cls, finished: 0, onTime: 0, points: 0, readers: 0, members: sizes[cls] || 0 });
-  rankClasses().forEach((c) => by.set(c, blank(c)));   // every class is on the board, even before anyone in it has read
+  const by = new Map();
   students.filter((p) => p.kind === 'student' && p.cls).forEach((p) => {
-    const sc = readingScore(p, since), row = by.get(p.cls) || blank(p.cls);
+    const sc = readingScore(p, since), row = by.get(p.cls) || { cls: p.cls, name: p.cls, finished: 0, onTime: 0, points: 0, readers: 0 };
     row.finished += sc.finished; row.onTime += sc.onTime; row.points += sc.points; if (sc.finished) row.readers++;
     by.set(p.cls, row);
   });
-  const rows = [...by.values()];
-  rows.sort((x, y) => y.points - x.points || y.finished - x.finished || classSort(x.cls, y.cls));
-  rows.forEach((r, i) => { r.rank = i && rows[i - 1].points === r.points ? rows[i - 1].rank : i + 1; });
-  return rows;
+  return withRanks([...by.values()].filter((r) => r.finished > 0));
 }
 
 function lateness(l, at = new Date()) {
@@ -4711,11 +4351,7 @@ const exactStudent = (q) => {
   return s ? studentItem(s) : null;
 };
 
-const copyItem = (c) => { const b = bookById(c.bookId); return { value: c, label: c.barcode, html: `<strong>${esc(b.title)}</strong> <span class="mono">${esc(c.barcode)}</span>`, sub: `${isbnOf(b) ? `ISBN <span class="mono">${isbnOf(b)}</span> · ` : ''}${c.shelf ? t('Shelf {s}', { s: esc(c.shelf) }) + ' · ' : ''}${COND[c.condition]} · ${t('on shelf')}` }; };
-/** The words that tell one copy apart: its number and the ISBN of its edition. */
-const copyWords = (c, b) => [c ? t('copy {n}', { n: c.barcode }) : '', isbnOf(b) ? `ISBN ${isbnOf(b)}` : ''].filter(Boolean).join(', ');
-/** The toast or notice for a book set aside for a reader, with the copy kept for them. */
-const readyLine = (r, b, title, html) => { const w = copyWords(r.copyId ? copyById(r.copyId) : null, b); return w ? t('“{title}” ({details}) is set aside for you. Collect it at the library by {date}.', { title, details: html ? esc(w) : w, date: fmtDate(r.holdExpiresOn) }) : t('“{title}” is set aside for you. Collect it at the library by {date}.', { title, date: fmtDate(r.holdExpiresOn) }); };
+const copyItem = (c) => { const b = bookById(c.bookId); return { value: c, label: c.barcode, html: `<strong>${esc(b.title)}</strong> <span class="mono">${esc(c.barcode)}</span>`, sub: `${c.shelf ? t('Shelf {s}', { s: esc(c.shelf) }) + ' · ' : ''}${COND[c.condition]} · ${t('on shelf')}` }; };
 /** A typed number finds that very copy. A typed title gives one line per book, with the next free copy of it already chosen. */
 const searchCopies = (q) => {
   const code = codeKey(q), x = ix(), out = [], used = new Set();
@@ -4724,21 +4360,11 @@ const searchCopies = (q) => {
     x.code.forEach((c, key) => { if (c.status === 'AVAILABLE' && key.includes(code)) hits.push([key === code ? 0 : key.startsWith(code) ? 1 : 2, c]); });
     hits.sort((a, b) => a[0] - b[0]).slice(0, 5).forEach(([, c]) => { used.add(c); out.push(copyItem(c)); });
   }
-  const isbn = isbn13(q);
-  if (isbn) {   // a scanned or typed ISBN: every copy of that edition on the shelf, so the one in hand can be picked by its number
-    const b = bookByIsbn(isbn); if (!b) return out;
-    const a = titleAvailability(b), mine = co.student && !co.student.isNew ? reservations.find((r) => r.bookId === b.id && r.studentId === co.student.id && r.status === 'READY') : null;
-    const aside = mine ? copyById(mine.copyId) : null;
-    if (aside && !used.has(aside)) out.push({ ...copyItem(aside), sub: t('Set aside for {name}', { name: co.student.name }) });
-    a.all.filter((c) => c.status === 'AVAILABLE' && !used.has(c)).slice(0, 10).forEach((c) => out.push({ ...copyItem(c), sub: `ISBN ${isbn} · ${t('{a} of {b} on the shelf', { a: a.available, b: a.total })}${c.shelf ? ' · ' + t('Shelf {s}', { s: esc(c.shelf) }) : ''}` }));
-    if (!out.length) out.push({ disabled: true, value: null, label: '', html: `<strong>${esc(b.title)}</strong>`, sub: esc(a.message), raw: a.message });
-    return out;
-  }
   const words = queryWords(norm(q)), phrase = ' ' + words.join(' '), found = [];
   for (const b of x.sorted) {
     const key = bookKey(b);
     if (words.length && words.every((w) => key.includes(w))) found.push([key.startsWith(phrase) ? 0 : words.every((w) => key.includes(' ' + w)) ? 1 : 2, b]);
-    else if (isbnHit(b, q)) found.push([1, b]);
+    else if (code.length >= 3 && b.isbn && codeKey(b.isbn).startsWith(code)) found.push([1, b]);
   }
   found.sort((a, b) => a[0] - b[0]);   // titles that start with what was typed come first; the alphabet decides the rest
   for (const [, b] of found) {
@@ -4755,7 +4381,7 @@ const searchCopies = (q) => {
 const exactCopy = (q) => {
   let c = copyByBarcode(q);
   if (!c) {   // an ISBN typed or scanned in full, with exactly one copy on the shelf, can only mean that copy
-    const b = bookByIsbn(isbn13(q));
+    const b = books.find((x) => x.isbn && codeKey(x.isbn) === codeKey(q));
     const free = b ? (ix().ofBook.get(b.id) || NONE).filter((x) => x.status === 'AVAILABLE') : [];
     if (free.length === 1) c = free[0];
   }
@@ -4764,8 +4390,8 @@ const exactCopy = (q) => {
 /** "This book is not in the list": offered unless the text clearly means a known title that is simply all out. */
 const createCopy = (q) => {
   const text = q.replace(/\s+/g, ' ').trim();
-  if (!text || searchCopies(q).some((i) => i.disabled) || bookByIsbn(isbn13(text))) return null;   // an ISBN already in the list is not a new book
-  return { value: { draft: text }, label: text, html: esc(isbn13(text) ? t('Add a new book with ISBN {isbn}', { isbn: isbn13(text) }) : t('Add “{q}” as a new book', { q: text })), sub: t('Not in the list yet') };
+  if (!text || searchCopies(q).some((i) => i.disabled)) return null;
+  return { value: { draft: text }, label: text, html: esc(t('Add “{q}” as a new book', { q: text })), sub: t('Not in the list yet') };
 };
 const missCopy = (q, found) => found.length ? `${t('Nothing to issue for “{q}”.', { q })} ${found[0].raw}` : t('No book copy or title matches “{q}”. Check the barcode and scan again.', { q });
 
@@ -4799,28 +4425,25 @@ const coCopyCombo = combo({
 });
 
 // ---- a book that is not in the list: number and title typed at the desk
-const nb = { title: $('#nb-title'), number: $('#nb-number'), author: $('#nb-author'), isbn: $('#nb-isbn'), msg: $('#nb-msg') };
+const nb = { title: $('#nb-title'), number: $('#nb-number'), author: $('#nb-author'), msg: $('#nb-msg') };
 function nbOpen(text) {
-  const isbn = isbn13(text), looksLikeNumber = !isbn && /\d/.test(text);   // an ISBN goes to the ISBN box; "4521", "A-17", "inv 9" to the number box; plain words are the title
-  nb.title.value = isbn || looksLikeNumber ? '' : text.charAt(0).toUpperCase() + text.slice(1);
-  nb.number.value = looksLikeNumber ? text : ''; nb.author.value = ''; nb.isbn.value = isbn; nb.msg.textContent = '';
+  const looksLikeNumber = /\d/.test(text);   // "4521", "A-17", "inv 9" go to the number box; plain words are the title
+  nb.title.value = looksLikeNumber ? '' : text.charAt(0).toUpperCase() + text.slice(1);
+  nb.number.value = looksLikeNumber ? text : ''; nb.author.value = ''; nb.msg.textContent = '';
   co.copy = null; co.adding = true; coRender();
-  (isbn || looksLikeNumber ? nb.title : nb.number).focus();
-  if (isbn) isbnFill(nb.isbn, nb.title, nb.author, nb.msg).then(() => { if (nb.title.value.trim() && document.activeElement === nb.title) nb.number.focus(); });   // the title is known: the number on the copy is what is left to type
+  (looksLikeNumber ? nb.title : nb.number).focus();
 }
-nb.isbn.addEventListener('change', () => isbnFill(nb.isbn, nb.title, nb.author, nb.msg));
 function nbAccept() {
   const tidy = (el) => el.value.replace(/\s+/g, ' ').trim();
-  const title = tidy(nb.title), number = tidy(nb.number), author = tidy(nb.author), isbnText = tidy(nb.isbn), isbn = isbn13(isbnText);
+  const title = tidy(nb.title), number = tidy(nb.number), author = tidy(nb.author);
   const fail = (text, el) => { nb.msg.textContent = text; nb.msg.dataset.kind = 'error'; el.focus(); };
-  if (isbnText && !isbn) return fail(t('This ISBN is not right. Check the digits.'), nb.isbn);
   if (!title) return fail(t('Enter the title of the book.'), nb.title);
   if (!number) return fail(t('Enter the number written on the book.'), nb.number);
   const clash = copyByBarcode(number);
   if (clash) return fail(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title }), nb.number);
-  const known = bookHome(title, isbn);
-  co.copy = { id: 0, bookId: known ? known.id : 0, barcode: number, status: 'AVAILABLE', condition: 'GOOD', shelf: '', isNew: true, ...(known && isbn && !isbnOf(known) ? { setIsbn: isbn } : {}),
-    draftBook: known ? null : makeBook({ id: 0, isbn: isbn || null, enTitle: title, enAuthor: author, uzTitle: title, uzAuthor: author }) };
+  const known = books.find((b) => norm(b.enTitle) === norm(title) || norm(b.uzTitle) === norm(title));
+  co.copy = { id: 0, bookId: known ? known.id : 0, barcode: number, status: 'AVAILABLE', condition: 'GOOD', shelf: '', isNew: true,
+    draftBook: known ? null : makeBook({ id: 0, isbn: null, enTitle: title, enAuthor: author, uzTitle: title, uzAuthor: author }) };
   co.adding = false; $('#co-cond-good').checked = true; coRender(); coFocusNext();
 }
 function nbCancel() { co.adding = false; coRender(); coEls.copy.focus(); }
@@ -4847,6 +4470,33 @@ function coSyncDates() {
   $$('#co-due-chips .chip').forEach((c) => c.setAttribute('aria-pressed', String(Number(c.dataset.days) === n)));
   const daysEl = $('#co-days'); if (document.activeElement !== daysEl) daysEl.value = n === null ? '' : n;
 }
+/** The code printed inside the book: a known code picks that copy, a new one is written onto an unlabelled copy when the book is issued. */
+const AUTO_NO = /^K\d+-\d+$/i;
+function coPrintBox(c) {
+  const pend = co.pending && co.pending.id === c.id ? co.pending.code : '';
+  return `<div class="print-code" style="margin-top:14px"><label class="field-label" for="co-print">${t('Code written in the book')}</label>
+    <div class="actions" style="margin:0"><input class="ctl" id="co-print" autocomplete="off" spellcheck="false" maxlength="40" placeholder="kps-01" value="${esc(co.printed || pend)}" style="font-family:var(--font-mono);max-width:280px"><button type="button" class="btn small" id="co-print-ok">${t('Apply')}</button></div>
+    <p class="field-msg" id="co-print-msg" role="status">${pend ? t('This copy will be numbered “{code}” when the book is issued.', { code: esc(pend) }) : t('Type the code written in the book to pick exactly that copy.')}</p></div>`;
+}
+function coPrintApply() {
+  const inp = $('#co-print'), msg = $('#co-print-msg'), c = co.copy;
+  if (!inp || !c || c.isNew) return;
+  const v = inp.value.replace(/\s+/g, ' ').trim(), say = (text, kind) => { msg.textContent = text; msg.dataset.kind = kind || ''; };
+  if (!v) return say(t('Type the code written in the book to pick exactly that copy.'));
+  co.printed = v;
+  const mine = ix().ofBook.get(c.bookId) || [], k = codeKey(v), same = mine.find((x) => codeKey(x.barcode) === k);
+  if (same) {
+    const problem = same.id === c.id ? null : copyProblem(same, co.student);
+    if (problem) return say(problem, 'error');
+    co.pending = null; co.printed = ''; co.copy = same; coRender(); return coFocusNext();
+  }
+  const clash = copyByBarcode(v);
+  if (clash) return say(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title }), 'error');
+  const target = AUTO_NO.test(c.barcode) ? c : mine.find((x) => x.status === 'AVAILABLE' && AUTO_NO.test(x.barcode) && !copyProblem(x, co.student));
+  if (!target) return say(t('Every copy of this book already has its own code, and none of them is “{code}”.', { code: v }), 'error');
+  co.copy = target; co.pending = { id: target.id, code: v }; co.printed = ''; coRender(); coFocusNext();
+}
+
 function coRender() {
   const s = co.student, c = co.copy;
   // step 1
@@ -4858,8 +4508,9 @@ function coRender() {
   $('#co-copy-combo').hidden = !!c || !!co.adding;
   $('#co-copy-picked').hidden = !c; $('#co-newbook').hidden = !co.adding;
   $('#co-step-copy').classList.toggle('done', !!c);
-  if (c) { const b = bookOf(c); $('#co-copy-picked').innerHTML = `<div class="picked">${miniCover(b, true)}<div class="picked-main"><div class="picked-name">${esc(b.title)}</div>${origTitle(b)}<div class="picked-sub">${authorDot(b)}${isbnDot(b) || (c.setIsbn ? `<span class="mono">ISBN ${esc(c.setIsbn)}</span> · ` : '')}${c.barcode ? `<span class="mono">${esc(c.barcode)}</span>` : t('Number given automatically')}${shelfDot(c)}</div><div class="badges">${c.isNew ? `<span class="pill ink">${c.draftBook ? t('New book, added when issued') : t('New copy of a book already in the list')}</span>` : `<span class="pill ok">${t('Available')}</span><span class="pill off">${t('Last recorded: {c}', { c: COND[c.condition] })}</span>`}</div></div><button type="button" class="btn small" id="co-copy-change">${t('Change')}</button></div>`; }
-  coEls.copy.placeholder = s ? t('Number, title or ISBN of the book for {name}', { name: s.name.split(' ')[0] }) : t('Type the number on the book, its title or ISBN');
+  if (!c || (co.pending && co.pending.id !== c.id)) co.pending = null;
+  if (c) { const b = bookOf(c); $('#co-copy-picked').innerHTML = `<div class="picked">${miniCover(b, true)}<div class="picked-main"><div class="picked-name">${esc(b.title)}</div>${origTitle(b)}<div class="picked-sub">${authorDot(b)}${c.barcode ? `<span class="mono">${esc(c.barcode)}</span>` : t('Number given automatically')}${shelfDot(c)}</div><div class="badges">${c.isNew ? `<span class="pill ink">${c.draftBook ? t('New book, added when issued') : t('New copy of a book already in the list')}</span>` : `<span class="pill ok">${t('Available')}</span><span class="pill off">${t('Last recorded: {c}', { c: COND[c.condition] })}</span>`}</div></div><button type="button" class="btn small" id="co-copy-change">${t('Change')}</button></div>${c.isNew ? '' : coPrintBox(c)}`; }
+  coEls.copy.placeholder = s ? t('Number or title of the book for {name}', { name: s.name.split(' ')[0] }) : t('Type the number on the book, or its title');
   $('#co-step-details').classList.toggle('done', !!(s && c));
   coSyncDates();
   // blocks + warnings
@@ -4905,7 +4556,7 @@ function coFocusNext() {
   coEls.submit.focus();
 }
 function coReset(keepStudent) {
-  co.copy = null; co.adding = false; co.issuedEdit = false; co.dueManual = false; co.override = false;
+  co.copy = null; co.pending = null; co.printed = ''; co.adding = false; co.issuedEdit = false; co.dueManual = false; co.override = false;
   if (!keepStudent) co.student = null;
   coEls.issued.readOnly = true; $('#co-issued-edit').textContent = t('Edit');
   $('#co-issued-hint').textContent = t('Now. Changing it needs override permission.');
@@ -4940,6 +4591,13 @@ $('#co-form').addEventListener('submit', (e) => {
     reason = $('#co-reason').value.trim();
     if (reason.length < 5) { const m = $('#co-reason-msg'); m.textContent = t('Give a short reason, at least 5 characters.'); m.dataset.kind = 'error'; $('#co-reason').setAttribute('aria-invalid', 'true'); return $('#co-reason').focus(); }
   }
+  if (co.pending && !co.copy.isNew && co.pending.id === co.copy.id) {
+    const dup = copyByBarcode(co.pending.code);
+    if (dup && dup.id !== co.copy.id) { co.pending = null; coRender(); return coCopyCombo.setMsg(t('Number {n} is already used by “{title}”.', { n: dup.barcode, title: bookById(dup.bookId).title }), 'error'); }
+    record('copy', `${bookById(co.copy.bookId).enTitle} [${co.copy.barcode}]`, `number: ${co.copy.barcode} → ${co.pending.code}`.slice(0, 200));
+    co.copy.barcode = co.pending.code; dataGen++; touch();
+  }
+  co.pending = null; co.printed = '';
   const student = registerPerson(co.student), copy = registerCopy(co.copy), book = bookById(copy.bookId);
   const pointsBefore = student.id ? readingScore(student).points : 0;
   const loan = doCheckout({ student, copy, issuedAt, dueDate: due, condition: $('input[name="co-cond"]:checked').value, overrideReason: reason });
@@ -4949,9 +4607,11 @@ $('#co-form').addEventListener('submit', (e) => {
   addLog(t('Issued {book} to {name}, due {date}', { book: `<strong>${esc(book.title)}</strong> <span class="mono">${esc(copy.barcode)}</span>`, name: esc(student.name), date: fmtDate(loan.dueDate) }) + (reason ? ' ' + t('(override)') : ''));
   save(); coReset(true); renderAll();
 });
+$('#co-form').addEventListener('keydown', (e) => { if (e.target.id === 'co-print' && e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); coPrintApply(); } });
 $('#co-form').addEventListener('click', (e) => {
+  if (e.target.id === 'co-print-ok') coPrintApply();
   if (e.target.id === 'co-student-change') { co.student = null; co.override = false; coRender(); coEls.student.focus(); }
-  if (e.target.id === 'co-copy-change') { co.copy = null; coRender(); coEls.copy.focus(); }
+  if (e.target.id === 'co-copy-change') { co.copy = null; co.printed = ''; coRender(); coEls.copy.focus(); }
   if (e.target.id === 'co-clear') { $('#co-result').innerHTML = ''; coReset(false); }
   const chip = e.target.closest('#co-due-chips .chip');
   if (chip) { const n = Number(chip.dataset.days); coEls.due.value = addDays(isoOf(coIssuedAt()), n); co.dueManual = n !== coBaseDays(); coSyncDates(); }
@@ -5011,7 +4671,7 @@ function rtResolve() {
   rt.loan = null; rtChoices([]);
   if (!copy) {
     const k = norm(q), code = codeKey(q);
-    const found = activeLoanViews().filter((v) => (code.length >= 2 && codeKey(v.copy.barcode).includes(code)) || bookMatches(v.book, k) || isbnHit(v.book, q) || studentMatches(v.student, k));
+    const found = activeLoanViews().filter((v) => (code.length >= 2 && codeKey(v.copy.barcode).includes(code)) || bookMatches(v.book, k) || studentMatches(v.student, k));
     if (found.length === 1) { rt.loan = found[0].loan; rtSetMsg(''); rtRender(); return $('#rt-confirm').focus(); }
     rtRender();
     if (found.length > 1) { rtSetMsg(t('{n} books on loan match. Pick one.', { n: found.length }), 'info'); rtChoices(found); return $('#rt-choices button').focus(); }
@@ -5149,26 +4809,21 @@ $('#view-loans').addEventListener('submit', (e) => {
 // ================================================================ TITLES
 const PAGE = 60;   // long lists show this many rows, and a button brings the next ones
 const moreRow = (shown, total, key) => (total > shown ? `<button type="button" class="btn" data-more="${key}">${t('Show {n} more', { n: Math.min(PAGE, total - shown) })}</button><span class="muted">${t('{a} of {b} shown', { a: shown, b: total })}</span>` : '');
-const tt = { q: '', filter: 'ALL', open: null, limit: PAGE, cat: '' };
-document.addEventListener('change', (e) => { if (e.target.id === 'tt-cat') { tt.cat = e.target.value; tt.limit = PAGE; ttRender(); } });
+const tt = { q: '', filter: 'ALL', open: null, limit: PAGE };
 function ttRender() {
   const all = ix().sorted.map(titleAvailability);
   const zero = all.filter((a) => a.zero).length;
   $('#tt-filters').innerHTML = [['ALL', t('All titles'), all.length], ['ZERO', t('None on shelf'), zero]].map(([k, label, n]) =>
     `<button type="button" class="chip solid" data-filter="${k}" aria-pressed="${tt.filter === k}">${label} <span class="num">${n}</span></button>`).join('');
-  const k = norm(tt.q), per = new Map(); all.forEach((a) => per.set(catOf(a.book), (per.get(catOf(a.book)) || 0) + 1));
-  $('#tt-cat').innerHTML = `<option value="">${esc(t('All categories'))} (${fmtNum(all.length)})</option>` + CATS.map(([c]) => `<option value="${c}"${tt.cat === c ? ' selected' : ''}>${esc(catName(c))} (${fmtNum(per.get(c) || 0)})</option>`).join('');
-  const rows = all.filter((a) => (tt.filter === 'ALL' || a.zero) && (!tt.cat || catOf(a.book) === tt.cat) && (!k || bookMatches(a.book, k) || isbnHit(a.book, tt.q)));
+  const k = norm(tt.q);
+  const rows = all.filter((a) => (tt.filter === 'ALL' || a.zero) && (!k || bookMatches(a.book, k) || (a.book.isbn || '').includes(k)));
   const shown = rows.slice(0, tt.limit), opened = tt.open !== null && !shown.some((a) => a.book.id === tt.open) && rows.find((a) => a.book.id === tt.open);
   if (opened) shown.unshift(opened);   // the title that is open stays in view, however far down the alphabet it is
   $('#tt-more').innerHTML = moreRow(shown.length, rows.length, 'tt');
-  const kept = titleEdit !== null || copyEdit !== null ? $$('#tt-body form').map((f) => [f.dataset.titleForm || `c${f.dataset.copyForm}`, $$('input[id], select[id]', f).filter((el) => el.type !== 'file').map((el) => [el.id, el.value])]) : [];
-  const had = document.activeElement && $('#tt-body').contains(document.activeElement) ? document.activeElement.id : '';
   $('#tt-body').innerHTML = shown.map((a) => {
     const strip = a.all.map((c) => `<i class="${{ ON_LOAN: 'loan', ON_HOLD: 'hold', LOST: 'gone', WITHDRAWN: 'gone' }[c.status] || ''}"></i>`).join('');
     const open = tt.open === a.book.id;
     const detail = !open ? '' : `<tr class="expand"><td colspan="6">${titleTools(a)}<div class="table-wrap"><table><thead><tr><th>${t('Copy')}</th><th>${t('Status')}</th><th>${t('Condition')}</th><th>${t('Held by')}</th><th>${t('Due')}</th><th></th></tr></thead><tbody>${a.all.map((c) => {
-      if (copyEdit === c.id) return copyForm(c);
       const l = activeLoanOfCopy(c.id), v = l && loanView(l), r = reservations.find((x) => x.copyId === c.id && x.status === 'READY');
       const st = { AVAILABLE: `<span class="pill ok">${t('On shelf')}</span>`, ON_LOAN: `<span class="pill ink">${t('Borrowed')}</span>`, ON_HOLD: `<span class="pill warn">${t('Hold shelf')}</span>`, LOST: `<span class="pill off">${t('Lost')}</span>`, WITHDRAWN: `<span class="pill off">${t('Withdrawn')}</span>` }[c.status];
       return `<tr><td class="mono">${esc(c.barcode)}${c.shelf ? `<span class="sub" style="font-family:var(--font-ui)">${t('Shelf {s}', { s: esc(c.shelf) })}</span>` : ''}</td><td>${st}</td><td>${COND[c.condition]}</td>
@@ -5177,7 +4832,7 @@ function ttRender() {
         <td class="acts">${c.status === 'AVAILABLE' ? `<button type="button" class="btn small" data-issue="${esc(c.barcode)}">${t('Issue this copy')}</button>` : ''}${copyTools(c)}</td></tr>`; }).join('')}</tbody></table></div>
         ${a.holds ? `<p class="hint">${t('{students} waiting: {names}. The next returned copy goes to the hold shelf.', { students: plural(a.holds, 'student'), names: pendingHolds(a.book.id).map((r) => esc(studentById(r.studentId).name)).join(', ') })}</p>` : ''}</td></tr>`;
     return `<tr>
-      <td data-label="${t('Title')}"><div class="cell">${miniCover(a.book)}<div><button type="button" class="link" data-title="${a.book.id}" aria-expanded="${open}">${esc(a.book.title)}</button> ${featureTags(a.book)}${catTag(a.book)}${origTitle(a.book)}<span class="sub">${esc(a.book.author)}${a.book.isbn ? ` · <span class="mono">${esc(a.book.isbn)}</span>` : ''}</span></div></div></td>
+      <td data-label="${t('Title')}"><div class="cell">${miniCover(a.book)}<div><button type="button" class="link" data-title="${a.book.id}" aria-expanded="${open}">${esc(a.book.title)}</button> ${featureTags(a.book)}${origTitle(a.book)}<span class="sub">${esc(a.book.author)}${a.book.isbn ? ` · <span class="mono">${esc(a.book.isbn)}</span>` : ''}</span></div></div></td>
       <td data-label="${t('Copies')}"><div><span class="copies" role="img" aria-label="${t('{a} on shelf, {b} borrowed', { a: a.available, b: a.borrowed })}${a.onHold ? t(', {n} on hold', { n: a.onHold }) : ''}">${strip}</span></div></td>
       <td data-label="${t('Total')}" class="num">${a.total}</td>
       <td data-label="${t('On shelf')}" class="num"><strong style="color:var(${a.available ? '--ok' : '--bad'})">${a.available}</strong></td>
@@ -5186,33 +4841,29 @@ function ttRender() {
   }).join('');
   const empty = $('#tt-empty'); empty.hidden = rows.length > 0; $('#tt-table').hidden = rows.length === 0;
   empty.textContent = t('No titles match. Try part of the title, the author or the ISBN.');
-  kept.forEach(([key, vals]) => { const f = $(`#tt-body form[data-title-form="${key}"], #tt-body form[data-copy-form="${key.slice(1)}"]`); if (f) vals.forEach(([id, v]) => { const el = document.getElementById(id); if (el && f.contains(el)) el.value = v; }); });
-  if (had) document.getElementById(had)?.focus({ preventScroll: true });
 }
 $('#tt-search').addEventListener('input', (e) => { tt.q = e.target.value.trim(); tt.limit = PAGE; ttRender(); });
 // ---- add a book (or more copies of one) straight from the Titles tab
-const ab = { form: $('#ab-form'), open: $('#ab-open'), title: $('#ab-title'), isbn: $('#ab-isbn'), author: $('#ab-author'), shelf: $('#ab-shelf'), copies: $('#ab-copies'), numbers: $('#ab-numbers'), msg: $('#ab-msg') };
+/** ISBN: keep only digits (and a final X for the old 10-digit kind); returns '' when empty, null when it is not 10 or 13 characters. */
+const cleanIsbn = (raw) => { const v = String(raw || '').replace(/[\s\-–—]/g, '').toUpperCase(); if (!v) return ''; return /^(\d{13}|\d{9}[\dX])$/.test(v) ? v : null; };
+const isbnOwner = (isbn, exceptId) => books.find((b) => b.id !== exceptId && b.isbn && cleanIsbn(b.isbn) === isbn);
+const ab = { form: $('#ab-form'), open: $('#ab-open'), title: $('#ab-title'), author: $('#ab-author'), shelf: $('#ab-shelf'), isbn: $('#ab-isbn'), copies: $('#ab-copies'), numbers: $('#ab-numbers'), msg: $('#ab-msg') };
 function abToggle(show) {
-  if (show) $('#ab-cat').innerHTML = catOptions('', t('Choose a category'));
   ab.form.hidden = !show; ab.open.setAttribute('aria-expanded', String(show)); ab.msg.textContent = '';
   if (show) ab.title.focus(); else { ab.form.reset(); ab.open.focus(); }
 }
 ab.open.addEventListener('click', () => abToggle(ab.form.hidden));
-ab.isbn.addEventListener('change', () => isbnFill(ab.isbn, ab.title, ab.author, ab.msg));
 $('#ab-cancel').addEventListener('click', () => abToggle(false));
 ab.form.addEventListener('submit', (e) => {
   e.preventDefault(); e.stopPropagation();
   const tidy = (el) => el.value.replace(/\s+/g, ' ').trim();
   const fail = (text, el) => { ab.msg.textContent = text; ab.msg.dataset.kind = 'error'; el.focus(); };
-  const isbnText = tidy(ab.isbn), isbn = isbn13(isbnText);
-  if (isbnText && !isbn) return fail(t('This ISBN is not right. Check the digits.'), ab.isbn);
-  if (!tidy(ab.title) && bookByIsbn(isbn)) ab.title.value = bookByIsbn(isbn).enTitle;   // the ISBN alone names a book already in the list
   const title = tidy(ab.title), author = tidy(ab.author), shelf = tidy(ab.shelf);
   const numbers = ab.numbers.value.split(/[,;\n]/).map((x) => x.replace(/\s+/g, ' ').trim()).filter(Boolean);
   let count = Number(ab.copies.value);
   if (!title) return fail(t('Enter the title of the book.'), ab.title);
-  const known = bookHome(title, isbn), kind = $('#ab-cat').value;
-  if (!known && !CAT.has(kind)) return fail(t('Choose the category of the book.'), $('#ab-cat'));
+  const isbn = cleanIsbn(ab.isbn.value);
+  if (isbn === null) return fail(t('ISBN must have 10 or 13 digits.'), ab.isbn);
   if (!Number.isInteger(count) || count < 1 || count > 50) return fail(t('Copies must be a number from 1 to 50.'), ab.copies);
   if (!numbers.length) return fail(t('Enter the number written on each copy, separated with commas.'), ab.numbers);
   if (numbers.length < count) return fail(t('{c} copies need {c} numbers, but only {n} entered.', { c: count, n: numbers.length }), ab.numbers);
@@ -5222,10 +4873,15 @@ ab.form.addEventListener('submit', (e) => {
     const clash = copyByBarcode(n);
     if (clash) return fail(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title }), ab.numbers);
   }
-  let book = known;
+  let book = books.find((b) => norm(b.enTitle) === norm(title) || norm(b.uzTitle) === norm(title));
   const isNew = !book;
-  if (!isNew && isbn && !isbnOf(book)) book.isbn = isbn;   // a title without an ISBN takes the one typed for its new copies
-  if (isNew) { book = makeBook({ id: books.reduce((n, b) => Math.max(n, b.id), 0) + 1, isbn: isbn || null, enTitle: title, enAuthor: author, uzTitle: title, uzAuthor: author, addedOn: today(), cat: kind }); books.push(book); }
+  if (isbn) {
+    const owner = isbnOwner(isbn, book ? book.id : 0);
+    if (owner) return fail(t('ISBN {n} already belongs to “{title}”.', { n: isbn, title: owner.title }), ab.isbn);
+    if (book && book.isbn && cleanIsbn(book.isbn) !== isbn) return fail(t('“{title}” already has another ISBN ({n}).', { title: book.title, n: book.isbn }), ab.isbn);
+  }
+  if (isNew) { book = makeBook({ id: books.reduce((n, b) => Math.max(n, b.id), 0) + 1, isbn: isbn || null, enTitle: title, enAuthor: author, uzTitle: title, uzAuthor: author, addedOn: today() }); books.push(book); }
+  if (isbn && !book.isbn) { book.isbn = isbn; dataGen++; }
   let lastId = copies.reduce((n, x) => Math.max(n, x.id), 0);
   for (let i = 0; i < count; i++) copies.push({ id: ++lastId, bookId: book.id, barcode: numbers[i], status: 'AVAILABLE', condition: 'GOOD', shelf });
   record('book-add', book.enTitle, `${count} × ${numbers.join(', ')}`.slice(0, 200)); save(); tt.open = book.id; tt.q = ''; $('#tt-search').value = ''; tt.filter = 'ALL';
@@ -5237,7 +4893,7 @@ ab.form.addEventListener('submit', (e) => {
 $('#view-titles').addEventListener('click', (e) => {
   const f = e.target.closest('[data-filter]'); if (f) { tt.filter = f.dataset.filter; tt.limit = PAGE; ttRender(); return $(`#tt-filters [data-filter="${tt.filter}"]`).focus(); }
   if (e.target.closest('[data-more]')) { tt.limit += PAGE; ttRender(); const more = $('#tt-more button'); if (more) more.focus({ preventScroll: true }); return; }
-  const row = e.target.closest('[data-title]'); if (row) { const id = Number(row.dataset.title); tt.open = tt.open === id ? null : id; titleEdit = null; copyEdit = null; ttRender(); return $(`[data-title="${id}"]`).focus(); }
+  const row = e.target.closest('[data-title]'); if (row) { const id = Number(row.dataset.title); tt.open = tt.open === id ? null : id; titleEdit = null; ttRender(); return $(`[data-title="${id}"]`).focus(); }
   const i = e.target.closest('[data-issue]'); if (i) { show('checkout'); coCopyCombo.fill(i.dataset.issue); }
 });
 
@@ -5280,7 +4936,7 @@ function personCard(s) {
   const heldRows = held.map((r) => {
     const b = bookById(r.bookId), c = r.copyId ? copyById(r.copyId) : null; if (!b) return '';
     const state = r.status === 'READY' ? `<span class="pill ok">${t('Set aside until {date}', { date: fmtDate(r.holdExpiresOn) })}</span>` : `<span class="pill ink">${t('Number {n} in the queue', { n: queuePlace(r) })}</span>`;
-    return `<div class="loan-row"><div><strong>${esc(b.title)}</strong>${c ? ` <span class="mono muted">${esc(c.barcode)}</span>` : ''}${isbnOf(b) ? ` <span class="mono muted" style="font-size:12px">ISBN ${isbnOf(b)}</span>` : ''}<div style="margin-top:4px">${state}${holdDays(r.days) ? ` <span class="muted" style="font-size:13px">${t('Wants it for {days}', { days: plural(r.days, 'day') })}</span>` : ''}</div></div><div class="hold-side">${r.status === 'READY' ? `<button type="button" class="btn small" data-hold-issue="${esc(r.id)}">${t('Issue')}</button>` : ''}<button type="button" class="btn small" data-hold-cancel="${esc(r.id)}">${t('Cancel')}</button></div></div>`;
+    return `<div class="loan-row"><div><strong>${esc(b.title)}</strong>${c ? ` <span class="mono muted">${esc(c.barcode)}</span>` : ''}<div style="margin-top:4px">${state}${holdDays(r.days) ? ` <span class="muted" style="font-size:13px">${t('Wants it for {days}', { days: plural(r.days, 'day') })}</span>` : ''}</div></div><div class="hold-side">${r.status === 'READY' ? `<button type="button" class="btn small" data-hold-issue="${esc(r.id)}">${t('Issue')}</button>` : ''}<button type="button" class="btn small" data-hold-cancel="${esc(r.id)}">${t('Cancel')}</button></div></div>`;
   }).join('');
   return `<div data-card="${s.id}" class="stack">
     <div class="picked">${avatar(s, true)}<div class="picked-main"><div class="picked-name">${esc(s.name)}</div><div class="picked-sub">${[`<span class="mono">${esc(s.no)}</span>`, esc(personTag(s)), s.kind === 'student' && s.house && houseTag(s.house), s.email && esc(s.email)].filter(Boolean).join(' · ')}</div><div class="badges">${studentBadges(s)}<span class="pill ink">${t('{n} points', { n: points })} · ${levelOf(points)}</span></div></div></div>
@@ -5372,7 +5028,7 @@ function hdRender() {
       ? `<span class="pill ${left <= 0 ? 'warn' : 'ok'}">${left <= 0 ? t('Last day') : t('{days} left', { days: plural(left, 'day') })}</span><span class="sub">${t('Collect by {date}', { date: fmtDate(r.holdExpiresOn) })}</span>`
       : `<span class="pill ink">${t('Number {n} in the queue', { n: queuePlace(r) })}</span><span class="sub">${r.at ? t('Since {date}', { date: fmtDate(isoOf(new Date(r.at))) }) : ''}</span>`;
     const asked = holdDays(r.days) ? `<span class="sub">${t('Wants it for {days}', { days: plural(r.days, 'day') })}</span>` : '';
-    return `<div class="hd-row"><div class="cell">${miniCover(b)}<div><strong>${esc(b.title)}</strong>${c || isbnOf(b) ? `<span class="sub mono">${[c ? esc(c.barcode) : '', isbnOf(b) ? `ISBN ${isbnOf(b)}` : ''].filter(Boolean).join(' · ')}</span>` : ''}</div></div><div class="cell">${who(s)}</div><div>${when}${asked}</div>
+    return `<div class="hd-row"><div class="cell">${miniCover(b)}<div><strong>${esc(b.title)}</strong>${c ? `<span class="sub mono">${esc(c.barcode)}</span>` : ''}</div></div><div class="cell">${who(s)}</div><div>${when}${asked}</div>
       <div class="acts">${r.status === 'READY' ? `<button type="button" class="btn small" data-hold-issue="${esc(r.id)}">${t('Issue')}</button>` : ''}<button type="button" class="btn small" data-hold-cancel="${esc(r.id)}">${t('Cancel')}</button></div></div>`;
   };
   $('#hd-ready').innerHTML = ready.length ? ready.map(row).join('') : `<p class="empty">${k ? t('Nothing matches.') : t('No book is waiting to be collected.')}</p>`;
@@ -5480,8 +5136,7 @@ function stRender() {
 }
 
 // ================================================================ STUDENT PAGE (read-only, names and classes only)
-const bd = { q: '', filter: 'ALL', limit: PAGE, cat: '', sort: 'az' };
-document.addEventListener('change', (e) => { if (e.target.id === 'bd-sort') { bd.sort = e.target.value; bd.limit = PAGE; catRender(true); } });
+const bd = { q: '', filter: 'ALL', limit: PAGE };
 const inDays = (n) => (n === 0 ? t('today') : n === 1 ? t('tomorrow') : t('in {n} days', { n }));
 /** When can someone walking in today get this title? Copies due back first go to readers already waiting. */
 function freeToBorrow(a) {
@@ -5506,7 +5161,7 @@ function bookCard(a, i, extra = {}) {
     <div class="cover ${coverClass(a.book)}${coverSrc(a.book) ? ' pic' : ''}" aria-hidden="true">${coverSrc(a.book) ? `<img src="${esc(coverSrc(a.book))}" alt="" loading="lazy">` : weave(a.book)}<span class="cover-title">${esc(a.book.title)}</span><span class="cover-author">${esc(a.book.author)}</span></div>
     <div class="bc-body">
       <div>${inLib}</div>
-      <div><h3>${esc(a.book.title)}</h3>${origTitle(a.book)}<span class="sub">${esc(a.book.author)}</span><button type="button" class="ctag-btn" data-cat-go="${catOf(a.book)}" title="${t('Show this category')}">${catTag(a.book)}</button></div>
+      <div><h3>${esc(a.book.title)}</h3>${origTitle(a.book)}<span class="sub">${esc(a.book.author)}</span></div>
       ${extra.note ? `<p class="bc-note">${extra.note}</p>` : ''}
       ${whoList(a, out)}
       <div class="bc-free"><small>${t('Free to borrow')}</small>${freeText(f)}${holdAction(a)}</div>
@@ -5554,7 +5209,7 @@ function shelfCard(a, i) {
       : `<span class="pill bad">${a.total === 1 ? t('Out') : t('All {n} out', { n: a.total })}</span>${back ? `<span class="sub">${back}</span>` : ''}`;
   return `<article class="kc${a.available > 0 ? '' : ' out'}" style="--i:${Math.min(i, 14)}">
     <div class="kc-top"><div class="kc-tags">${featureTags(b)}</div>${coverArt(b)}</div>
-    <div class="kc-body"><span class="kc-cat" style="--cc:${CAT.get(catOf(b)).color}">${catIcon(catOf(b))}${esc(catName(catOf(b)))}</span><b class="kc-t">${esc(b.title)}</b><small class="kc-a">${esc(b.author)}</small><div class="kc-st">${state}${assignTags(b)}</div><div class="kc-ac">${holdAction(a)}</div></div></article>`;
+    <div class="kc-body"><b class="kc-t">${esc(b.title)}</b><small class="kc-a">${esc(b.author)}</small><div class="kc-st">${state}${assignTags(b)}</div><div class="kc-ac">${holdAction(a)}</div></div></article>`;
 }
 const shelfRow = (title, list, more = '') => (list.length ? `<section class="sh"><div class="shh"><h2>${title}</h2>${more}</div><div class="k-shelf">${list.map((b, i) => shelfCard(titleAvailability(b), i)).join('')}</div></section>` : '');
 /** Rows too long for the page drift slowly from right to left and stop under the pointer or a finger; short rows stay still. */
@@ -5620,7 +5275,7 @@ function fanStart() {
   }, 3400);
 }
 /** A book picked on the fan opens the Books page on that title. */
-function openTitle(b) { if (!b) return; bd.q = b.title; bd.limit = PAGE; bd.filter = 'ALL'; bd.cat = ''; $('#bd-search').value = b.title; show('catalog', false); catRender(true); window.scrollTo({ top: 0 }); }
+function openTitle(b) { if (!b) return; bd.q = b.title; bd.limit = PAGE; bd.filter = 'ALL'; $('#bd-search').value = b.title; show('catalog', false); catRender(true); window.scrollTo({ top: 0 }); }
 document.addEventListener('click', (e) => { const c = e.target.closest('[data-fan]'); if (c && fan) openTitle(bookById(fan[Number(c.dataset.fan)])); });
 document.addEventListener('keydown', (e) => { if (e.key !== 'Enter' && e.key !== ' ') return; const c = e.target.closest && e.target.closest('[data-fan]'); if (c && fan) { e.preventDefault(); openTitle(bookById(fan[Number(c.dataset.fan)])); } });
 
@@ -5677,13 +5332,13 @@ let recKept = null;
 const scriptOf = (b) => (/[Ѐ-ӿ]/.test(b.enTitle) ? 'cyr' : 'lat');
 function recommended(p) {
   if (recKept && recKept.id === p.id && recKept.ids.length && recKept.ids.every((id) => bookById(id))) return recKept.ids.map(bookById);
-  const mine = new Set(), authors = new Set(), scripts = new Set(), kinds = new Map();
-  (lv().ofPerson.get(p.id) || NONE).forEach((l) => { const c = copyById(l.copyId), b = c && bookById(c.bookId); if (!b) return; mine.add(b.id); if (b.enAuthor) authors.add(norm(b.enAuthor)); scripts.add(scriptOf(b)); kinds.set(catOf(b), (kinds.get(catOf(b)) || 0) + 1); });
+  const mine = new Set(), authors = new Set(), scripts = new Set();
+  (lv().ofPerson.get(p.id) || NONE).forEach((l) => { const c = copyById(l.copyId), b = c && bookById(c.bookId); if (!b) return; mine.add(b.id); if (b.enAuthor) authors.add(norm(b.enAuthor)); scripts.add(scriptOf(b)); });
   reservations.forEach((r) => { if (r.studentId === p.id && holdLive(r)) mine.add(r.bookId); });
   const mates = new Set(students.filter((x) => x.kind === p.kind && x.id !== p.id && (p.kind !== 'student' || x.cls === p.cls)).map((x) => x.id)), liked = new Map();
   loans.forEach((l) => { if (!mates.has(l.studentId)) return; const c = copyById(l.copyId); if (c) liked.set(c.bookId, (liked.get(c.bookId) || 0) + 1); });
   const open = books.filter((b) => !mine.has(b.id) && titleAvailability(b).total > 0);
-  const score = (b) => (b.enAuthor && authors.has(norm(b.enAuthor)) ? 3 : 0) + Math.min(3, liked.get(b.id) || 0) + Math.min(2, kinds.get(catOf(b)) || 0) * 0.75 + (scripts.has(scriptOf(b)) ? 0.5 : 0) + (titleAvailability(b).available > 0 ? 0.4 : 0);   // the same kind of book as the ones read counts too
+  const score = (b) => (b.enAuthor && authors.has(norm(b.enAuthor)) ? 3 : 0) + Math.min(3, liked.get(b.id) || 0) + (scripts.has(scriptOf(b)) ? 0.5 : 0) + (titleAvailability(b).available > 0 ? 0.4 : 0);
   const personal = open.filter((b) => score(b) >= 1 && titleAvailability(b).available > 0).sort((a, b) => score(b) - score(a)).slice(0, 6);
   const out = personal.slice(), taken = new Set(out.map((b) => b.id));
   const draw = (pool) => { while (out.length < REC_COUNT && pool.length) { const b = pool.splice(Math.floor(Math.random() * pool.length), 1)[0]; if (!taken.has(b.id)) { taken.add(b.id); out.push(b); } } };
@@ -5696,7 +5351,7 @@ const featured = (p) => { const set = assignedNow(p); return books.filter((b) =>
 document.addEventListener('input', (e) => {   // typing on the front page looks through every book, so it carries on in Books
   if (e.target.id !== 'home-search') return;
   const v = e.target.value; if (!v.trim()) return;
-  bd.q = v.trim(); bd.limit = PAGE; bd.cat = ''; e.target.value = '';
+  bd.q = v.trim(); bd.limit = PAGE; e.target.value = '';
   const box = $('#bd-search'); box.value = v; show('catalog', false); catRender(); box.focus(); box.setSelectionRange(v.length, v.length);
 });
 /** Put new markup in place only when it differs from what is there, so rows keep moving and nothing flickers on a refresh. */
@@ -5718,7 +5373,7 @@ function houseSizes() {
 function houseList() {
   const have = new Set(Object.keys(houseSizes()));
   students.forEach((p) => { if (p.kind === 'student' && p.house) have.add(p.house); });
-  const known = HOUSES.map((h) => h[0]);   // the school's four, always: a house nobody has read for yet is still in the race
+  const known = HOUSES.map((h) => h[0]).filter((h) => have.has(h));
   return [...known, ...[...have].filter((h) => !known.includes(h)).sort()];
 }
 /** The house race on the front page: this school year's points, the reader's own house marked. */
@@ -5906,7 +5561,7 @@ function storiesHtml(p, posts) {
   return `<div class="stories" style="--i:0">${one(p, true)}${row.map((q) => one(q, false)).join('')}</div>`;
 }
 /** Open Books with this title looked up. */
-function findBook(b) { bd.q = b.title; bd.limit = PAGE; bd.cat = ''; bd.filter = 'ALL'; $('#bd-search').value = b.title; show('catalog', false); catRender(); window.scrollTo({ top: 0 }); }
+function findBook(b) { bd.q = b.title; bd.limit = PAGE; $('#bd-search').value = b.title; show('catalog', false); catRender(); window.scrollTo({ top: 0 }); }
 
 // ---- a reader's profile: who they are, their points, what they have and what they read. It shows what the library's
 // public list already shows, gathered per person; a reader who switched the feed off shows only name, house and points.
@@ -5927,11 +5582,6 @@ function openProfile(id) {
     ${own ? `${picTools()}<div class="nft"><button type="button" class="btn" data-go="me">${t('My books')}</button></div>` : ''}`;
   if (!$('#prof').open) $('#prof').showModal();
 }
-document.addEventListener('click', (e) => {   // a category tile, or a category tag, opens Books with that category
-  const go = e.target.closest('[data-cat-go]'); if (!go) return;
-  bd.cat = go.dataset.catGo; bd.filter = 'ALL'; bd.q = ''; bd.limit = PAGE; $('#bd-search').value = '';
-  show('catalog', false); catRender(true); window.scrollTo({ top: 0 });
-});
 document.addEventListener('click', (e) => {
   const prof = e.target.closest('[data-profile]');
   if (prof) return openProfile(Number(prof.dataset.profile));
@@ -5953,47 +5603,6 @@ document.addEventListener('change', (e) => {
   actStep({ kind: 'feed', on }, on ? t('Your books now show in the feed.') : t('Your books are no longer posted in the feed.'));
 });
 
-// ---- categories. Every title has one (book.cat); a title without one counts as "Other".
-const CATS = [
-  ['uzlit', 'Uzbek literature', '#059669', '<path d="M2.5 5.5c3-1.2 6.2-1 9.5 1 3.3-2 6.5-2.2 9.5-1v13c-3-1.2-6.2-1-9.5 1-3.3-2-6.5-2.2-9.5-1z"/><path d="M12 6.5v13"/>'],
-  ['world', 'World literature', '#2563EB', '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3.4 3.2 14.6 0 18M12 3c-3.2 3.4-3.2 14.6 0 18"/>'],
-  ['english', 'Reading in English', '#DC2626', '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7.5 15V9h3.5M7.5 12h3M7.5 15h3.5M14 15V9l3.5 6V9"/>'],
-  ['kids', 'Children’s books', '#F59E0B', '<path d="M12 3a6 6 0 0 1 6 6c0 4.2-3 7-6 7s-6-2.8-6-7a6 6 0 0 1 6-6z"/><path d="M11 16.5l1 1.5 1-1.5M12 18c-.8 1.2.8 2 0 3.5"/>'],
-  ['cambridge', 'Cambridge & exam prep', '#7C3AED', '<path d="M2 9.5 12 5l10 4.5L12 14z"/><path d="M6 11.5v4.5c3.2 2.2 8.8 2.2 12 0v-4.5M22 9.5V15"/>'],
-  ['school', 'School textbooks', '#0891B2', '<path d="M4 20l1.2-4.8L16 4.4l3.6 3.6L8.8 18.8z"/><path d="M13.8 6.6l3.6 3.6"/>'],
-  ['lang', 'Languages & dictionaries', '#DB2777', '<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/>'],
-  ['history', 'History & biography', '#B45309', '<path d="M3 20.5h18M5 17.5h14M4 9h16L12 4z"/><path d="M7 9v8.5M12 9v8.5M17 9v8.5"/>'],
-  ['religion', 'Religion & spirituality', '#0D9488', '<path d="M15.5 3.8A8.5 8.5 0 1 0 20.5 17 7 7 0 0 1 15.5 3.8z"/><path d="M18 6.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/>'],
-  ['society', 'State, law & society', '#475569', '<path d="M12 4v16M7.5 20h9M5 7.5h14"/><path d="M5 7.5 2.5 13h5zM19 7.5 16.5 13h5z"/>'],
-  ['science', 'Science & self-development', '#65A30D', '<path d="M9 3h6M10 3v6.2l-5 8.6A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.2l-5-8.6V3"/><path d="M7.3 15h9.4"/>'],
-  ['arts', 'Sport, arts & music', '#C026D3', '<path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>'],
-  ['other', 'Other', '#94A3B8', '<circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/>'],
-];
-const CAT = new Map(CATS.map(([key, name, color, icon]) => [key, { key, name, color, icon }]));
-const catOf = (b) => (b && CAT.has(b.cat) ? b.cat : 'other');
-const catName = (key) => t((CAT.get(key) || CAT.get('other')).name);
-const catIcon = (key) => `<svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${(CAT.get(key) || CAT.get('other')).icon}</svg>`;
-const catTag = (b) => { const k = catOf(b); return `<span class="ctag" style="--cc:${CAT.get(k).color}">${catIcon(k)}${esc(catName(k))}</span>`; };
-const catOptions = (sel, blank) => (blank ? `<option value="">${esc(blank)}</option>` : '') + CATS.map(([k]) => `<option value="${k}"${sel === k ? ' selected' : ''}>${esc(catName(k))}</option>`).join('');
-/** How many titles each category has, and how many of those have a copy on the shelf right now. */
-function catCounts() {
-  const n = new Map(CATS.map(([k]) => [k, { titles: 0, free: 0 }]));
-  ix().sorted.forEach((b) => { const a = titleAvailability(b); if (!a.total) return; const c = n.get(catOf(b)); c.titles++; if (a.available > 0) c.free++; });
-  return n;
-}
-/** The front page's row of categories: one tile each, a tap opens Books with that category. */
-function catTilesHtml() {
-  const n = catCounts();
-  const tiles = CATS.filter(([k]) => n.get(k).titles > 0 && k !== 'other').map(([k], i) => `<button type="button" class="ctile" style="--cc:${CAT.get(k).color};--i:${i}" data-cat-go="${k}">
-      <span class="ctile-i">${catIcon(k)}</span><b>${esc(catName(k))}</b><small>${t('{books} · {n} on the shelf', { books: plural(n.get(k).titles, 'book'), n: fmtNum(n.get(k).free) })}</small></button>`).join('');
-  return tiles ? `<div class="sec-head"><div><h2>${t('Browse by category')}</h2><p>${t('Pick a kind of book and see everything the library has of it.')}</p></div></div><div class="ctiles">${tiles}</div>` : '';
-}
-/** How often each title has been borrowed, ever. */
-function borrowCounts() {
-  const m = new Map();
-  loans.forEach((l) => { const c = copyById(l.copyId); if (c) m.set(c.bookId, (m.get(c.bookId) || 0) + 1); });
-  return m;
-}
 /** Home: what everyone is reading, and what is down to its last copy. */
 function bdRender(animate) {
   const reader = mePerson();
@@ -6002,7 +5611,6 @@ function bdRender(animate) {
   setHtml($('#home-shelves'), (reader ? shelfRow(t('Recommended for you'), recommended(reader), `<button type="button" class="btn small quiet" data-go="catalog">${t('See all')}</button>`) : '') + shelfRow(t('Featured'), featured(reader)));
   const side = $('#home-side'); side.hidden = !reader; side.classList.toggle('anim', !!animate); $('#view-board').classList.toggle('two', !!reader);
   setHtml(side, reader ? feedHtml(reader) : '');
-  setHtml($('#bd-cats'), catTilesHtml()); $('#bd-cats').classList.toggle('anim', !!animate);
   const trend = trendingBooks(3), trendIds = new Set(trend.map((x) => x.a.book.id));
   $('#bd-trend').innerHTML = trend.length ? trend.map(({ a }, i) => {
     const reading = a.borrowed, waiting = a.holds;
@@ -6034,24 +5642,14 @@ function catRender(animate) {
   $('#bd-filters').innerHTML = [['ALL', t('All books')], ['IN', t('On the shelf')], ...(counts.READ ? [['READ', t('Being read')]] : []), ['OUT', t('All out')], ...(counts.NEW ? [['NEW', t('New arrivals')]] : [])].map(([k, label]) =>
     `<button type="button" class="chip solid" data-filter="${k}" aria-pressed="${bd.filter === k}">${label} <span class="num">${counts[k]}</span></button>`).join('');
   const k = norm(bd.q);
-  const status = (a) => bd.filter === 'ALL' || (bd.filter === 'NEW' ? isFresh(a.book) : bd.filter === 'READ' ? a.borrowed > 0 : bd.filter === 'IN' ? a.available > 0 : a.total > 0 && a.available === 0);
-  const before = all.filter((a) => status(a) && (!k || bookMatches(a.book, k) || isbnHit(a.book, bd.q)));   // the category chips count what the other choices leave
-  const per = new Map(); before.forEach((a) => { const c = catOf(a.book); per.set(c, (per.get(c) || 0) + 1); });
-  if (bd.cat && !CAT.has(bd.cat)) bd.cat = '';
-  $('#bd-catbar').innerHTML = [['', t('All categories'), before.length], ...CATS.filter(([c]) => per.get(c) || bd.cat === c).map(([c]) => [c, catName(c), per.get(c) || 0])].map(([c, label, n]) =>
-    `<button type="button" class="chip solid cchip" data-cat="${c}" aria-pressed="${bd.cat === c}"${c ? ` style="--cc:${CAT.get(c).color}"` : ''}>${c ? catIcon(c) : ''}${esc(label)} <span class="num">${fmtNum(n)}</span></button>`).join('');
-  const rows = before.filter((a) => !bd.cat || catOf(a.book) === bd.cat);
-  if (bd.sort === 'pop') { const n = borrowCounts(); rows.sort((x, y) => (n.get(y.book.id) || 0) - (n.get(x.book.id) || 0) || y.borrowed - x.borrowed); }
-  else if (bd.sort === 'shelf') rows.sort((x, y) => y.available - x.available || y.total - x.total);
-  else if (bd.sort === 'new') rows.sort((x, y) => (y.book.addedOn || '').localeCompare(x.book.addedOn || '') || y.book.id - x.book.id);
-  $('#bd-sort').value = bd.sort;
+  const rows = all.filter((a) => (bd.filter === 'ALL' || (bd.filter === 'NEW' ? isFresh(a.book) : bd.filter === 'READ' ? a.borrowed > 0 : bd.filter === 'IN' ? a.available > 0 : a.total > 0 && a.available === 0)) && (!k || bookMatches(a.book, k)));
   const shown = rows.slice(0, bd.limit);
   $('#cat-more').innerHTML = moreRow(shown.length, rows.length, 'cat');
   $('#cat-body').innerHTML = shown.map((a, i) => {
     const out = loansOutOf(a.book.id);
     return `<article class="cat-row ${a.available > 0 ? '' : 'out'}" style="--i:${Math.min(i, 16)}">
       ${miniCover(a.book, true)}
-      <div class="cat-main">${isFresh(a.book) ? `<span class="pill ink" style="margin-bottom:4px">${t('New')}</span>` : ''}<h3>${esc(a.book.title)}</h3>${origTitle(a.book)}<span class="sub">${esc(a.book.author)}${isbnOf(a.book) ? `${a.book.author ? ' · ' : ''}<span class="mono">ISBN ${esc(isbnOf(a.book))}</span>` : ''}</span><button type="button" class="ctag-btn" data-cat="${catOf(a.book)}" title="${t('Show this category')}">${catTag(a.book)}</button></div>
+      <div class="cat-main">${isFresh(a.book) ? `<span class="pill ink" style="margin-bottom:4px">${t('New')}</span>` : ''}<h3>${esc(a.book.title)}</h3>${origTitle(a.book)}<span class="sub">${esc(a.book.author)}</span></div>
       <dl class="cat-counts">
         <div><dt>${t('Total')}</dt><dd>${a.total}</dd></div>
         <div><dt>${t('On shelf')}</dt><dd class="${a.available ? 'yes' : 'no'}">${a.available}</dd></div>
@@ -6137,8 +5735,7 @@ function openWant(bookId, btn, hold) {
   const free = !hold && copies.some((c) => c.bookId === bookId && c.status === 'AVAILABLE');
   $('#want-h').textContent = hold ? t('Change how long you need it') : t('Reserve this book');
   $('#want-go').textContent = hold ? t('Save') : free ? t('Reserve') : t('Join the queue');
-  const shelf = copies.filter((c) => c.bookId === bookId && c.status === 'AVAILABLE'), all = copies.filter((c) => c.bookId === bookId && c.status !== 'WITHDRAWN' && c.status !== 'LOST');
-  $('#want-book').innerHTML = `<strong>${esc(b.title)}</strong>${isbnOf(b) ? `<span class="sub">ISBN <span class="mono">${isbnOf(b)}</span></span>` : ''}${hold ? '' : `<span class="sub">${shelf.length ? `${t('{a} of {b} on the shelf', { a: shelf.length, b: all.length })}: <span class="mono">${shelf.slice(0, 6).map((c) => esc(c.barcode)).join(', ')}${shelf.length > 6 ? '…' : ''}</span>` : t('None on the shelf now. You join the queue.')}</span>`}`;
+  $('#want-book').textContent = b.title;
   $('#want-days').min = HOLD.minDays; $('#want-days').max = HOLD.maxDays;
   wantPaint(); $('#want').showModal();
 }
@@ -6172,7 +5769,7 @@ async function bookIt(bookId, btn, days) {
   renderPublic();
   if (res.why) return toast(t(HOLD_WHY[res.why] || ACT_WHY.bad, { n: HOLD.limit }));
   const mine = myHold(bookId), title = (bookById(bookId) || b).title;
-  toast(mine && mine.status === 'READY' ? readyLine(mine, bookById(bookId) || b, title)
+  toast(mine && mine.status === 'READY' ? t('“{title}” is set aside for you. Collect it at the library by {date}.', { title, date: fmtDate(mine.holdExpiresOn) })
     : mine ? t('You are number {n} in the queue for “{title}”. When a copy comes back it is set aside for you.', { n: queuePlace(mine), title })
       : t('Reserved.'));
 }
@@ -6200,7 +5797,6 @@ function openSignin() {
   const dlg = $('#signin');
   if (dlg.open) return;
   $('#signin-pin').value = ''; $('#signin-msg').textContent = '';
-  $('#signin-preview').hidden = !!API;   // a copy running on its own made its own codes: the paper slips belong to the real site
   dlg.showModal(); ($('#signin-no').value ? $('#signin-pin') : $('#signin-no')).focus();
 }
 /** Returns an error text, or '' when the reader is signed in. */
@@ -6274,8 +5870,7 @@ function meRender() {
     const state = r.status === 'READY' ? `<span class="pill ok">${t('Ready to collect')}</span>` : `<span class="pill ink">${t('Number {n} in the queue', { n: queuePlace(r) })}</span>`;
     const sub = r.status === 'READY' ? t('Set aside for you at the library. Collect it by {date}.', { date: fmtDate(r.holdExpiresOn) }) : t('When a copy comes back, it is set aside for you.');
     const asked = holdDays(r.days) ? ` ${t('You asked for {days}.', { days: plural(r.days, 'day') })}` : '';
-    const which = r.status === 'READY' ? copyWords(r.copyId ? copyById(r.copyId) : null, b) : isbnOf(b) ? `ISBN ${isbnOf(b)}` : '';
-    return `<div class="loan-row"><div><strong>${esc(b.title)}</strong>${which ? `<div class="mono muted" style="font-size:12.5px">${esc(which)}</div>` : ''}<div class="muted" style="font-size:13px">${sub}${asked}</div></div><div class="hold-side">${state}<button type="button" class="btn small quiet" data-holddays="${esc(r.id)}">${t('Change days')}</button><button type="button" class="btn small quiet" data-unhold="${esc(r.id)}">${t('Cancel reservation')}</button></div></div>`;
+    return `<div class="loan-row"><div><strong>${esc(b.title)}</strong><div class="muted" style="font-size:13px">${sub}${asked}</div></div><div class="hold-side">${state}<button type="button" class="btn small quiet" data-holddays="${esc(r.id)}">${t('Change days')}</button><button type="button" class="btn small quiet" data-unhold="${esc(r.id)}">${t('Cancel reservation')}</button></div></div>`;
   }).join('');
   const loanRows = views.map((v) => {
     const span = Math.max(diffDays(v.loan.dueDate, isoOf(v.loan.issuedAt)), 1), used = Math.min(Math.max(diffDays(today(), isoOf(v.loan.issuedAt)) / span, 0.03), 1);
@@ -6490,7 +6085,7 @@ function myNotes() {
   reservations.forEach((r) => {
     if (r.studentId !== me.id) return;
     const b = bookById(r.bookId); if (!b) return;
-    if (r.status === 'READY') out.push({ key: `ready:${r.id}`, tone: 'ok', html: readyLine(r, b, title(b), true) });
+    if (r.status === 'READY') out.push({ key: `ready:${r.id}`, tone: 'ok', html: t('“{title}” is set aside for you. Collect it at the library by {date}.', { title: title(b), date: fmtDate(r.holdExpiresOn) }) });
     else if (r.status === 'EXPIRED' && r.holdExpiresOn && diffDays(day, r.holdExpiresOn) <= 7) out.push({ key: `lapsed:${r.id}`, tone: 'bad', html: t('Your reservation of “{title}” lapsed: the book was not collected by {date}.', { title: title(b), date: fmtDate(r.holdExpiresOn) }) });
   });
   loansHeldBy(me.id).forEach((v) => {
@@ -6626,7 +6221,7 @@ function rkRender(animate) {
       `<button type="button" class="chip solid" data-period="${k}" aria-pressed="${rk.period === k}">${label}</button>`).join('');
   const since = rk.period === 'month' ? monthStart() : rk.period === 'year' ? schoolYearStart() : null;
   // choosing a class shows the ranking of that class only
-  const classes = rankClasses();
+  const classes = [...new Set(students.filter((p) => p.kind === 'student' && p.cls).map((p) => p.cls))].sort(classSort);
   if (rk.cls && !classes.includes(rk.cls)) rk.cls = '';
   const pick = $('#rk-classes'); pick.hidden = rk.tab !== 'student' || classes.length < 2;
   const reader = me && rk.tab === 'student' ? mePerson() : null, mineId = reader && reader.kind === 'student' ? reader.id : 0;
@@ -6643,7 +6238,7 @@ function rkRender(animate) {
   const you = mineId && (!rk.cls || rk.cls === reader.cls) && (!rk.house || rk.house === reader.house), place = you ? rows.find((r) => r.p && r.p.id === mineId) : null;
   $('#rk-you').hidden = !you;
   $('#rk-you').textContent = !you ? '' : place ? t('You are number {n} here, with {p} points.', { n: place.rank, p: place.points }) : t('Borrow a book in this period and you are on the board.');
-  const under = (r) => (r.p ? `${esc(personTag(r.p))}${r.p.kind === 'student' && r.p.house ? ` · ${houseTag(r.p.house)}` : ''}` : r.members ? t('{a} of {b} reading', { a: r.readers, b: r.members }) : plural(r.readers, 'reader'));
+  const under = (r) => (r.p ? `${esc(personTag(r.p))}${r.p.kind === 'student' && r.p.house ? ` · ${houseTag(r.p.house)}` : ''}` : plural(r.readers, 'reader'));
   const detail = (r) => `${t('{books} read', { books: plural(r.finished, 'book') })} · ${t('{n} on time', { n: r.onTime })}`;
   $('#rk-podium').innerHTML = rows.slice(0, 3).map((r, i) => `<article class="pod ${['first', 'second', 'third'][i]}${mine(r)}" style="--i:${i}"${open(r)}>
       <b class="medal m${r.rank}" aria-label="${r.rank}">${r.rank}</b>${face(r, true)}
@@ -6686,7 +6281,6 @@ const renderPublic = (animate) => { touch(); bdRender(animate); catRender(animat
 $('#bd-search').addEventListener('input', (e) => { bd.q = e.target.value.trim(); bd.limit = PAGE; if (bd.q && current !== 'catalog') show('catalog', false); catRender(); });
 $('#view-catalog').addEventListener('click', (e) => {
   const f = e.target.closest('[data-filter]'); if (f) { bd.filter = f.dataset.filter; bd.limit = PAGE; catRender(true); $(`#bd-filters [data-filter="${bd.filter}"]`).focus(); return; }
-  const c = e.target.closest('[data-cat]'); if (c) { bd.cat = bd.cat === c.dataset.cat && c.classList.contains('ctag-btn') ? '' : c.dataset.cat; bd.limit = PAGE; catRender(true); const again = $(`#bd-catbar [data-cat="${bd.cat}"]`); if (again) { again.focus({ preventScroll: true }); if (c.classList.contains('ctag-btn')) $('#bd-catbar').scrollIntoView({ block: 'nearest' }); } return; }
   if (e.target.closest('[data-more]')) { bd.limit += PAGE; catRender(); const more = $('#cat-more button'); if (more) more.focus({ preventScroll: true }); }
 });
 document.addEventListener('click', (e) => { const go = e.target.closest('[data-go]'); if (go) { show(go.dataset.go, false); window.scrollTo({ top: 0 }); } });
@@ -6706,7 +6300,7 @@ function deskSigns(as) { const last = activity[activity.length - 1]; if (last) l
 const LOG_LABEL = {
   issue: 'Issued', return: 'Returned', extend: 'Loan extended', reserve: 'Reserved on the site', 'hold-cancel': 'Reservation cancelled', 'hold-days': 'Reservation length changed', pic: 'Profile picture changed',
   'renew-ask': 'Asked for more days', 'renew-drop': 'Request withdrawn', 'renew-yes': 'More days approved', 'renew-no': 'More days declined',
-  assign: 'Reading set for classes', unassign: 'Class reading removed', 'book-add': 'Book added', 'book-edit': 'Book changed', 'book-del': 'Book removed', 'book-cat': 'Category changed', 'copy-edit': 'Copy number or shelf changed', import: 'Imported from Excel',
+  assign: 'Reading set for classes', unassign: 'Class reading removed', 'book-add': 'Book added', 'book-edit': 'Book changed', 'book-del': 'Book removed',
   feature: 'Featured book changed', cover: 'Cover picture changed', copy: 'Copy status changed', 'person-add': 'Person added', 'person-edit': 'Person changed', 'person-del': 'Person removed',
   'person-off': 'Card switched off', 'person-on': 'Card switched on', pin: 'Code changed at the desk', 'pin-self': 'Code changed by the reader',
   'loan-del': 'Removed from history', year: 'New school year', data: 'Backup file loaded',
@@ -6730,36 +6324,31 @@ $('#view-log').addEventListener('click', (e) => { if (e.target.closest('[data-mo
 const deskAssign = assignPanel($('#cr-body'), 'cr', true);
 
 // ---- Titles: featured, cover picture, title and author, copies taken out of use, a book added by mistake
-let titleEdit = null;   // the book whose details form has changes not saved yet
-let copyEdit = null;    // the copy whose number or shelf is being retyped
+let titleEdit = null;   // the book whose title is being retyped
 const neverLent = (bookId) => { const mine = new Set((ix().ofBook.get(bookId) || NONE).map((c) => c.id)); return !loans.some((l) => mine.has(l.copyId)); };
 /** The row of tools shown under an opened title. */
 function titleTools(a) {
   const b = a.book;
-  return `<form class="addbook title-edit" data-title-form="${b.id}" novalidate><h3 class="te-h">${t('Book details')}</h3><div class="nb-grid">
+  if (titleEdit === b.id) return `<form class="addbook title-edit" data-title-form="${b.id}" novalidate><div class="nb-grid">
       <div class="wide"><label class="field-label" for="te-title">${t('Title')}</label><input class="ctl" id="te-title" autocomplete="off" maxlength="160" value="${esc(b.enTitle)}" style="font-family:var(--font-ui)"></div>
       <div class="wide"><label class="field-label" for="te-author">${t('Author (optional)')}</label><input class="ctl" id="te-author" autocomplete="off" maxlength="80" value="${esc(b.enAuthor || '')}" style="font-family:var(--font-ui)"></div>
-      <div><label class="field-label" for="te-isbn">${t('ISBN (optional)')}</label><input class="ctl" id="te-isbn" autocomplete="off" spellcheck="false" inputmode="numeric" maxlength="20" placeholder="978…" value="${esc(isbnOf(b) || b.isbn || '')}"></div>
-      <div><label class="field-label" for="te-cat">${t('Category')}</label><select class="ctl" id="te-cat" style="font-family:var(--font-ui)">${catOptions(catOf(b))}</select></div></div>
-      <p class="field-msg" id="te-msg" role="alert"></p><div class="actions"><button class="btn small" type="submit" style="background:var(--accent);color:var(--accent-fg);border-color:var(--accent)">${t('Save changes')}</button><button class="btn small" type="button" data-title-cancel>${t('Undo changes')}</button></div></form>
-  <div class="title-tools">
+      <div class="wide"><label class="field-label" for="te-isbn">${t('ISBN (optional)')}</label><input class="ctl" id="te-isbn" autocomplete="off" spellcheck="false" maxlength="20" value="${esc(b.isbn || '')}" style="font-family:var(--font-mono)"></div>
+      <div class="wide"><span class="field-label">${t('Numbers on the copies')}</span><div class="nb-grid">${(ix().ofBook.get(b.id) || []).map((c, i) => `<div><label class="field-label" for="te-copy-${c.id}">${t('Copy {n}', { n: i + 1 })}</label><input class="ctl" id="te-copy-${c.id}" data-te-copy="${c.id}" autocomplete="off" spellcheck="false" maxlength="40" value="${esc(c.barcode)}" style="font-family:var(--font-mono)"></div>`).join('')}</div></div>
+      <div class="wide"><label class="field-label" for="te-new">${t('Add more copies (separate the numbers with commas)')}</label><input class="ctl" id="te-new" autocomplete="off" spellcheck="false" maxlength="400" style="font-family:var(--font-mono)"></div></div>
+      <p class="field-msg" id="te-msg" role="alert"></p><div class="actions"><button class="btn small" type="submit" style="background:var(--accent);color:var(--accent-fg);border-color:var(--accent)">${t('Save')}</button><button class="btn small" type="button" data-title-cancel>${t('Cancel')}</button></div></form>`;
+  return `<div class="title-tools">
     <button type="button" class="chip solid" data-feature="week" data-book="${b.id}" aria-pressed="${!!b.week}">${t('Book of the Week')}</button>
     <button type="button" class="chip solid" data-feature="month" data-book="${b.id}" aria-pressed="${!!b.month}">${t('Book of the Month')}</button>
     <span class="tools-gap"></span>
+    <button type="button" class="btn small" data-title-edit="${b.id}">${t('Edit title')}</button>
     <label class="btn small">${t(b.cover ? 'Change the cover' : 'Add a cover picture')}<input type="file" accept="image/*" hidden data-cover-file="${b.id}"></label>
     ${b.cover ? `<button type="button" class="btn small" data-cover-drop="${b.id}">${t('Remove the cover')}</button>` : ''}
     ${neverLent(b.id) && !a.onHold ? `<button type="button" class="btn small" data-title-del="${b.id}">${t('Delete this book')}</button>` : ''}
   </div>`;
 }
 /** Beside a copy on the Titles tab: take it out of use, or bring it back. */
-const copyTools = (c) => `<button type="button" class="btn small quiet" data-copy-edit="${c.id}">${t('Edit')}</button>` + (c.status === 'AVAILABLE' ? `<button type="button" class="btn small" data-copy-off="${c.id}">${t('Take out of use')}</button>`
+const copyTools = (c) => (c.status === 'AVAILABLE' ? `<button type="button" class="btn small" data-copy-off="${c.id}">${t('Take out of use')}</button>`
   : c.status === 'LOST' || c.status === 'WITHDRAWN' ? `<button type="button" class="btn small" data-copy-on="${c.id}">${t('Back on the shelf')}</button>` : '');
-/** A copy whose number or shelf is being changed: its row becomes a small form. */
-const copyForm = (c) => `<tr class="copy-edit-row"><td colspan="6"><form class="copy-edit" data-copy-form="${c.id}" novalidate>
-    <div><label class="field-label" for="ce-number">${t('Number on the book')}</label><input class="ctl" id="ce-number" autocomplete="off" spellcheck="false" maxlength="40" value="${esc(c.barcode)}" style="font-family:var(--font-mono)"></div>
-    <div><label class="field-label" for="ce-shelf">${t('Shelf (optional)')}</label><input class="ctl" id="ce-shelf" autocomplete="off" maxlength="20" value="${esc(c.shelf || '')}"></div>
-    <div class="actions"><button class="btn small" type="submit" style="background:var(--accent);color:var(--accent-fg);border-color:var(--accent)">${t('Save')}</button><button class="btn small" type="button" data-copy-cancel>${t('Cancel')}</button></div>
-    <p class="field-msg" id="ce-msg" role="alert"></p></form></td></tr>`;
 /** A picture chosen at the desk becomes a small 3:4 JPEG, cut to fill the cover. */
 const coverFromFile = (file) => new Promise((resolve, reject) => {
   const reader = new FileReader();
@@ -6788,14 +6377,6 @@ async function setCover(b, made) {
     return true;
   } catch (_) { return false; }
 }
-document.addEventListener('change', (e) => {   // the librarian puts a title into another category
-  const sel = e.target.closest && e.target.closest('[data-cat-set]'); if (!sel || !unlocked) return;
-  const b = bookById(Number(sel.dataset.catSet)); if (!b || !CAT.has(sel.value) || catOf(b) === sel.value) return;
-  const was = catOf(b); b.cat = sel.value; dataGen++; touch();
-  record('book-cat', b.enTitle, `${CAT.get(was).name} → ${CAT.get(b.cat).name}`); save(); renderAll();
-  toast(t('“{title}” is now in {cat}.', { title: b.title, cat: catName(b.cat) }));
-  const again = $(`[data-cat-set="${b.id}"]`); if (again) again.focus();
-});
 document.addEventListener('change', async (e) => {
   const input = e.target.closest && e.target.closest('[data-cover-file]'); if (!input || !input.files[0]) return;
   const b = bookById(Number(input.dataset.coverFile)); if (!b) return;
@@ -6815,10 +6396,7 @@ $('#view-titles').addEventListener('click', async (e) => {
   }
   const ed = e.target.closest('[data-title-edit]');
   if (ed) { titleEdit = Number(ed.dataset.titleEdit); ttRender(); const box = $('#te-title'); if (box) box.focus(); return; }
-  if (e.target.closest('[data-title-cancel]')) { titleEdit = null; ttRender(); const box = $('#te-title'); if (box) box.focus(); return; }
-  const ce = e.target.closest('[data-copy-edit]');
-  if (ce) { copyEdit = Number(ce.dataset.copyEdit); ttRender(); const box = $('#ce-number'); if (box) { box.focus(); box.select(); } return; }
-  if (e.target.closest('[data-copy-cancel]')) { const was = copyEdit; copyEdit = null; ttRender(); $(`[data-copy-edit="${was}"]`)?.focus(); return; }
+  if (e.target.closest('[data-title-cancel]')) { titleEdit = null; return ttRender(); }
   const drop = e.target.closest('[data-cover-drop]');
   if (drop) { const b = bookById(Number(drop.dataset.coverDrop)); if (!b || !armed(drop, t('Click again to remove'))) return; if (await setCover(b, null)) { delete b.cover; record('cover', b.enTitle, 'removed'); save(); renderAll(); } return; }
   const del = e.target.closest('[data-title-del]');
@@ -6829,7 +6407,7 @@ $('#view-titles').addEventListener('click', async (e) => {
     reservations.filter((r) => r.bookId === b.id && holdLive(r)).forEach((r) => holdCancel(data, r, today()));
     refill(reservations, reservations.filter((r) => r.bookId !== b.id));
     refill(copies, copies.filter((c) => c.bookId !== b.id)); refill(books, books.filter((x) => x.id !== b.id));
-    dataGen++; touch(); tt.open = null; titleEdit = null; copyEdit = null;
+    dataGen++; touch(); tt.open = null; titleEdit = null;
     record('book-del', b.enTitle, ''); save(); renderAll(); toast(t('“{title}” deleted.', { title: b.title }));
     return;
   }
@@ -6841,50 +6419,47 @@ $('#view-titles').addEventListener('click', async (e) => {
     touch(); record('copy', `${bookById(c.bookId).enTitle} [${c.barcode}]`, off ? 'out of use' : 'back on the shelf'); save(); renderAll();
   }
 });
-$('#view-titles').addEventListener('input', (e) => { const f = e.target.closest('[data-title-form]'); if (f) titleEdit = Number(f.dataset.titleForm); });
-$('#view-titles').addEventListener('change', (e) => { const f = e.target.closest('[data-title-form]'); if (f) titleEdit = Number(f.dataset.titleForm); });
-$('#view-titles').addEventListener('submit', (e) => {   // a copy gets another number or shelf
-  const form = e.target.closest('[data-copy-form]'); if (!form) return;
-  e.preventDefault(); e.stopPropagation();
-  const c = copyById(Number(form.dataset.copyForm)), msg = $('#ce-msg'), tidy = (s) => s.replace(/\s+/g, ' ').trim();
-  if (!c) return;
-  const number = tidy($('#ce-number').value), shelf = tidy($('#ce-shelf').value);
-  const fail = (text) => { msg.textContent = text; msg.dataset.kind = 'error'; $('#ce-number').focus(); };
-  if (!number) return fail(t('Enter the number written on the book.'));
-  const clash = copyByBarcode(number);
-  if (clash && clash.id !== c.id) return fail(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title }));
-  const was = c.barcode, wasShelf = c.shelf || '';
-  copyEdit = null;
-  if (was !== number || wasShelf !== shelf) {
-    c.barcode = number; c.shelf = shelf; dataGen++; touch();
-    record('copy-edit', `${bookById(c.bookId).enTitle} [${number}]`, [was === number ? '' : `${was} → ${number}`, wasShelf === shelf ? '' : `shelf ${wasShelf || '—'} → ${shelf || '—'}`].filter(Boolean).join(' · ')); save();
-    toast(t('Saved.'));
-  }
-  renderAll(); $(`[data-copy-edit="${c.id}"]`)?.focus();
-});
 $('#view-titles').addEventListener('submit', (e) => {
   const form = e.target.closest('[data-title-form]'); if (!form) return;
   e.preventDefault();
-  const b = bookById(Number(form.dataset.titleForm)), tidy = (s) => s.replace(/\s+/g, ' ').trim(), title = tidy($('#te-title').value), author = tidy($('#te-author').value), msg = $('#te-msg');
-  const fail = (text, el) => { msg.textContent = text; msg.dataset.kind = 'error'; (el || $('#te-title')).focus(); };
+  const b = bookById(Number(form.dataset.titleForm)), tidy = (s) => s.replace(/\s+/g, ' ').trim(), title = tidy($('#te-title').value), author = tidy($('#te-author').value), isbn = cleanIsbn($('#te-isbn').value), msg = $('#te-msg');
+  const fail = (text) => { msg.textContent = text; msg.dataset.kind = 'error'; $('#te-title').focus(); };
   if (!b) return;
   if (!title) return fail(t('Enter the title of the book.'));
-  const isbnText = tidy($('#te-isbn').value), isbn = isbn13(isbnText);
-  if (isbnText && !isbn) return fail(t('This ISBN is not right. Check the digits.'), $('#te-isbn'));
-  const owner = bookByIsbn(isbn);
-  if (owner && owner.id !== b.id) return fail(t('ISBN {isbn} already belongs to “{title}”.', { isbn, title: owner.title }), $('#te-isbn'));
-  const twin = books.find((x) => x.id !== b.id && (norm(x.enTitle) === norm(title) || norm(x.uzTitle) === norm(title)) && isbnOf(x) === isbn);   // the same title is fine for another edition (another ISBN)
-  if (twin) return fail(isbn ? t('Another book already has this title.') : t('Another book already has this title. If it is a different edition, give each its ISBN.'));
-  const cat = $('#te-cat') ? $('#te-cat').value : catOf(b), wasCat = catOf(b);
-  if (!CAT.has(cat)) return fail(t('Choose the category of the book.'), $('#te-cat'));
-  if (cat !== wasCat) b.cat = cat;
-  const wasIsbn = isbnOf(b); b.isbn = isbn || null;
+  const twin = books.find((x) => x.id !== b.id && (norm(x.enTitle) === norm(title) || norm(x.uzTitle) === norm(title)));
+  if (twin) return fail(t('Another book already has this title.'));
+  if (isbn === null) { fail(t('ISBN must have 10 or 13 digits.')); return $('#te-isbn').focus(); }
+  const isbnTwin = isbn && isbnOwner(isbn, b.id);
+  if (isbnTwin) { fail(t('ISBN {n} already belongs to “{title}”.', { n: isbn, title: isbnTwin.title })); return $('#te-isbn').focus(); }
+  const own = ix().ofBook.get(b.id) || [], seen = new Set(), renames = [];
+  for (const inp of form.querySelectorAll('[data-te-copy]')) {
+    const c = copyById(Number(inp.dataset.teCopy)), v = inp.value.replace(/\s+/g, ' ').trim();
+    if (!c) continue;
+    if (!v) { fail(t('Every copy needs a number.')); return inp.focus(); }
+    const k = codeKey(v), clash = copyByBarcode(v);
+    if (seen.has(k)) { fail(t('Number {n} is written twice.', { n: v })); return inp.focus(); }
+    if (clash && clash.id !== c.id) { fail(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title })); return inp.focus(); }
+    seen.add(k); if (v !== c.barcode) renames.push([c, v]);
+  }
+  const extra = $('#te-new').value.split(/[,;\n]/).map((x) => x.replace(/\s+/g, ' ').trim()).filter(Boolean);
+  for (const n of extra) {
+    const k = codeKey(n), clash = copyByBarcode(n), moved = clash && renames.some(([c]) => c.id === clash.id);
+    if (seen.has(k)) { fail(t('Number {n} is written twice.', { n })); return $('#te-new').focus(); }
+    if (clash && !moved) { fail(t('Number {n} is already used by “{title}”.', { n: clash.barcode, title: bookById(clash.bookId).title })); return $('#te-new').focus(); }
+    seen.add(k);
+  }
   const was = b.enTitle;
+  b.isbn = isbn || null;
+  renames.forEach(([c, v]) => { record('copy', `${b.enTitle} [${c.barcode}]`, `number: ${c.barcode} → ${v}`.slice(0, 200)); c.barcode = v; });
+  if (extra.length) {
+    let lastId = copies.reduce((n, x) => Math.max(n, x.id), 0);
+    extra.forEach((n) => copies.push({ id: ++lastId, bookId: b.id, barcode: n, status: 'AVAILABLE', condition: 'GOOD', shelf: own[0] ? own[0].shelf || '' : '' }));
+    record('book-add', b.enTitle, `${extra.length} × ${extra.join(', ')}`.slice(0, 200));
+  }
   if (b.uzTitle === b.enTitle) b.uzTitle = title; b.enTitle = title;
   if ((b.uzAuthor || '') === (b.enAuthor || '')) b.uzAuthor = author; b.enAuthor = author;
   foldKeys.delete(b); dataGen++; touch(); titleEdit = null;
-  record('book-edit', title, [was === title ? '' : `was: ${was}`, wasIsbn === (isbn || '') ? '' : `ISBN ${wasIsbn || '—'} → ${isbn || '—'}`, cat === wasCat ? '' : `${CAT.get(wasCat).name} → ${CAT.get(cat).name}`].filter(Boolean).join(' · ')); save(); renderAll(); toast(t('Saved.'));
-  const box = $('#te-title'); if (box) box.focus();
+  record('book-edit', title, was === title ? '' : `was: ${was}`); save(); renderAll(); toast(t('Saved.'));
 });
 
 // ---- People: change a name or class, switch a card off, remove someone added by mistake, clean a wrong line out of the history
@@ -7051,373 +6626,19 @@ function readersWorkbook() {
 }
 function booksWorkbook() {
   const list = ix().sorted.map(titleAvailability);
-  const titles = [['Title', 'Author', 'ISBN', 'Category', 'Copies', 'On the shelf', 'Borrowed', 'Set aside', 'Book of the Week', 'Book of the Month'], ...list.map((a) => [a.book.enTitle, a.book.enAuthor || '', isbnOf(a.book), CAT.get(catOf(a.book)).name, a.total, a.available, a.borrowed, a.onHold, a.book.week ? 'yes' : '', a.book.month ? 'yes' : ''])];
+  const titles = [['Title', 'Author', 'Copies', 'On the shelf', 'Borrowed', 'Set aside', 'Book of the Week', 'Book of the Month'], ...list.map((a) => [a.book.enTitle, a.book.enAuthor || '', a.total, a.available, a.borrowed, a.onHold, a.book.week ? 'yes' : '', a.book.month ? 'yes' : ''])];
   const each = [['Title', 'Number on the book', 'Status', 'Condition', 'Shelf', 'With'], ...list.flatMap((a) => a.all.map((c) => { const l = c.status === 'ON_LOAN' ? activeLoanOfCopy(c.id) : null, p = l ? studentById(l.studentId) : null; return [a.book.enTitle, c.barcode, c.status.toLowerCase().replace('_', ' '), c.condition.toLowerCase().replace('_', ' '), c.shelf || '', p ? `${p.enName} (${p.no})` : '']; }))];
-  return xlsxBook([{ name: 'Books', rows: titles, widths: [50, 28, 16, 26, 8, 12, 10, 10, 16, 17] }, { name: 'Copies', rows: each, widths: [50, 20, 12, 12, 10, 32] }]);
+  return xlsxBook([{ name: 'Books', rows: titles, widths: [50, 28, 8, 12, 10, 10, 16, 17] }, { name: 'Copies', rows: each, widths: [50, 20, 12, 12, 10, 32] }]);
 }
 const logWorkbook = () => xlsxBook([{ name: 'Activity log', widths: [18, 28, 26, 50, 44], rows: [['When', 'Who', 'What', 'Item', 'Details'], ...activity.slice().reverse().sort((a, b) => (a.at < b.at ? 1 : a.at > b.at ? -1 : 0)).map((e) => [fmtDateTime(new Date(e.at)), e.by, LOG_LABEL[e.k] || e.k, e.a, e.b])] }]);
 document.addEventListener('click', async (e) => {
   const x = e.target.closest('[data-excel]'); if (!x || !unlocked) return;
-  const kind = x.dataset.excel, name = `mutolaxona-${{ readers: 'readers', books: 'books', log: 'log', template: 'import-form' }[kind]}-${today()}.xlsx`;
-  const ok = await saveFile(name, kind === 'readers' ? readersWorkbook() : kind === 'books' ? booksWorkbook() : kind === 'template' ? templateWorkbook() : logWorkbook());
+  const kind = x.dataset.excel, name = `mutolaxona-${{ readers: 'readers', books: 'books', log: 'log' }[kind]}-${today()}.xlsx`;
+  const ok = await saveFile(name, kind === 'readers' ? readersWorkbook() : kind === 'books' ? booksWorkbook() : logWorkbook());
   const said = ok ? t('Excel file created: {name}. Check your downloads folder.', { name }) : t('The file was not saved.');
   if ($('#data').open) dataMsg(said, ok ? 'info' : 'error'); else toast(said);
 });
 
-// ---- import from Excel or CSV: people, books and copies, and who has which book. Nothing changes until the librarian has seen
-// what the file adds and pressed Import. Codes in a file are never used: a new person gets a new code of their own.
-/** The files inside a zip (an .xlsx is one). Only what Excel, LibreOffice and Google Sheets write: stored or deflated. */
-function unzipEntries(buf) {
-  const u8 = new Uint8Array(buf), dv = new DataView(buf), dec = new TextDecoder();
-  let end = -1;
-  for (let i = u8.length - 22; i >= Math.max(0, u8.length - 65557); i--) if (dv.getUint32(i, true) === 0x06054b50) { end = i; break; }
-  if (end < 0) throw new Error('not a zip');
-  const files = new Map(); let p = dv.getUint32(end + 16, true);
-  for (let k = dv.getUint16(end + 10, true); k > 0; k--) {
-    if (dv.getUint32(p, true) !== 0x02014b50) throw new Error('bad zip');
-    const nl = dv.getUint16(p + 28, true);
-    files.set(dec.decode(u8.subarray(p + 46, p + 46 + nl)), { method: dv.getUint16(p + 10, true), size: dv.getUint32(p + 20, true), at: dv.getUint32(p + 42, true) });
-    p += 46 + nl + dv.getUint16(p + 30, true) + dv.getUint16(p + 32, true);
-  }
-  const read = async (name) => {
-    const f = files.get(name); if (!f) return null;
-    const start = f.at + 30 + dv.getUint16(f.at + 26, true) + dv.getUint16(f.at + 28, true), raw = u8.subarray(start, start + f.size);
-    if (f.method === 0) return dec.decode(raw);
-    if (f.method !== 8 || typeof DecompressionStream === 'undefined') throw new Error('unsupported zip');
-    return new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).text();
-  };
-  return { read };
-}
-/** The sheets of an .xlsx file as rows of cells: text, or a number (an Excel date is a number too). */
-async function readXlsx(buf) {
-  const z = unzipEntries(buf), parser = new DOMParser();
-  const xml = async (name) => { const s = await z.read(name); return s === null ? null : parser.parseFromString(s, 'application/xml'); };
-  const all = (node, tag) => [...node.getElementsByTagNameNS('*', tag)];
-  const wb = await xml('xl/workbook.xml'); if (!wb) throw new Error('not xlsx');
-  const rels = await xml('xl/_rels/workbook.xml.rels'), target = new Map();
-  if (rels) all(rels, 'Relationship').forEach((r) => target.set(r.getAttribute('Id'), r.getAttribute('Target')));
-  const ss = await xml('xl/sharedStrings.xml');
-  const shared = ss ? all(ss, 'si').map((si) => all(si, 't').filter((x) => x.parentNode.localName !== 'rPh').map((x) => x.textContent).join('')) : [];
-  const out = [];
-  for (const s of all(wb, 'sheet')) {
-    const rid = s.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'id') || s.getAttribute('r:id');
-    let path = target.get(rid); if (!path) continue;
-    path = path.startsWith('/') ? path.slice(1) : `xl/${path.replace(/^\.\//, '')}`;
-    const doc = await xml(path); if (!doc) continue;
-    const rows = [];
-    all(doc, 'row').forEach((r) => {
-      const y = Number(r.getAttribute('r')) - 1, line = []; let x = 0;
-      all(r, 'c').forEach((c) => {
-        const ref = /^[A-Z]+/.exec(c.getAttribute('r') || ''); if (ref) x = [...ref[0]].reduce((n, ch) => n * 26 + ch.charCodeAt(0) - 64, 0) - 1;
-        const type = c.getAttribute('t'), v = all(c, 'v')[0], text = v ? v.textContent : '';
-        line[x++] = type === 's' ? shared[Number(text)] ?? '' : type === 'inlineStr' ? all(c, 't').map((n) => n.textContent).join('') : type === 'str' ? text : type === 'b' ? (text === '1' ? 'TRUE' : 'FALSE') : type === 'e' || text === '' ? '' : Number(text);
-      });
-      rows[y >= 0 ? y : rows.length] = line;
-    });
-    out.push({ name: s.getAttribute('name') || `Sheet ${out.length + 1}`, rows: Array.from(rows, (r) => Array.from(r || [], (v) => (v === undefined ? '' : v))) });
-  }
-  return out;
-}
-/** A CSV or tab-separated text: the separator is whichever of ; , or tab the first line uses most. */
-function readCsv(text) {
-  text = text.replace(/^﻿/, '');
-  const first = text.split(/\r?\n/, 1)[0], sep = [';', '\t', ','].map((c) => [c, first.split(c).length]).sort((a, b) => b[1] - a[1])[0][0];
-  const rows = []; let row = [], cell = '', quoted = false;
-  for (let i = 0; i < text.length; i++) {
-    const ch = text[i];
-    if (quoted) { if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else quoted = false; } else cell += ch; }
-    else if (ch === '"' && cell === '') quoted = true;
-    else if (ch === sep) { row.push(cell); cell = ''; }
-    else if (ch === '\n' || ch === '\r') { if (ch === '\r' && text[i + 1] === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; }
-    else cell += ch;
-  }
-  if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
-  return rows;
-}
-/** The words a heading may be written with, in English, Uzbek and Russian. "number" alone is decided by the sheet: the
-    number on the book where the sheet has titles, the reader number where it has only people. */
-const IMPORT_HEADS = {
-  no: ['reader number', 'reader no', 'reader id', 'kitobxon raqami', 'o quvchi raqami', 'oquvchi raqami', 'номер читателя', 'читательский номер', 'читательский билет'],
-  name: ['name', 'full name', 'student', 'student name', 'reader', 'reader name', 'teacher', 'teacher name', 'person', 'ism', 'ismi', 'ism familiya', 'familiya ism', 'familiya ismi', 'familiyasi ismi', 'ismi familiyasi', 'f i sh', 'fish', 'f i o', 'fio', 'o quvchi', 'oquvchi', 'o qituvchi', 'kitobxon', 'фио', 'ф и о', 'имя', 'ученик', 'читатель', 'учитель'],
-  kind: ['student or teacher', 'kind', 'type', 'role', 'turi', 'kim', 'lavozim', 'тип', 'роль'],
-  cls: ['class', 'grade', 'form', 'sinf', 'sinfi', 'класс'],
-  house: ['house', 'house name', 'xaus', 'haus', 'uy', 'дом', 'факультет', 'команда'],
-  title: ['title', 'book', 'book title', 'kitob', 'kitob nomi', 'nomi', 'asar', 'asar nomi', 'название', 'книга', 'название книги'],
-  author: ['author', 'muallif', 'muallifi', 'автор'],
-  isbn: ['isbn', 'isbn 13', 'isbn 10', 'isbn13'],
-  cat: ['category', 'genre', 'toifa', 'toifasi', 'turkum', 'kategoriya', 'janr', 'категория', 'жанр', 'раздел'],
-  copies: ['copies', 'count', 'quantity', 'number of copies', 'soni', 'nusxa', 'nusxalar', 'nusxa soni', 'nusxalar soni', 'количество', 'экземпляры', 'экземпляров', 'кол во'],
-  barcode: ['number on the book', 'numbers on the copies', 'copy number', 'copy', 'barcode', 'inventory number', 'inventory', 'inv', 'inv no', 'kitob raqami', 'kitobdagi raqam', 'nusxa raqami', 'inventar raqami', 'inventar', 'инвентарный номер', 'инв номер', 'штрихкод', 'шифр'],
-  number: ['number', 'no', 'raqam', 'raqami', 'nomer', 'номер'],
-  shelf: ['shelf', 'javon', 'полка', 'стеллаж'],
-  status: ['status', 'holat', 'holati', 'статус'],
-  cond: ['condition', 'holati kitob', 'состояние'],
-  issued: ['issued', 'taken', 'date issued', 'issue date', 'given', 'berilgan', 'berilgan sana', 'olingan', 'olingan sana', 'berildi', 'выдано', 'выдан', 'дата выдачи'],
-  due: ['due', 'due date', 'return by', 'qaytarish', 'qaytarish sanasi', 'qaytarish muddati', 'muddat', 'muddati', 'срок', 'срок возврата', 'вернуть до'],
-  returned: ['returned', 'qaytarilgan', 'qaytarildi', 'возвращено', 'дата возврата'],
-  code: ['code', 'pin', 'kod', 'код', 'parol'],
-};
-const importHeadKey = (v) => String(v ?? '').toLowerCase().replace(/[‘’ʻʼ`'".,:;()№#*\/\\_\-–]/g, ' ').replace(/\s+/g, ' ').trim();
-const IMPORT_HEAD = new Map(); Object.entries(IMPORT_HEADS).forEach(([field, words]) => words.forEach((w) => IMPORT_HEAD.set(w, field)));
-const IMPORT_LONG = [...IMPORT_HEAD.keys()].filter((w) => w.length >= 4).sort((a, b) => b.length - a.length);
-const importField = (v) => { const k = importHeadKey(v); if (!k) return ''; if (IMPORT_HEAD.has(k)) return IMPORT_HEAD.get(k); const w = IMPORT_LONG.find((x) => k.startsWith(`${x} `)); return w ? IMPORT_HEAD.get(w) : ''; };
-/** The heading row: of the first rows, the one with the most known headings. */
-function importHead(rows) {
-  let best = null;
-  for (let y = 0; y < Math.min(rows.length, 12); y++) {
-    const f = {}; let n = 0;
-    (rows[y] || []).forEach((v, x) => { const field = importField(v); if (field && f[field] === undefined) { f[field] = x; n++; } });
-    if (n && (!best || n > best.n)) best = { at: y, f, n };
-  }
-  if (!best || !(best.n >= 2 || best.f.name !== undefined || best.f.title !== undefined)) return null;
-  const f = best.f;
-  if (f.number !== undefined) { if ((f.title !== undefined || f.isbn !== undefined) && f.barcode === undefined) f.barcode = f.number; else if (f.no === undefined) f.no = f.number; }
-  return best;
-}
-const importText = (v) => (v === null || v === undefined ? '' : String(v)).replace(/\s+/g, ' ').trim();
-/** A date as Excel or a person writes it: an Excel day number, 2026-09-01, 01.09.2026 or 1/9/26 (day first). */
-function importDate(v) {
-  const ok = (y, m, d) => { const dt = new Date(Date.UTC(Number(y), Number(m) - 1, Number(d))); return dt.getUTCMonth() === Number(m) - 1 && dt.getUTCDate() === Number(d) && Number(y) > 1990 ? dt.toISOString().slice(0, 10) : ''; };
-  const s = importText(v); let m;
-  const n = typeof v === 'number' ? v : /^\d{5}(\.\d+)?$/.test(s) ? Number(s) : NaN;
-  if (n > 30000 && n < 80000) return new Date(Date.UTC(1899, 11, 30) + Math.floor(n) * 864e5).toISOString().slice(0, 10);
-  if ((m = /^(\d{4})[-./](\d{1,2})[-./](\d{1,2})/.exec(s))) return ok(m[1], m[2], m[3]);
-  if ((m = /^(\d{1,2})[-./](\d{1,2})[-./](\d{2}|\d{4})\b/.exec(s))) return ok(m[3].length === 2 ? `20${m[3]}` : m[3], m[2], m[1]);
-  return '';
-}
-const IMPORT_CAT_WORDS = [['uzlit', /o.?zbek|ўзбек|узбек/], ['english', /english|ingliz|англ/], ['kids', /bolalar|child|kid|дет/], ['cambridge', /cambridge|ielts|exam|imtihon|экзам/],
-  ['school', /darslik|textbook|школ|учебн/], ['lang', /lug.?at|dictionar|language|словар|язык/], ['history', /tarix|histor|biogra|истор|биограф/], ['religion', /relig|islom|islam|дин|рели|(^|\s)din/],
-  ['society', /huquq|(^|\s)law|society|jamiyat|davlat|прав|общест/], ['science', /science|ilm|(^|\s)fan(\s|$)|наук|psix|psych|психол|self/], ['arts', /sport|san.?at|(^|\s)art|music|musiqa|спорт|искус|музык/], ['world', /jahon|world|foreign|мир|зарубеж/]];
-/** A category as the file writes it: our key or name in any language, or a word that points to one. */
-function importCat(v) {
-  const k = importText(v).toLowerCase(); if (!k) return '';
-  const hit = CATS.find(([key, name]) => k === key || k === name.toLowerCase() || k === String(UZ[name] || '').toLowerCase() || k === String(RU[name] || '').toLowerCase());
-  if (hit) return hit[0];
-  const w = IMPORT_CAT_WORDS.find(([, re]) => re.test(k)); return w ? w[0] : '';
-}
-/** A house as the file writes it: "Fitrat", "Cho'lpon", or the whole name. Anything else stays as typed. */
-function importHouse(v) {
-  const s = importText(v); if (!s) return '';
-  const key = (x) => norm(x).replace(/[^a-zа-яё0-9]/g, '');
-  const k = key(s), hit = HOUSES.find(([name]) => { const words = name.split(/\s+/).map(key).filter((w) => w.length > 3); return key(name) === k || words.some((w) => k.includes(w)); });
-  return hit ? hit[0] : s;
-}
-const importStatus = (v) => { const s = importText(v).toLowerCase(); return /lost|yo.?qol|утер|потер/.test(s) ? 'LOST' : /withdraw|out of use|chiqarilgan|списан/.test(s) ? 'WITHDRAWN' : 'AVAILABLE'; };
-const importCond = (v) => { const s = importText(v).toLowerCase(); return /damag|shikast|yirtil|повре/.test(s) ? 'DAMAGED' : /brand|yangi|нов/.test(s) ? 'BRAND_NEW' : /wear|eskir|изно/.test(s) ? 'MINOR_WEAR' : 'GOOD'; };
-/** Runs the import. real = false works on a copy of the library and only counts: that is the preview. */
-function runImport(sheets, real) {
-  const C = real ? { people: students, books, copies, loans: loans }
-    : JSON.parse(JSON.stringify({ people: students, books, copies, loans: loans.filter((l) => l.status === 'ACTIVE').map(({ id, copyId, studentId, status }) => ({ id, copyId, studentId, status })) }));
-  const res = { sheets: [], peopleNew: 0, peopleSet: 0, booksNew: 0, booksSet: 0, copiesNew: 0, loansNew: 0, known: 0, returned: 0, codes: false, skipped: [], newPeople: [] };
-  const skip = (sheet, row, why) => res.skipped.push({ sheet, row, why });
-  const val = (row, i) => (i === undefined || !row ? '' : row[i] ?? ''), cell = (row, i) => importText(val(row, i));
-  // what the library has, looked up the way the file is read
-  const pKey = (s) => norm(s).replace(/[^\p{L}\p{N}' ]/gu, ' ').replace(/\s+/g, ' ').trim(), pSorted = (s) => pKey(s).split(' ').sort().join(' ');
-  const byNo = new Map(), byName = new Map();
-  const addP = (p) => { if (p.no) byNo.set(trimZeros(noKey(p.no)), p); [pKey(p.enName), pSorted(p.enName), pKey(p.uzName), pSorted(p.uzName)].forEach((k) => { if (!k) return; const l = byName.get(k) || []; if (!l.includes(p)) l.push(p); byName.set(k, l); }); };
-  C.people.forEach(addP);
-  const bKey = (s) => norm(s).replace(/\s+/g, ' ').trim(), byTitle = new Map(), byIsbn = new Map(), byCode = new Map(), ofBook = new Map(), bookOfId = new Map();
-  const addB = (b) => { bookOfId.set(b.id, b); [b.enTitle, b.uzTitle].forEach((x) => { const k = bKey(x); if (k) { const l = byTitle.get(k) || []; if (!l.includes(b)) l.push(b); byTitle.set(k, l); } }); const i = isbn13(b.isbn); if (i && !byIsbn.has(i)) byIsbn.set(i, b); if (!ofBook.has(b.id)) ofBook.set(b.id, []); };
-  C.books.forEach(addB);
-  const addC = (c) => { const k = codeKey(c.barcode); if (k && !byCode.has(k)) byCode.set(k, c); if (!ofBook.has(c.bookId)) ofBook.set(c.bookId, []); ofBook.get(c.bookId).push(c); };
-  C.copies.forEach(addC);
-  const held = new Map(); C.loans.forEach((l) => { if (l.status === 'ACTIVE') held.set(l.copyId, l); });
-  let personId = C.people.reduce((n, p) => Math.max(n, p.id), 0), bookId = C.books.reduce((n, b) => Math.max(n, b.id), 0), copyId = C.copies.reduce((n, c) => Math.max(n, c.id), 0), loanId = real ? nextLoanId : C.loans.reduce((n, l) => Math.max(n, l.id), 0) + 1;
-  const lastNo = { 'S-': 0, 'T-': 0 }; C.people.forEach((p) => { const m = /^([ST]-)(\d+)$/.exec(p.no || ''); if (m) lastNo[m[1]] = Math.max(lastNo[m[1]], Number(m[2])); });
-  const fresh = new Set();   // titles this import adds
-  function findPerson(row, f, sheet, y, kindHint) {
-    const name = cell(row, f.name), no = cell(row, f.no), cls = f.cls !== undefined ? classKey(cell(row, f.cls)) : '', kindText = cell(row, f.kind);
-    let kind = /teach|o.?qituvchi|ustoz|учит|педагог|преподав/i.test(kindText) ? 'teacher' : kindText ? 'student' : '';
-    if (no) {
-      const k = trimZeros(noKey(no)), p = byNo.get(k) || (/^\d+$/.test(k) ? byNo.get((kind === 'teacher' || kindHint === 'teacher' ? 'T' : 'S') + k) : null);
-      if (p) return { p, known: true };
-      if (!kind && /^T/.test(k)) kind = 'teacher';
-    }
-    if (!name) { skip(sheet, y, no ? t('Reader number {n} is not in the list, and the row has no name.', { n: no }) : t('The row has no name.')); return null; }
-    const hits = (byName.get(pKey(name)) || byName.get(pSorted(name)) || []).filter((p) => !kind || p.kind === kind);
-    const same = cls ? hits.filter((p) => p.cls === cls) : [], pool = same.length ? same : hits;
-    if (pool.length === 1) return { p: pool[0], known: true };
-    if (pool.length > 1) { skip(sheet, y, t('{name}: more than one person has this name. Add the reader number or the class.', { name })); return null; }
-    kind = kind || kindHint || 'student';
-    const clean = tidyName(name), p = makePerson({ id: ++personId, kind, no: '', card: '', enName: clean, uzName: clean, cls: kind === 'teacher' ? '' : cls, active: true, email: '' });
-    const prefix = kind === 'teacher' ? 'T-' : 'S-', digits = /(\d+)\s*$/.exec(no), letter = noKey(no).replace(/\d.*$/, '');
-    let n = digits && (!letter || letter === prefix[0]) ? Number(digits[1]) : 0;
-    if (!n || byNo.has(prefix[0] + n)) n = lastNo[prefix] + 1;
-    lastNo[prefix] = Math.max(lastNo[prefix], n); p.no = prefix + String(n).padStart(kind === 'teacher' ? 2 : 3, '0');
-    const house = kind === 'student' && f.house !== undefined ? importHouse(val(row, f.house)) : ''; if (house) p.house = house;
-    if (real) p.pin = newPin();
-    C.people.push(p); addP(p); res.peopleNew++; res.newPeople.push(p);
-    return { p, known: false };
-  }
-  function findBook(row, f, sheet, y, peek) {
-    const title = cell(row, f.title), isbnText = cell(row, f.isbn), isbn = isbn13(isbnText);
-    if (isbnText && !isbn) { skip(sheet, y, t('ISBN {isbn} is not right. Check the digits.', { isbn: isbnText })); return null; }
-    let b = isbn ? byIsbn.get(isbn) : null;
-    if (!b && title) {
-      const named = byTitle.get(bKey(title)) || [];
-      b = isbn ? named.find((x) => !isbn13(x.isbn)) || null : named[0] || null;
-      if (b && isbn) { b.isbn = isbn; byIsbn.set(isbn, b); res.booksSet++; }
-    }
-    if (b) return { b, known: true };
-    if (peek) return { b: null };
-    if (!title) { skip(sheet, y, isbn ? t('ISBN {isbn} is not in the list, and the row has no title.', { isbn }) : t('The row has no title.')); return null; }
-    const author = cell(row, f.author), cat = importCat(val(row, f.cat)) || catGuess({ enTitle: title, uzTitle: title }) || 'other';
-    b = makeBook({ id: ++bookId, isbn: isbn || null, enTitle: title, enAuthor: author, uzTitle: title, uzAuthor: author, addedOn: today(), cat });
-    C.books.push(b); addB(b); fresh.add(b.id); res.booksNew++;
-    return { b, known: false };
-  }
-  const newCopy = (b, number, shelf, status, condition) => { const c = { id: ++copyId, bookId: b.id, barcode: number, status: status || 'AVAILABLE', condition: condition || 'GOOD', shelf: shelf || '' }; C.copies.push(c); addC(c); res.copiesNew++; return c; };
-  const newNumber = (b) => { let i = (ofBook.get(b.id) || []).length, n; do { n = `N${b.id}-${String(++i).padStart(2, '0')}`; } while (byCode.has(codeKey(n))); return n; };
-  // which sheet is which: people, books (and their copies), or who has which book
-  const plan = sheets.map((sh) => {
-    const head = importHead(sh.rows); if (!head) return { sh, type: 'none' };
-    const f = head.f, reader = f.name !== undefined || f.no !== undefined, bookish = f.title !== undefined || f.barcode !== undefined || f.isbn !== undefined;
-    if (f.code !== undefined) res.codes = true;
-    return { sh, head, f, type: reader && bookish ? 'loans' : reader ? 'people' : bookish ? 'books' : 'none' };
-  });
-  const numbered = plan.some((x) => x.type === 'books' && x.f.barcode !== undefined);   // a sheet lists the copies one by one: counts elsewhere add no copies
-  const order = { people: 0, books: 1, loans: 2, none: 3 };
-  plan.slice().sort((a, b) => order[a.type] - order[b.type]).forEach(({ sh, head, f, type }) => {
-    let rows = 0;
-    if (type !== 'none') {
-      const kindHint = /teach|o.?qituv|ustoz|учит|педагог/i.test(sh.name) ? 'teacher' : '';
-      sh.rows.slice(head.at + 1).forEach((row, i) => {
-        if (!row || !row.some((v) => importText(v))) return;
-        const y = head.at + i + 2; rows++;
-        if (type === 'people') {
-          const got = findPerson(row, f, sh.name, y, kindHint); if (!got) return;
-          if (!got.known) return;
-          const p = got.p; let changed = false;
-          const cls = f.cls !== undefined ? classKey(cell(row, f.cls)) : '', house = f.house !== undefined ? importHouse(val(row, f.house)) : '';
-          if (p.kind === 'student' && cls && !p.cls) { p.cls = cls; changed = true; }
-          if (p.kind === 'student' && house && !p.house) { p.house = house; changed = true; }
-          if (changed) res.peopleSet++; else res.known++;
-        } else if (type === 'books') {
-          const numbers = f.barcode !== undefined ? cell(row, f.barcode).split(/[,;]/).map((x) => x.trim()).filter(Boolean) : [];
-          if (numbers.length && numbers.every((num) => byCode.has(codeKey(num)))) {   // every number is taken: a new title is not made for nothing
-            const look = findBook(row, f, sh.name, y, true); if (!look) return;
-            if (!look.b) { numbers.forEach((num) => skip(sh.name, y, t('Number {n} is already used by “{title}”.', { n: num, title: (bookOfId.get(byCode.get(codeKey(num)).bookId) || {}).enTitle || '' }))); return; }
-          }
-          const got = findBook(row, f, sh.name, y); if (!got) return;
-          const b = got.b;
-          if (got.known) {
-            let changed = false; const author = cell(row, f.author), cat = importCat(val(row, f.cat));
-            if (author && !b.enAuthor) { b.enAuthor = author; if (!b.uzAuthor) b.uzAuthor = author; changed = true; }
-            if (cat && !CAT.has(b.cat)) { b.cat = cat; changed = true; }
-            if (changed) res.booksSet++;
-          }
-          const shelf = cell(row, f.shelf);
-          if (numbers.length) {
-            numbers.forEach((num) => {
-              const c = byCode.get(codeKey(num));
-              if (!c) newCopy(b, num, shelf, importStatus(val(row, f.status)), importCond(val(row, f.cond)));
-              else if (c.bookId === b.id) res.known++;
-              else skip(sh.name, y, t('Number {n} is already used by “{title}”.', { n: num, title: (bookOfId.get(c.bookId) || {}).enTitle || '' }));
-            });
-          } else if (f.copies !== undefined && !numbered) {
-            const want = Math.min(parseInt(cell(row, f.copies), 10) || 0, 200), have = (ofBook.get(b.id) || []).length;
-            if (want > have) for (let k = have; k < want; k++) newCopy(b, newNumber(b), shelf); else if (got.known) res.known++;
-          } else if (!got.known && !numbered) newCopy(b, newNumber(b), shelf);   // a new title with no number: one copy
-          else if (got.known) res.known++;
-        } else if (type === 'loans') {
-          if (cell(row, f.returned) || /return|qaytar|возвр/i.test(cell(row, f.status))) { res.returned++; return; }
-          const who = findPerson(row, f, sh.name, y, kindHint); if (!who) return;
-          const num = cell(row, f.barcode);
-          let c = num ? byCode.get(codeKey(num)) : null;
-          if (!c) {
-            if (!cell(row, f.title) && !isbn13(cell(row, f.isbn))) { skip(sh.name, y, num ? t('Number {n} is not in the list, and the row has no title.', { n: num }) : t('The row has no book.')); return; }
-            const got = findBook(row, f, sh.name, y); if (!got) return;
-            const list = ofBook.get(got.b.id) || [];
-            if (num) c = newCopy(got.b, num, '');
-            else {
-              if (list.some((x) => held.get(x.id) && held.get(x.id).studentId === who.p.id)) { res.known++; return; }
-              c = list.find((x) => x.status === 'AVAILABLE' && !held.has(x.id)) || (fresh.has(got.b.id) ? newCopy(got.b, newNumber(got.b), '') : null);
-              if (!c) { skip(sh.name, y, t('No copy of “{title}” is on the shelf.', { title: got.b.enTitle })); return; }
-            }
-          }
-          const l0 = held.get(c.id);
-          if (l0) { if (l0.studentId === who.p.id) res.known++; else skip(sh.name, y, t('Copy {n} is already with someone else.', { n: c.barcode })); return; }
-          if (c.status !== 'AVAILABLE') { skip(sh.name, y, t('Copy {n} is not on the shelf.', { n: c.barcode })); return; }
-          let issued = importDate(val(row, f.issued)) || today(); if (issued > today()) issued = today();
-          let due = importDate(val(row, f.due)); if (!due || due < issued) due = addDays(issued, policy.loanDays);
-          const l = { id: loanId++, copyId: c.id, studentId: who.p.id, issuedAt: new Date(`${issued}T09:00:00`), dueDate: due, returnedAt: null, status: 'ACTIVE',
-            conditionOut: c.condition, conditionIn: null, renewals: 0, daysLate: null, fine: 0, finePaid: false, overrideReason: '', lastReminderAt: null };
-          C.loans.push(l); held.set(c.id, l); c.status = 'ON_LOAN'; res.loansNew++;
-        }
-      });
-    }
-    res.sheets.push({ name: sh.name, type, rows });
-  });
-  res.sheets.sort((a, b) => sheets.findIndex((s) => s.name === a.name) - sheets.findIndex((s) => s.name === b.name));
-  if (real) { nextLoanId = loanId; dataGen++; touch(); }
-  return res;
-}
-const IMPORT_TYPE = { people: 'people', books: 'books and copies', loans: 'who has which book', none: 'not recognised: skipped' };
-const imp = { sheets: null, name: '', res: null };
-/** What the file adds, shown before anything changes. */
-function importPreview() {
-  const r = imp.res, box = $('#import-box'), n = (k) => fmtNum(r[k]);
-  const adds = r.peopleNew + r.booksNew + r.copiesNew + r.loansNew + r.peopleSet + r.booksSet;
-  box.innerHTML = `<h3>${t('From “{name}”', { name: esc(imp.name) })}</h3>
-    <ul class="imp-sheets">${r.sheets.map((s) => `<li><strong>${esc(s.name)}</strong> · ${t(IMPORT_TYPE[s.type])}${s.type !== 'none' ? ` · ${plural(s.rows, 'row')}` : ''}</li>`).join('')}</ul>
-    <dl class="imp-sum">
-      <dt>${t('New people')}</dt><dd>${n('peopleNew')}</dd><dt>${t('New books')}</dt><dd>${n('booksNew')}</dd><dt>${t('New copies')}</dt><dd>${n('copiesNew')}</dd>
-      <dt>${t('Books given out')}</dt><dd>${n('loansNew')}</dd><dt>${t('Filled in (class, house, ISBN, author, category)')}</dt><dd>${fmtNum(r.peopleSet + r.booksSet)}</dd><dt>${t('Already in the list')}</dt><dd>${n('known')}</dd>
-    </dl>
-    ${r.returned ? `<p class="hint">${t('Books already returned: {rows}. Only books still out are imported.', { rows: plural(r.returned, 'row') })}</p>` : ''}
-    ${r.peopleNew ? `<p class="hint">${t('New people get a reader number and a code of their own. Print their slips on the Students tab.')}</p>` : ''}
-    ${r.codes ? `<p class="hint">${t('The codes in the file are not used.')}</p>` : ''}
-    ${r.skipped.length ? `<details class="imp-skip"><summary>${t('Skipped: {rows}', { rows: plural(r.skipped.length, 'row') })}</summary><ul>${r.skipped.slice(0, 80).map((s) => `<li>${esc(s.sheet)}, ${t('row {n}', { n: s.row })}: ${esc(s.why)}</li>`).join('')}${r.skipped.length > 80 ? '<li>…</li>' : ''}</ul></details>` : ''}
-    <div class="actions">${adds ? `<button type="button" class="btn primary" id="import-go">${t('Import')}</button>` : `<p class="hint">${t('Nothing new to add from this file.')}</p>`}<button type="button" class="btn" id="import-cancel">${t('Cancel')}</button></div>`;
-  box.hidden = false;
-  const go = $('#import-go'); (go || $('#import-cancel')).focus();
-}
-$('#import-open').addEventListener('click', () => $('#import-file').click());
-$('#import-file').addEventListener('change', async (e) => {
-  const file = e.target.files[0]; e.target.value = ''; if (!file) return;
-  $('#import-box').hidden = true; imp.sheets = null;
-  if (API && remote.view !== 'full') return dataMsg(t('Not saved: the desk is not connected to the shared library. Lock the desk and unlock it again.'), 'error');
-  const ext = (file.name.split('.').pop() || '').toLowerCase();
-  if (ext === 'xls') return dataMsg(t('This is an old Excel file (.xls). Open it in Excel, choose Save As, pick “Excel Workbook (.xlsx)”, and import that file.'), 'error');
-  if (ext === 'json') return dataMsg(t('This is a backup file. Use “Load a backup file” for it.'), 'error');
-  dataMsg(t('Reading the file…'), 'info');
-  try {
-    const buf = await file.arrayBuffer(), head = new Uint8Array(buf.slice(0, 4));
-    if (head[0] === 0x50 && head[1] === 0x4b) imp.sheets = await readXlsx(buf);
-    else {
-      let text; try { text = new TextDecoder('utf-8', { fatal: true }).decode(buf); } catch (_) { text = new TextDecoder('windows-1251').decode(buf); }
-      imp.sheets = [{ name: file.name.replace(/\.[^.]+$/, ''), rows: readCsv(text) }];
-    }
-  } catch (_) { imp.sheets = null; }
-  if (!imp.sheets || !imp.sheets.length) return dataMsg(t('This file could not be read. Save it from Excel as .xlsx or .csv and try again.'), 'error');
-  imp.name = file.name; imp.res = runImport(imp.sheets, false);
-  if (imp.res.sheets.every((s) => s.type === 'none')) { imp.sheets = null; return dataMsg(t('No headings this page knows were found. Use headings such as Name, Class, Title, ISBN, Number on the book, or download the empty form.'), 'error'); }
-  dataMsg(''); importPreview();
-});
-$('#data').addEventListener('click', (e) => {
-  if (e.target.closest('#import-cancel')) { imp.sheets = null; $('#import-box').hidden = true; $('#import-open').focus(); return; }
-  if (!e.target.closest('#import-go') || !imp.sheets) return;
-  if (API && remote.view !== 'full') return dataMsg(t('Not saved: the desk is not connected to the shared library. Lock the desk and unlock it again.'), 'error');
-  const r = runImport(imp.sheets, true); imp.sheets = null;
-  record('import', imp.name, `${r.peopleNew} people, ${r.booksNew} books, ${r.copiesNew} copies, ${r.loansNew} loans, ${r.peopleSet + r.booksSet} filled in, ${r.skipped.length} skipped`);
-  save(); renderAll();
-  $('#import-box').hidden = true;
-  dataMsg(t('Imported. New people: {a} · new books: {b} · new copies: {c} · books given out: {d}.', { a: fmtNum(r.peopleNew), b: fmtNum(r.booksNew), c: fmtNum(r.copiesNew), d: fmtNum(r.loansNew) }) + (r.skipped.length ? ' ' + t('Skipped: {rows}', { rows: plural(r.skipped.length, 'row') }) + '.' : ''), 'info');
-  $('#import-open').focus();
-});
-/** The empty form to fill in: one sheet each for people, books and who has which book, and a sheet that says how. */
-function templateWorkbook() {
-  const how = [[t('How to fill in this file')], [t('People: one row per student or teacher. Class is the grade (5 to 11). Leave Reader number empty for new people: the library gives one.')],
-    [t('Books: one row per title. Write the numbers of its copies separated with commas, or only how many copies there are.')],
-    [t('Who has which book: one row per book that is out now. The reader number or the name, and the number on the book or its title.')],
-    [t('Dates: 01.09.2026 or an Excel date. Without a due date the book is due in {n} days.', { n: policy.loanDays })],
-    [t('Then open Library data, press Import from Excel, choose this file, check the summary and press Import.')]];
-  return xlsxBook([
-    { name: t('People'), rows: [['Name', 'Student or teacher', 'Class', 'House', 'Reader number']], widths: [32, 18, 8, 22, 14] },
-    { name: t('Books'), rows: [['Title', 'Author', 'ISBN', 'Category', 'Numbers on the copies', 'Copies', 'Shelf']], widths: [44, 26, 16, 24, 30, 8, 8] },
-    { name: t('Who has which book'), rows: [['Reader number', 'Name', 'Class', 'Number on the book', 'Title', 'ISBN', 'Issued', 'Due']], widths: [14, 30, 8, 18, 40, 16, 12, 12] },
-    { name: t('Read me'), rows: how, widths: [120] }]);
-}
 // ---- a new school year: every class moves up one, and the top class leaves
 $('#year-up').addEventListener('click', (e) => {
   const btn = e.currentTarget, top = Math.max(0, ...students.filter((p) => p.kind === 'student' && p.active).map((p) => parseInt(p.cls, 10) || 0));
@@ -7490,7 +6711,6 @@ document.addEventListener('keydown', (e) => {
     else if (current === 'titles' && !ab.form.hidden) abToggle(false);
     else if (current === 'students' && !ap.form.hidden) apToggle(false);
     else if (personEdit !== null) { personEdit = null; renderAll(); }
-    else if (copyEdit !== null) { copyEdit = null; ttRender(); }
     else if (titleEdit !== null) { titleEdit = null; ttRender(); }
     else if (current === 'loans' && ln.open) { const was = ln.open; ln.open = null; lnRender(); $(`[data-act="${was.kind}"][data-loan="${was.id}"]`)?.focus(); }
     return;
@@ -7543,7 +6763,7 @@ function askPasscode(view) {
   $('#lock-pass').value = ''; $('#lock-msg').textContent = '';
   d.showModal(); $('#lock-pass').focus();
 }
-function clearDeskState() { co.student = null; co.copy = null; co.adding = false; co.override = false; rt.loan = null; ln.open = null; pinEdit = null; personEdit = null; titleEdit = null; copyEdit = null; }
+function clearDeskState() { co.student = null; co.copy = null; co.adding = false; co.override = false; rt.loan = null; ln.open = null; pinEdit = null; personEdit = null; titleEdit = null; }
 /** A newer copy of the library arrived while the desk was mid-task: point the half-done work at the same people and books in it. */
 function rebindDesk() {
   if (co.student && !co.student.isNew) co.student = studentById(co.student.id) || null;
