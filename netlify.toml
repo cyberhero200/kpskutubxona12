@@ -1,0 +1,7 @@
+# Netlify reads this file. Nothing to build: index.html is the page, netlify/functions/ is the server part.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

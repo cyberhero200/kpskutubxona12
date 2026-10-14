@@ -1,0 +1,9 @@
+# Visitors only need the page. Everything else in this folder stays private.
+/netlify/*          /404.html  404!
+/node_modules/*     /404.html  404!
+/package.json       /404.html  404!
+/package-lock.json  /404.html  404!
+/netlify.toml       /404.html  404!
+/README.md          /404.html  404!
+/deploy.bat         /404.html  404!
+/deploy.sh          /404.html  404!
